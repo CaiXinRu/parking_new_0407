@@ -60,11 +60,12 @@ header .header-pic{position: absolute;z-index: 2;width: 100%; height: var(--head
 main{position: relative; width: 100%; display: flex; align-items: center; flex-direction: column; min-height: 93%; background: linear-gradient(145deg, #efefef 0%, #ffffff 52%, #ffffff 80%, #dfdfdf 89%);margin: -100px 0 0; color: var(--main-font)}
 main.nor{padding: 9rem 0}
 main h2{padding: 0 0 2rem; font-size: 2.5rem}
-#popup_bg{position: absolute; top: 0; left: 0; width:100%; height: var(--mainsize-h); display:flex; justify-content: center; align-items: center;background-color:#00000075 ;backdrop-filter: blur(3px); z-index: 98}
+#popup_bg{position: absolute; top: 0; left: 0; width:100%; height: var(--mainsize-h); display:flex; justify-content: center; align-items: center;background-color:#000000d1 ;backdrop-filter: blur(5px); z-index: 98}
 #popupParagraph{background: var(--white); color: var(--font-grey-d); width: 80%; min-height: 200px; max-width: 650px; position: relative; border-radius: 2rem; padding:2rem 2rem 10rem; display: flex; flex-direction: column;align-items: center}
 #popupParagraph h1{text-align: center; font-size: 1.6rem; margin:1rem 0 2rem}
 #popupParagraph .CUT{right: 20px;  bottom: unset}
 #popupParagraph.single h1{font-size: 3rem; color: var(--black)}
+#popupParagraph.popup-h1-bar h1{background: #4e566e; color: var(--white); margin: -2rem -2rem 2rem; padding: 1.25rem 2rem; width: calc(100% + 4rem); box-sizing: border-box; border-radius: 2rem 2rem 0 0}
 #popupParagraph.single.icon h1{margin: 1rem 0 6rem}
 #popupParagraph.single.icon #popup-inner .popup-pic{background: none; justify-content: center; align-items: center; height: 140px}
 #popupParagraph.single.icon #popup-inner .popup-pic p{position: relative;top: unset; left: unset; justify-content: center; align-items: center}

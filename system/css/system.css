@@ -21,7 +21,11 @@ select{background: transparent; border: none; cursor: pointer;appearance: none; 
 #list-bt-inner button:active{background: var(--main-font);box-shadow:none; color: #fff}
 #list-bt-inner button{border: none; background:  var(--white);color: var(--main-font); box-shadow: 1px 0 2px #bbc3c8,-1px 0 2px #bbc3c8,0 1px 2px #bbc3c8,0 -1px 2px #bbc3c8,inset 0 -1px 30px #bbc3c8; display: flex; justify-content: center; align-items: center; border-radius: 1.5rem; font-size: 2.2rem; font-weight: 500; padding: 0 0 0 .1rem; width: 80%; height: 80px}
 #popupParagraph.syt{width: 46%; max-width: 580px; padding: 2rem 2rem 6rem}
+#popupParagraph.syt.popup-h1-bar{min-height: 26rem; display: flex; flex-direction: column}
+#popupParagraph.syt.popup-h1-bar .CUT{top: 6.75rem; bottom: auto}
 #popupParagraph .type.center{text-align: center}
+#popupParagraph.syt .type.center{align-items: center; justify-content: center; width: 100%; box-sizing: border-box}
+#popupParagraph.syt.popup-h1-bar .type.center{flex: 1 1 auto; align-self: stretch; width: auto; min-height: 0; margin: 0 0 2rem; justify-content: center; align-items: center}
 #popupParagraph .type{position: relative; width: 95%; min-height: 240px;margin: -2rem auto 2rem; display: flex; flex-direction: column; justify-content: center; line-height:3.5rem; font-size: 2rem}
 #popupParagraph .type.long{font-size: 1.2rem; line-height: 3rem}
 #popupParagraph .type b{color: var(--sec-color); font-weight: normal}
