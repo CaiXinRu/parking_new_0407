@@ -1,0 +1,100 @@
+body,select,input,button,textarea{font-family:"Noto Sans TC", "Microsoft JhengHei","Arial","Helvetica","STHeiti";outline: none}
+html, body{display: flex; align-items: center;justify-content: center; background: linear-gradient(to bottom,  #1a114d 0%,#4b158e 100%)}
+input,textarea{-webkit-user-select: text}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {
+	margin:0;
+	padding:0;
+}
+::-webkit-scrollbar {
+	width: 7px;	
+	height: 7px;
+}
+::-webkit-scrollbar-button {
+      background: transparent;
+      border-radius: 4px;
+	height: 0
+}
+::-webkit-scrollbar-track-piece {
+      background: transparent;
+}
+::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      background-color: rgba(0, 0, 0, 0.1);
+      border:none;
+}
+::-webkit-scrollbar-track {
+      box-shadow: transparent;
+}
+a{text-decoration:none; outline:none; color:var(--link-color)}
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+}
+fieldset, img {
+	border:0;
+}
+address, caption, cite, code, dfn, /*em,*/ th, var {
+	font-style:normal;
+	font-weight:normal;
+}
+ol, ul {
+	list-style:none;
+}
+caption {
+	text-align:left;
+}
+
+q:before, q:after {
+	content:'';
+}
+abbr, acronym {
+	border:0;
+}
+
+.clearfix {
+	display: block;
+}
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.clear:after {  /* fur Firefox, IE8, Opera, Safari, etc. */
+    content: ".";  
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+* + html .clear { /* for IE7 */
+    display: inline-block;
+}
+* html .clear { /* for IE6 */
+	height: 1%;
+}
+
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+	display:block;
+}
+
+blockquote,q {
+	quotes:none;
+}
+
+blockquote:before,blockquote:after,q:before,q:after {
+	content:none;
+}
+button::-moz-focus-inner, input[type="reset"]::-moz-focus-inner, input[type="button"]::-moz-focus-inner, input[type="submit"]::-moz-focus-inner, input[type="file"] > input[type="button"]::-moz-focus-inner {
+border:none 
+}
+
+*,
+*:after,
+*:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}

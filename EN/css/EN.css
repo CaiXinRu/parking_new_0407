@@ -1,0 +1,7 @@
+.EN #header-title{font-size: 1.5rem}
+.EN main h2{font-size: 2.2rem}
+.EN .orb_value:before{content: 'sec'}
+.EN #header-inner .top-tool ul li a{font-size: .7rem}
+.EN #header-inner .top-tool ul li a::before{border-width:3px}
+.EN #main-bt-container a{letter-spacing: -.1rem}
+
