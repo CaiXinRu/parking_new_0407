@@ -273,18 +273,20 @@ footer #pay-list-container{position:absolute; display: flex; justify-content: ce
 footer #pat-list-inner{display: flex; flex-wrap: wrap; justify-content: center;padding:0 1rem}
 footer #pat-list-inner p{display: flex; justify-content: center; align-items: center; width: 50px; height: 50px}
 footer #pat-list-inner p img{width: 100%; max-height: 100%; opacity: .8}
-#b-bt-container{display: grid; grid-template-columns: repeat(2, 265px); grid-template-rows: repeat(1, 340px); column-gap: 30px; margin: 2rem 0; position: relative; height: 55%; place-content: center}
-#b-bt-container a{position: relative; display: flex; flex-direction: column; justify-content: center; align-items: center; font-size: 2.6rem; font-weight: 500; letter-spacing: .1rem; padding: 0 0 0 .1rem; color: var(--main-font)}
-#b-bt-container a span{position: relative; width: 92%; height: 242px; background: var(--white);border-radius: 1rem;margin: 0 0 1rem; display: flex; justify-content: center; align-items: center; box-shadow: 1px 0 2px #bbc3c8,-1px 0 2px #bbc3c8,0 1px 2px #bbc3c8,0 -1px 2px #bbc3c8,inset 0 -1px 30px #bbc3c8}
-#b-bt-container a:active svg{display: none}
-#b-bt-container a:active span{background: var(--main-font);box-shadow:none}
-#b-bt-container a span i{display: flex; width: 168px; height: 168px;filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.2));}
-#b-bt-container a.sct span i{background: url("../images/scooter.svg") no-repeat center center; background-size: 100%}
-#b-bt-container a.sct:active span i{background: url("../images/scooter-w.svg") no-repeat center center; background-size: 100%}
-#b-bt-container a.car span i{background: url("../images/car.svg") no-repeat center center; background-size: 100%}
-#b-bt-container a.car:active span i{background: url("../images/car-w.svg") no-repeat center center; background-size: 100%}
-#b-bt-container a span svg{position: absolute; width: 100%; height: 100%; left: -2%; top: -2%;overflow: visible}
-#b-bt-container a span .line{stroke-dasharray: 260; stroke-width: 1px; fill: transparent; stroke: rgb(234 201 255 / 100%); filter: drop-shadow(0 0 2px #fff) drop-shadow(0 0 2px rgba(219, 219, 219, 0.8)) drop-shadow(0 0 3px rgba(219, 219, 219, 0.5));  animation: svgAnimation 6s linear infinite}
+#b-bt-container{display: grid; grid-template-columns: repeat(2, minmax(240px, 280px)); column-gap: 28px; margin: 2rem 0; position: relative; place-content: center; align-items: stretch; min-height: auto}
+#b-bt-container a.pick-type{position: relative; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 2rem 1.25rem 1.75rem; border-radius: 1.25rem; background: var(--main-p); box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06); text-decoration: none; color: inherit; -webkit-tap-highlight-color: transparent}
+#b-bt-container .pick-icon-ring{display: flex; justify-content: center; align-items: center; width: 200px; height: 200px; border-radius: 50%; background: rgba(255, 255, 255, 0.1); margin: 0 0 1.5rem; flex-shrink: 0}
+#b-bt-container .pick-icon-ring i{display: block; width: 140px; height: 140px; background-repeat: no-repeat; background-position: center center; background-size: 100%}
+#b-bt-container a.car .pick-icon-ring i{background-image: url("../images/0327/vehicle_car.png")}
+#b-bt-container a.sct .pick-icon-ring i{background-image: url("../images/0327/vehicle_scooter.png")}
+#b-bt-container .pick-text{display: flex; flex-direction: column; align-items: center; gap: 0.4rem}
+#b-bt-container .pick-zh{font-size: 2.6rem; font-weight: 700; letter-spacing: 0.14rem; color: #fff; line-height: 1.2}
+#b-bt-container .pick-en{font-size: 1rem; font-weight: 600; letter-spacing: 0.22rem; text-transform: uppercase; font-family: Arial, Helvetica, sans-serif}
+#b-bt-container a.car .pick-en{color: #eed5a1}
+#b-bt-container a.sct .pick-en{color: #eed5a1}
+#b-bt-container a.pick-type:active .pick-icon-ring{background: rgba(255, 255, 255, 0.14)}
+#b-bt-container a.car:active .pick-icon-ring i{background-image: url("../images/car-w.svg")}
+#b-bt-container a.sct:active .pick-icon-ring i{background-image: url("../images/scooter-w.svg")}
 #type-container{position: relative;width: 80%; min-height: 600px; display: flex; justify-content: center; align-items: center; text-align: center; font-size: 2rem;color: var(--black); background: linear-gradient(145deg, #efefef 0%, #d9d9d9 52%, #ffffff 80%);border-radius: 1.9rem; margin: 0 auto 5rem}
 #type-container::after,#lice-out::after{
 	content: '';
