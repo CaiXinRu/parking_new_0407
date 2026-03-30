@@ -6,6 +6,15 @@
     <link href="https://googleapis.com" rel="stylesheet" />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <style>
+      #payment-out #payment-bt-container.payment-method-grid {
+        gap: 1.65rem;
+      }
+      #payment-out #payment-bt-container.payment-method-grid .pay-tile__art img {
+        min-height: 140px;
+        max-height: 140px;
+      }
+    </style>
     <title>微程式資訊 Microprogram｜停車場繳費機</title>
   </head>
 
@@ -49,7 +58,7 @@
                 <div class="pay-tile__left">
                   <div class="pay-tile__instruction">
                     <span class="pay-tile__badge">靠近</span>
-                    <p class="pay-tile__hint">請將電子票證靠近感應區</p>
+                    <p class="pay-tile__hint">請將票卡靠近感應區</p>
                   </div>
                   <div class="pay-tile__logos">
                     <img src="images/payment-easycard.png" alt="" />
@@ -94,7 +103,7 @@
                 <div class="pay-tile__left">
                   <div class="pay-tile__instruction">
                     <span class="pay-tile__badge">掃描</span>
-                    <p class="pay-tile__hint">請將支付條碼對準掃描器</p>
+                    <p class="pay-tile__hint">請將條碼對準掃描器</p>
                   </div>
                   <div class="pay-tile__logos">
                     <img src="images/payment-easw.png" alt="" />
@@ -105,12 +114,19 @@
                 </div>
                 <div class="pay-tile__right">
                   <div class="pay-tile__art">
-                    <img src="images/0327/payment_qrCode.png" alt="" />
+                    <img src="images/0327/qrcode_carried.png" alt="" />
                   </div>
                 </div>
               </div>
             </a>
           </div>
+        </div>
+        <div id="main-bt-container">
+          <a href="" class="left">
+            <svg xmlns="http://www.w3.org/2000/svg">
+              <rect rx="38" ry="38" class="line" height="100%" width="100%" stroke-linejoin="round"/>
+            </svg><i></i>取消
+          </a>
         </div>
       </main>
       <footer class="inner">

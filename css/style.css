@@ -325,32 +325,58 @@ footer #pat-list-inner p img{width: 100%; max-height: 100%; opacity: .8}
 #lice-bt-container a .img{position: absolute; left: 0; top: 0; width: 100%; height: 100%; display: flex; z-index: 1; overflow: hidden; border-radius: .5rem; padding: 0}
 #payment-out{position: relative; display: flex; width: 100%; margin: .5rem auto 1rem; justify-content: center; align-items: center}
 #payment-out #payment-bt-container{position: relative; width: 90%; display: flex; margin:0 0 1rem; height: 720px; overflow: hidden; justify-content: center}
-#payment-out #payment-bt-container.payment-method-grid{display:grid;grid-template-columns:1fr;gap:1.35rem;width:100%;max-width:640px;height:auto;min-height:0;overflow:visible;align-content:start;padding:0 0 1.5rem;margin:0 auto 1rem}
-#payment-out #payment-bt-container.payment-method-grid .pay-tile{display:flex;flex-direction:column;text-decoration:none;color:inherit;border-radius:1.35rem;overflow:hidden;box-shadow:0 8px 24px rgba(0,0,0,.3),0 2px 8px rgba(0,0,0,.3);background:#f7f6f3;-webkit-tap-highlight-color:transparent}
+#payment-out #payment-bt-container.payment-method-grid{display:grid;grid-template-columns:1fr;gap:1.1rem;width:100%;max-width:640px;height:auto;min-height:0;overflow:visible;align-content:start;padding:0 0 1.25rem;margin:0 auto 1rem}
+#payment-out #payment-bt-container.payment-method-grid .pay-tile{display:flex;flex-direction:column;text-decoration:none;color:inherit;border-radius:1.15rem;overflow:hidden;box-shadow:0 8px 24px rgba(0,0,0,.3),0 2px 8px rgba(0,0,0,.3);background:#f7f6f3;-webkit-tap-highlight-color:transparent}
 #payment-out #payment-bt-container.payment-method-grid .pay-tile:active{opacity:.92;transform:scale(.995)}
-#payment-out #payment-bt-container.payment-method-grid .pay-tile__header{font-size:1.9rem;font-weight:700;color:#fff;text-align:center;padding:.8rem 1rem;line-height:1.2}
+#payment-out #payment-bt-container.payment-method-grid .pay-tile__header{font-size:1.65rem;font-weight:700;color:#fff;text-align:center;padding:.55rem .85rem;line-height:1.2}
 #payment-out #payment-bt-container.payment-method-grid .pay-tile--place .pay-tile__header{background:#2a5a86}
 #payment-out #payment-bt-container.payment-method-grid .pay-tile--nfc .pay-tile__header{background:#2a5a86}
 #payment-out #payment-bt-container.payment-method-grid .pay-tile--scan .pay-tile__header{background:#2a5a86}
-#payment-out #payment-bt-container.payment-method-grid .pay-tile__inner{display:flex;flex-direction:row;align-items:stretch;min-height:200px;background:#f7f6f3}
-#payment-out #payment-bt-container.payment-method-grid .pay-tile__left{flex:1 1 72%;display:flex;flex-direction:column;justify-content:center;align-self:stretch;align-items:stretch;width:100%;min-width:0;min-height:100%;padding:1rem 1rem 1rem 1.1rem;gap:.85rem}
-#payment-out #payment-bt-container.payment-method-grid .pay-tile__instruction{display:flex;flex-wrap:wrap;align-items:flex-start;align-content:flex-start;justify-content:flex-start;gap:.55rem .75rem;width:100%;flex:0 0 auto;text-align:left}
-#payment-out #payment-bt-container.payment-method-grid .pay-tile__badge{display:inline-flex;align-items:center;padding:.38rem 1.05rem;border-radius:999px;font-size:1.38rem;font-weight:700;color:#fff;flex-shrink:0;line-height:1.25}
+#payment-out #payment-bt-container.payment-method-grid .pay-tile__header{color:#fff;text-align:left;padding-left:1rem;padding-right:1rem}
+#payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(1) .pay-tile__header{background:linear-gradient(90deg,#599E61 0%,#ffffff 130%)}
+#payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(2) .pay-tile__header{background:linear-gradient(90deg,#3C6FB4 0%,#ffffff 130%)}
+#payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(3) .pay-tile__header{background:linear-gradient(90deg,#7D4C9C 0%,#ffffff 130%)}
+#payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(4) .pay-tile__header{background:linear-gradient(90deg,#BD6E52 0%,#ffffff 130%)}
+#payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(5) .pay-tile__header{background:linear-gradient(90deg,#E8B845 0%,#ffffff 130%)}
+#payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(1) .pay-tile__badge{background:#599E61}
+#payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(1) .pay-tile__hint{color:#599E61}
+#payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(1) .pay-tile__art img{filter:drop-shadow(0 0 5px rgba(89,158,97,.55)) drop-shadow(0 0 8px rgba(89,158,97,.38)) drop-shadow(0 0 4px rgba(89,158,97,.22)) drop-shadow(0 0.35rem 0.75rem rgba(0,0,0,.14)) drop-shadow(0 0.12rem 0.35rem rgba(0,0,0,.1))}
+#payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(2) .pay-tile__badge{background:#3C6FB4}
+#payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(2) .pay-tile__hint{color:#3C6FB4}
+#payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(2) .pay-tile__art img{filter:drop-shadow(0 0 5px rgba(60,111,180,.55)) drop-shadow(0 0 8px rgba(60,111,180,.38)) drop-shadow(0 0 4px rgba(60,111,180,.22)) drop-shadow(0 0.35rem 0.75rem rgba(0,0,0,.14)) drop-shadow(0 0.12rem 0.35rem rgba(0,0,0,.1))}
+#payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(3) .pay-tile__badge{background:#7D4C9C}
+#payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(3) .pay-tile__hint{color:#7D4C9C}
+#payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(3) .pay-tile__art img{filter:drop-shadow(0 0 5px rgba(125,76,156,.55)) drop-shadow(0 0 8px rgba(125,76,156,.38)) drop-shadow(0 0 4px rgba(125,76,156,.22)) drop-shadow(0 0.35rem 0.75rem rgba(0,0,0,.14)) drop-shadow(0 0.12rem 0.35rem rgba(0,0,0,.1))}
+#payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(4) .pay-tile__badge{background:#BD6E52}
+#payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(4) .pay-tile__hint{color:#BD6E52}
+#payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(4) .pay-tile__art img{filter:drop-shadow(0 0 5px rgba(189,110,82,.55)) drop-shadow(0 0 8px rgba(189,110,82,.38)) drop-shadow(0 0 4px rgba(189,110,82,.22)) drop-shadow(0 0.35rem 0.75rem rgba(0,0,0,.14)) drop-shadow(0 0.12rem 0.35rem rgba(0,0,0,.1))}
+#payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(5) .pay-tile__badge{background:#E8B845}
+#payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(5) .pay-tile__hint{color:#E8B845}
+#payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(5) .pay-tile__art img{filter:drop-shadow(0 0 5px rgba(232,184,69,.55)) drop-shadow(0 0 8px rgba(232,184,69,.38)) drop-shadow(0 0 4px rgba(232,184,69,.22)) drop-shadow(0 0.35rem 0.75rem rgba(0,0,0,.14)) drop-shadow(0 0.12rem 0.35rem rgba(0,0,0,.1))}
+#payment-out #payment-bt-container.payment-method-grid .pay-tile__inner{display:flex;flex-direction:row;align-items:stretch;min-height:100px;background:#f7f6f3}
+#payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(1) .pay-tile__inner{background:linear-gradient(to bottom left,#edffe5,#ffffff)}
+#payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(2) .pay-tile__inner{background:linear-gradient(to bottom left,#d6f2fb,#ffffff)}
+#payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(3) .pay-tile__inner{background:linear-gradient(to bottom left,#ffe9fa,#ffffff)}
+#payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(4) .pay-tile__inner{background:linear-gradient(to bottom left,#fff2e4,#ffffff)}
+#payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(5) .pay-tile__inner{background:linear-gradient(to bottom left,#fff8dc,#ffffff)}
+#payment-out #payment-bt-container.payment-method-grid .pay-tile__left{flex:1 1 72%;display:flex;flex-direction:column;justify-content:center;align-self:stretch;align-items:stretch;width:100%;min-width:0;min-height:100%;padding:.75rem .85rem .75rem .95rem;gap:.55rem}
+#payment-out #payment-bt-container.payment-method-grid .pay-tile__instruction{display:flex;flex-wrap:wrap;align-items:center;align-content:center;justify-content:flex-start;gap:.4rem .55rem;width:100%;flex:0 0 auto;text-align:left}
+#payment-out #payment-bt-container.payment-method-grid .pay-tile__badge{display:inline-flex;align-items:center;padding:.22rem .72rem;border-radius:999px;font-size:1.75rem;font-weight:700;color:#fff;flex-shrink:0;line-height:1.2}
 #payment-out #payment-bt-container.payment-method-grid .pay-tile--place .pay-tile__badge{background:#2a5a86}
 #payment-out #payment-bt-container.payment-method-grid .pay-tile--nfc .pay-tile__badge{background:#2a5a86}
 #payment-out #payment-bt-container.payment-method-grid .pay-tile--scan .pay-tile__badge{background:#2a5a86}
-#payment-out #payment-bt-container.payment-method-grid .pay-tile__hint{margin:0;font-size:1.56rem;font-weight:600;line-height:1.45;flex:1 1 10rem;min-width:0;text-align:left}
+#payment-out #payment-bt-container.payment-method-grid .pay-tile__hint{margin:0;font-size:1.75rem;font-weight:600;line-height:1.35;flex:1 1 8rem;min-width:0;text-align:left}
 #payment-out #payment-bt-container.payment-method-grid .pay-tile--place .pay-tile__hint{color:#2a5a86}
 #payment-out #payment-bt-container.payment-method-grid .pay-tile--nfc .pay-tile__hint{color:#2a5a86}
 #payment-out #payment-bt-container.payment-method-grid .pay-tile--scan .pay-tile__hint{color:#2a5a86}
-#payment-out #payment-bt-container.payment-method-grid .pay-tile__logos{display:flex;flex-wrap:wrap;justify-content:flex-start;align-items:center;align-content:flex-start;gap:.5rem .65rem;flex:0 0 auto;width:fit-content;padding:.42rem .75rem;background:#fff;border-radius:.65rem;box-shadow:0 1px 4px rgba(0,0,0,.07)}
-#payment-out #payment-bt-container.payment-method-grid .pay-tile__logos img{height:52px;width:auto;max-width:42%;object-fit:contain;flex:0 1 auto}
-#payment-out #payment-bt-container.payment-method-grid .pay-tile__right{flex:0 0 28%;display:flex;align-items:center;justify-content:center;padding:.5rem .75rem .5rem .25rem;min-width:0}
-#payment-out #payment-bt-container.payment-method-grid .pay-tile__art{display:flex;align-items:center;justify-content:center;width:100%;height:100%;min-height:160px}
-#payment-out #payment-bt-container.payment-method-grid .pay-tile__art img{max-height:185px;width:auto;max-width:100%;object-fit:contain}
+#payment-out #payment-bt-container.payment-method-grid .pay-tile__logos{display:flex;flex-wrap:wrap;justify-content:flex-start;align-items:center;align-content:flex-start;gap:.4rem .55rem;flex:0 0 auto;width:fit-content;padding:.32rem .6rem;background:#fff;border-radius:.55rem;box-shadow:0 1px 4px rgba(0,0,0,.07)}
+#payment-out #payment-bt-container.payment-method-grid .pay-tile__logos img{height:44px;width:auto;max-width:42%;object-fit:contain;flex:0 1 auto}
+#payment-out #payment-bt-container.payment-method-grid .pay-tile__right{flex:0 0 28%;display:flex;align-items:center;justify-content:center;padding:.4rem .65rem .4rem .2rem;min-width:0}
+#payment-out #payment-bt-container.payment-method-grid .pay-tile__art{display:flex;align-items:center;justify-content:center;width:100%;height:100%;min-height:82px}
+#payment-out #payment-bt-container.payment-method-grid .pay-tile__art img{max-height:110px;width:auto;max-width:100%;object-fit:contain}
 @media (max-width:520px){
 #payment-out #payment-bt-container.payment-method-grid .pay-tile__inner{flex-direction:column}
-#payment-out #payment-bt-container.payment-method-grid .pay-tile__right{flex:0 0 auto;padding:.25rem .75rem .85rem;min-height:150px}
+#payment-out #payment-bt-container.payment-method-grid .pay-tile__right{flex:0 0 auto;padding:.2rem .65rem .65rem;min-height:78px}
 }
 #payment-out #payment-bt-container ul{position: relative; width: 90%; display: flex; flex-wrap:wrap; justify-content: flex-start;align-items: stretch; padding: 5px 0 0}
 #payment-out #payment-bt-container ul li:nth-child(even){margin: 0 0 0 2%}
