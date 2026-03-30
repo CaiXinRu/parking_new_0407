@@ -13,7 +13,7 @@
 	--main-font:#412187;
 	--red-color:#ff0000;
 }
-.scroll{position: absolute; top: 0; bottom:0; overflow-y:auto; -webkit-overflow-scrolling: touch;}
+.scroll{position: absolute; top: 0; bottom:0; -webkit-overflow-scrolling: touch;}
 #main-container{position: relative; width: var(--mainsize-w); height: var(--mainsize-h); background: var(--white);color: var(--white); font-size: 1.4rem; display: flex; flex-direction: column; align-items: center}
 .CUT{display:flex; align-items:flex-start; justify-content:center; flex-wrap:wrap; font-family:arial; position: absolute;right: 40px; bottom: -130px; z-index: 9; color: var(--black)}
 .orb_graphic{position:relative}
@@ -196,7 +196,7 @@ main h2{padding: 0 0 2rem; font-size: 2.5rem}
 #keyboard-del{position: relative; width: 52%; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: repeat(1,80px); column-gap: 1.6rem; margin: 1rem auto}
 #keyboard-del a{font-size: 2.3rem; background: radial-gradient(ellipse at center, #ffffff 40%,#d3d2db 100%);border:.1rem solid #bbc3c8; border-radius: 1rem; color:var(--black); font-weight: 600; display: flex; justify-content: center; align-items: center; font-family: Arial, "sans-serif"}
 #main-bt-container{display: flex; justify-content: space-around; align-items: center; margin: .5rem 0; z-index: 20; width: 75%}
-#main-bt-container a{position: relative; display: flex; justify-content: center; align-items: center; border-radius: 2.5rem; font-size: 2.5rem; color: var(--white) ;font-weight: 500; letter-spacing: -.1rem; padding: 0 0 0 .1rem; width: 240px; height: 80px; margin: -1rem .4rem 0}
+#main-bt-container a{position: relative; display: flex; justify-content: center; align-items: center; border-radius: 2rem; font-size: 2.5rem; color: var(--white) ;font-weight: 500; letter-spacing: -.1rem; padding: 0 0 0 .1rem; width: 240px; height: 80px; margin: -1rem .4rem 0}
 #main-bt-container a:after{content: ''; display: flex; width: 80%; height: 20px;position: absolute;z-index: 0; background: radial-gradient(ellipse at center, #b3a6d1 39%,#dcccff 100%); ; border-radius: 100%; filter: blur(2px); bottom: 0; opacity: .2}
 #main-bt-container a:before{content: ''; display: flex; width: 90%; height: 20px;position: absolute;z-index: -1; background: radial-gradient(ellipse at center, rgba(150,140,175,1) 0%,rgba(150,140,175,0.61) 39%,rgba(179,173,214,0) 100%) ; border-radius: 100%; filter: blur(4px); bottom: -16px}
 #main-bt-container a.left:active,#main-bt-container a.right:active{background: #412187}
@@ -481,5 +481,68 @@ footer #pat-list-inner p img{width: 100%; max-height: 100%; opacity: .8}
 #checkout-pay-inner ul li a span{position: absolute; z-index: -1; width: 100%; height: 100%; background: var(--white);border-radius: 1.5rem;display: flex; justify-content: center; align-items: center; box-shadow: 1px 0 2px #bbc3c8,-1px 0 2px #bbc3c8,0 1px 2px #bbc3c8,0 -1px 2px #bbc3c8,inset 0 -1px 30px #bbc3c8; bottom: 0}
 #checkout-pay-inner ul li a span svg{position: absolute; width: 100%; height: 100%; left: -2%; top: -3%;overflow: visible}
 #checkout-pay-inner ul li a span .line{stroke-dasharray: 260; stroke-width: 1px; fill: transparent; stroke: rgb(234 201 255 / 100%); filter: drop-shadow(0 0 2px #fff) drop-shadow(0 0 2px rgba(219, 219, 219, 0.8)) drop-shadow(0 0 3px rgba(219, 219, 219, 0.5));  animation: svgAnimation 6s linear infinite}
+
+/* 1.1_temppay：圖片置頂、計費表格式、支付方式置底橫列 */
+main.temppay-checkout-page #payment-main{flex-direction: column; align-items: center; width: 95%; height: auto; min-height: 0; flex-wrap: nowrap; gap: 0}
+main.temppay-checkout-page #checkout-container{width: 100%; max-width: 920px; margin: 0 auto; flex-direction: column; gap: 0}
+main.temppay-checkout-page #checkout-pic-container{position: relative; flex-direction: column; align-items: stretch; width: 100%; margin: 0 0 .85rem; overflow: hidden; border-radius: 1rem; box-shadow: 0 4px 14px rgba(65,33,135,.12), 0 1px 3px rgba(0,0,0,.06)}
+main.temppay-checkout-page #checkout-pic-container .pic{position: absolute; z-index: 1; inset: 0; width: 100%; height: 100%; max-width: none; min-height: 0; margin: 0; border-radius: 1rem; box-shadow: none}
+main.temppay-checkout-page #checkout-pic-container .type-bar-wrap{position: absolute; z-index: 3; left: 0; right: 0; bottom: 0; width: 100%; margin: 0; padding-left: .75rem; padding-bottom: 0; box-sizing: border-box; filter: drop-shadow(0 -2px 12px rgba(0,0,0,.18))}
+main.temppay-checkout-page #checkout-pic-container .type.type-bar{position: relative; z-index: 2; width: calc(100% - .75rem); margin: 0 0 0 .75rem; bottom: auto; right: auto; min-width: 0; padding: 0; line-height: 1.2; display: block; background: linear-gradient(180deg,#fff 0%,#f6f5f9 100%); border: none; border-top: none; box-shadow: none;border-radius: 10px}
+main.temppay-checkout-page #checkout-pic-container .type.type-bar:before{display: none !important; content: none !important}
+main.temppay-checkout-page #checkout-pic-container .type-bar__inner{display: flex; flex-direction: row; align-items: center; justify-content: center; flex-wrap: wrap; gap: .65rem 1.15rem; padding: .95rem 1.35rem 1rem 1.85rem; min-height: 3.35rem}
+main.temppay-checkout-page #checkout-pic-container .type-bar__divider{width: 1px; min-height: 2.25rem; align-self: stretch; background: linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,.12) 22%,rgba(0,0,0,.12) 78%,rgba(0,0,0,0) 100%); flex-shrink: 0}
+main.temppay-checkout-page #checkout-pic-container .type-bar__inner > span:before{content: none !important; display: none !important}
+main.temppay-checkout-page #checkout-pic-container .plate-row,
+main.temppay-checkout-page #checkout-pic-container .slot-row{display: inline-flex; align-items: baseline; flex-wrap: nowrap; gap: .2rem .45rem; flex: 0 1 auto; min-width: 0; justify-content: center}
+main.temppay-checkout-page #checkout-pic-container .plate-label,
+main.temppay-checkout-page #checkout-pic-container .slot-label{font-size: 1.05rem; font-weight: 700; color: #2a2a2a; letter-spacing: .04em}
+main.temppay-checkout-page #checkout-pic-container .plate-label::after,
+main.temppay-checkout-page #checkout-pic-container .slot-label::after{content: '：'}
+main.temppay-checkout-page #checkout-pic-container .plate-row .plate-value{font-size: clamp(1.75rem, 4vw, 2.5rem); font-weight: 800; letter-spacing: .1em; color: #111; font-variant-numeric: tabular-nums}
+main.temppay-checkout-page #checkout-pic-container .slot-row .slot-value{font-size: clamp(1.25rem, 2.8vw, 1.7rem); font-weight: 800; letter-spacing: .05em; color: #1a1a1a; font-variant-numeric: tabular-nums}
+main.temppay-checkout-page #checkout-list-container{width: 100%; min-height: 0; margin-bottom: 1.5rem; padding: 0; overflow: visible; border-radius: 1.25rem; box-shadow: 0 6px 24px rgba(65,33,135,.1), 0 2px 8px rgba(0,0,0,.05); border: 1px solid rgba(65,33,135,.12); background: linear-gradient(180deg,#fff 0%,#faf9fd 100%)}
+main.temppay-checkout-page #checkout-list-container .checkout-inner{padding: 0; display: flex; flex-direction: column; gap: 0}
+main.temppay-checkout-page .checkout-stack{display: flex; flex-direction: column; gap: .75rem; margin: 1.35rem}
+main.temppay-checkout-page .checkout-panel{border: 1px solid rgba(65,33,135,.22); border-radius: .75rem; overflow: hidden; box-shadow: 0 2px 12px rgba(65,33,135,.08)}
+main.temppay-checkout-page .checkout-panel--info{display: flex; flex-direction: column; background: linear-gradient(180deg,#fff 0%,#faf9fd 100%)}
+main.temppay-checkout-page .checkout-panel--amount{display: grid; grid-template-columns: 2fr 1fr; align-items: stretch; min-height: 132px; min-width: 0}
+main.temppay-checkout-page .checkout-times-grid{display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-bottom: 1px solid rgba(65,33,135,.15)}
+main.temppay-checkout-page .checkout-times-grid .time-item{display: flex; flex-direction: column; gap: .4rem; padding: .95rem 1rem; background: rgba(65,33,135,.05); border-right: 1px solid rgba(65,33,135,.18)}
+main.temppay-checkout-page .checkout-times-grid .time-item:last-child{border-right: none}
+main.temppay-checkout-page .time-label{font-size: .95rem; font-weight: 700; color: #3d3d3d; letter-spacing: .03em}
+main.temppay-checkout-page .time-value{font-size: 1.05rem; font-weight: 600; color: #1a1a1a; font-variant-numeric: tabular-nums; line-height: 1.35}
+main.temppay-checkout-page .checkout-panel--amount .total-main{display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .35rem; text-align: center; padding: 1rem 1rem 1.15rem; min-width: 0; min-height: 0; background: var(--main-font); box-shadow: inset 0 1px 0 rgba(255,255,255,.1)}
+main.temppay-checkout-page .checkout-panel--amount .discount-side{display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .25rem; text-align: center; padding: .65rem .75rem .85rem; min-width: 0; min-height: 0; background: #4e566e; border-left: 1px solid rgba(255,255,255,.12)}
+main.temppay-checkout-page .total-label{font-size: .95rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: rgba(220,200,255,.88)}
+main.temppay-checkout-page .total-value{font-size: clamp(2rem, 5.5vw, 3.25rem); font-weight: 800; line-height: 1.05; color: #fff; text-shadow: 0 0 20px rgba(255,255,255,.22), 0 2px 8px rgba(0,0,0,.35); font-variant-numeric: tabular-nums}
+main.temppay-checkout-page .discount-label{font-size: .95rem; font-weight: 600; color: rgba(255,255,255,.42); letter-spacing: .06em; white-space: nowrap}
+main.temppay-checkout-page .discount-value{font-size: clamp(.9rem, 4vw, 1.5rem); font-weight: 600; color: #E8B845; font-variant-numeric: tabular-nums}
+main.temppay-checkout-page .checkout-detail-block{padding: 1rem 1.1rem 1.15rem; border-top: 1px solid rgba(65,33,135,.1); background: linear-gradient(180deg,#f7f5fb 0%,#fff 55%)}
+main.temppay-checkout-page .bill-detail-label{font-weight: 700; margin-bottom: .5rem; color: var(--main-p); font-size: 0.95rem; letter-spacing: .04em}
+main.temppay-checkout-page .bill-detail-text{margin: 0; font-size: 1.05rem; line-height: 1.65; color: #333}
+main.temppay-checkout-page h2{width: 100%; text-align: center; font-weight: 700; letter-spacing: .06em; color: #3a2d55; font-size: clamp(1.5rem, 2.8vw, 1.85rem)}
+main.temppay-checkout-page #checkout-paysel{width: 100%; max-width: 920px; margin: 0 auto 2.25rem; display: flex; justify-content: center}
+main.temppay-checkout-page #checkout-pay-inner ul{flex-direction: row; flex-wrap: wrap; justify-content: center; align-items: stretch; gap: .85rem 1.1rem; width: 100%}
+main.temppay-checkout-page #checkout-pay-inner ul li{width: auto; flex: 1 1 200px; max-width: 300px; margin: 0; padding: .25rem 0}
+main.temppay-checkout-page #checkout-pay-inner ul li a{height: 152px; font-size: 1.65rem; padding-top: .9rem; border-radius: 1.35rem}
+@media (max-width: 520px){
+	main.temppay-checkout-page .checkout-panel--amount{grid-template-columns: 1fr; min-height: 0}
+	main.temppay-checkout-page .checkout-panel--amount .discount-side{border-left: none; border-top: 1px solid rgba(255,255,255,.1)}
+}
+
+/* 1.1_temppay 支付方式圖示（0327 PNG）：--main-font (#412187) 淡光暈 + 輕陰影 */
+main.temppay-checkout-page #checkout-pay-inner ul li a.cash i,
+main.temppay-checkout-page #checkout-pay-inner ul li a.rebate i,
+main.temppay-checkout-page #checkout-pay-inner ul li a.other i{
+	background-size: contain;
+	filter: drop-shadow(0 0 14px rgba(65,33,135,.34)) drop-shadow(0 3px 8px rgba(0,0,0,.16));
+}
+main.temppay-checkout-page #checkout-pay-inner ul li a.cash i{background-image: url(../images/0327/main_cash.png)}
+main.temppay-checkout-page #checkout-pay-inner ul li a.cash:active i{background-image: url(../images/0327/main_cash.png); filter: brightness(.95) drop-shadow(0 0 14px rgba(65,33,135,.34)) drop-shadow(0 3px 8px rgba(0,0,0,.16))}
+main.temppay-checkout-page #checkout-pay-inner ul li a.rebate i{background-image: url(../images/0327/main_coupon.png)}
+main.temppay-checkout-page #checkout-pay-inner ul li a.rebate:active i{background-image: url(../images/0327/main_coupon.png); filter: brightness(.95) drop-shadow(0 0 14px rgba(65,33,135,.34)) drop-shadow(0 3px 8px rgba(0,0,0,.16))}
+main.temppay-checkout-page #checkout-pay-inner ul li a.other i{background-image: url(../images/0327/main_otherpayments.png)}
+main.temppay-checkout-page #checkout-pay-inner ul li a.other:active i{background-image: url(../images/0327/main_otherpayments.png); filter: brightness(.95) drop-shadow(0 0 14px rgba(65,33,135,.34)) drop-shadow(0 3px 8px rgba(0,0,0,.16))}
 
 

@@ -42,31 +42,59 @@
 			</div>
 			<div class="header-pic"><img class="header-mask" src="images/header-bg.png" alt=""/></div>	
 		</header>
-		<main class="nor">			
-			<h2>請點選支付方式</h2>
+		<main class="nor temppay-checkout-page">			
 			<div id="payment-main">
 				<div id="checkout-container">
 					<div id="checkout-pic-container">
-						<div class="type"><span><span>車號：</span>BFZ6330</span><span><span>位置：</span>293</span></div>
 						<div class="pic"></div>
+						<div class="type-bar-wrap">
+							<div class="type type-bar">
+								<div class="type-bar__inner">
+									<span class="plate-row">
+										<span class="plate-label">車號</span><span class="plate-value">BFZ6330</span>
+									</span>
+									<span class="type-bar__divider" aria-hidden="true"></span>
+									<span class="slot-row">
+										<span class="slot-label">位置</span><span class="slot-value">293</span>
+									</span>
+								</div>
+							</div>
+						</div>
 					</div>
 					<div id="checkout-list-container">
 						<div class="checkout-inner">
-							<ul>
-								<li><span>總金額 NT$</span><span>300</span></li>
-								<li><span>優惠折抵 NT$</span><span>0</span></li>
-							</ul>
-							<div class="timer">
-								<p><span>進場時間：</span><span>2022-09-13<b></b>00:00:00</span></p>
-								<p><span>出場時間：</span><span>2022-09-13<b></b>00:00:00</span></p>
-							</div>
-							<div class="detail-ch">
-								<p><span>停車費用$200</span><span>充電費用$100</span><span>佔位費用$1,000</span></p>
-								<span class="min"><span>充電 120分鐘</span><span>佔位 100分鐘</span></span>
+							<div class="checkout-stack">
+								<section class="checkout-panel checkout-panel--info" aria-label="進出場與計費明細">
+									<div class="checkout-times-grid">
+										<div class="time-item">
+											<span class="time-label">進場時間</span>
+											<span class="time-value">2022-09-13 00:00:00</span>
+										</div>
+										<div class="time-item">
+											<span class="time-label">出場時間</span>
+											<span class="time-value">2022-09-13 00:00:00</span>
+										</div>
+									</div>
+									<div class="checkout-detail-block">
+										<div class="bill-detail-label">計費明細</div>
+										<p class="bill-detail-text">停車$200／充電$100／佔位$1,000／充電 120分鐘／佔位 100分鐘</p>
+									</div>
+								</section>
+								<section class="checkout-panel checkout-panel--amount" aria-label="應付金額">
+									<div class="total-main">
+										<span class="total-label">總金額</span>
+										<span class="total-value">NT$300</span>
+									</div>
+									<aside class="discount-side">
+										<span class="discount-label">優惠折抵</span>
+										<span class="discount-value">NT$0</span>
+									</aside>
+								</section>
 							</div>
 						</div>
 					</div>
 				</div>
+				<h2 style="padding:0 0 1.1rem">請點選支付方式</h2>
 				<div id="checkout-paysel">
 					<div id="checkout-pay-inner">
 						<ul class="scroll">
@@ -80,7 +108,7 @@
 								</a>
 							</li>
 							<li>
-								<a href="" class="rebate">停車折抵
+								<a href="" class="other">其他支付方式
 									<span>
 										<svg xmlns="http://www.w3.org/2000/svg">
 										<rect rx="23" ry="23" class="line" height="106%" width="104%" stroke-linejoin="round"/>
@@ -89,7 +117,7 @@
 								</a>
 							</li>
 							<li>
-								<a href="" class="other">其他支付方式
+								<a href="" class="rebate">停車折抵
 									<span>
 										<svg xmlns="http://www.w3.org/2000/svg">
 										<rect rx="23" ry="23" class="line" height="106%" width="104%" stroke-linejoin="round"/>
