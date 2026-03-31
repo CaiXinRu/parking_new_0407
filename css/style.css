@@ -335,13 +335,13 @@ footer #pat-list-inner p img{width: 100%; max-height: 100%; opacity: .8}
 #payment-out #payment-bt-container.payment-method-grid .pay-tile--nfc .pay-tile__header{background:#2a5a86}
 #payment-out #payment-bt-container.payment-method-grid .pay-tile--scan .pay-tile__header{background:#2a5a86}
 #payment-out #payment-bt-container.payment-method-grid .pay-tile__header{color:#fff;text-align:left;padding-left:1rem;padding-right:1rem}
-#payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(1) .pay-tile__header{background:linear-gradient(90deg,#599E61 0%,#ffffff 130%)}
-#payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(2) .pay-tile__header{background:linear-gradient(90deg,#3C6FB4 0%,#ffffff 130%)}
-#payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(3) .pay-tile__header{background:linear-gradient(90deg,#7D4C9C 0%,#ffffff 130%)}
-#payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(4) .pay-tile__header{background:linear-gradient(90deg,#BD6E52 0%,#ffffff 130%)}
-#payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(5) .pay-tile__header{background:linear-gradient(90deg,#E8B845 0%,#ffffff 130%)}
-#payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(1) .pay-tile__badge{background:#599E61}
-#payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(1) .pay-tile__hint{color:#599E61}
+#payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(1) .pay-tile__header{background:linear-gradient(90deg,#3d8a5d 0%,#ffffff 190%)}
+#payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(2) .pay-tile__header{background:linear-gradient(90deg,#3C6FB4 0%,#ffffff 190%)}
+#payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(3) .pay-tile__header{background:linear-gradient(90deg,#7D4C9C 0%,#ffffff 190%)}
+#payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(4) .pay-tile__header{background:linear-gradient(90deg,#BD6E52 0%,#ffffff 190%)}
+#payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(5) .pay-tile__header{background:linear-gradient(90deg,#E8B845 0%,#ffffff 190%)}
+#payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(1) .pay-tile__badge{background:#3d8a5d}
+#payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(1) .pay-tile__hint{color:#3d8a5d}
 #payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(1) .pay-tile__art img{filter:drop-shadow(0 0 5px rgba(89,158,97,.55)) drop-shadow(0 0 8px rgba(89,158,97,.38)) drop-shadow(0 0 4px rgba(89,158,97,.22)) drop-shadow(0 0.35rem 0.75rem rgba(0,0,0,.14)) drop-shadow(0 0.12rem 0.35rem rgba(0,0,0,.1))}
 #payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(2) .pay-tile__badge{background:#3C6FB4}
 #payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(2) .pay-tile__hint{color:#3C6FB4}
