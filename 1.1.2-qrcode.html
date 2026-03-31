@@ -30,45 +30,27 @@
 		<main class="nor">			
 			<h2>請選擇電子支付方式</h2>
 			<div id="payment-out">
-				<div id="payment-bt-container" class="qrcode">
-					<ul class="scroll">
-						<li>
-							<a href="">
-								<span>
-									<svg xmlns="http://www.w3.org/2000/svg">
-										<rect rx="23" ry="23" class="line" height="104%" width="104%" stroke-linejoin="round"/>
-									</svg><i><img src="images/150-line.png" alt=""/></i>
-								</span>
-							</a>
-						</li>
-						<li>
-							<a href="">
-								<span>
-									<svg xmlns="http://www.w3.org/2000/svg">
-										<rect rx="23" ry="23" class="line" height="104%" width="104%" stroke-linejoin="round"/>
-									</svg><i><img src="images/150-street.png" alt=""/></i>
-								</span>
-							</a>
-						</li>
-						<li>
-							<a href="">
-								<span>
-									<svg xmlns="http://www.w3.org/2000/svg">
-										<rect rx="23" ry="23" class="line" height="104%" width="104%" stroke-linejoin="round"/>
-									</svg><i><img src="images/150-easypay.png" alt=""/></i>
-								</span>
-							</a>
-						</li>
-						<li>
-							<a href="">
-							<span>
-							<svg xmlns="http://www.w3.org/2000/svg">
-										<rect rx="23" ry="23" class="line" height="104%" width="104%" stroke-linejoin="round"/>
-								</svg><i><img src="images/150-twpay.png" alt=""/></i>
-							</span>
-							</a>
-						</li>
-					</ul>
+				<div id="payment-bt-container" class="payment-qrcode-grid">
+					<a href="" class="payment-qrcode-card">
+						<div class="payment-qrcode-card__logo"><img src="images/150-line.png" alt="LINE Pay"/></div>
+						<strong class="payment-qrcode-card__title">LINE Pay</strong>
+						<span class="payment-qrcode-card__desc">使用 LINE 帳戶付款</span>
+					</a>
+					<a href="" class="payment-qrcode-card">
+						<div class="payment-qrcode-card__logo"><img src="images/150-street.png" alt="街口支付"/></div>
+						<strong class="payment-qrcode-card__title">街口支付</strong>
+						<span class="payment-qrcode-card__desc">JKOPay 行動支付</span>
+					</a>
+					<a href="" class="payment-qrcode-card">
+						<div class="payment-qrcode-card__logo"><img src="images/150-easypay.png" alt="悠遊付 EasyWallet"/></div>
+						<strong class="payment-qrcode-card__title">悠遊付 EasyWallet</strong>
+						<span class="payment-qrcode-card__desc">悠遊卡電子支付</span>
+					</a>
+					<a href="" class="payment-qrcode-card">
+						<div class="payment-qrcode-card__logo"><img src="images/150-twpay.png" alt="TWQR 共通支付"/></div>
+						<strong class="payment-qrcode-card__title">TWQR 共通支付</strong>
+						<span class="payment-qrcode-card__desc">支援多家銀行掃碼</span>
+					</a>
 				</div>
 			</div>							
 			<div id="main-bt-container">
