@@ -62,9 +62,9 @@ main.nor{padding: 9rem 0}
 main h2{padding: 0 0 2rem; font-size: 2.5rem}
 #popup_bg{position: absolute; top: 0; left: 0; width:100%; height: var(--mainsize-h); display:flex; justify-content: center; align-items: center;background-color:#000000d1 ;backdrop-filter: blur(5px); z-index: 98}
 #popupParagraph{background: var(--white); color: var(--font-grey-d); width: 80%; min-height: 200px; max-width: 650px; position: relative; border-radius: 2rem; padding:2rem 2rem 10rem; display: flex; flex-direction: column;align-items: center}
-#popupParagraph h1{text-align: center; font-size: 1.6rem; margin:1rem 0 2rem}
+#popupParagraph h1{text-align: center; font-size: 2.5rem; margin:1rem 0 2rem}
 #popupParagraph .CUT{right: 20px;  bottom: unset}
-#popupParagraph.single h1{font-size: 3rem; color: var(--black)}
+#popupParagraph.single h1{font-size: 2.5rem; color: var(--black)}
 #popupParagraph.popup-h1-bar h1{background: #4e566e; color: var(--white); margin: -2rem -2rem 2rem; padding: 1.25rem 2rem; width: calc(100% + 4rem); box-sizing: border-box; border-radius: 2rem 2rem 0 0}
 #popupParagraph.single.icon h1{margin: 1rem 0 6rem}
 #popupParagraph.single.icon #popup-inner .popup-pic{background: none; justify-content: center; align-items: center; height: 140px}
@@ -120,7 +120,7 @@ main h2{padding: 0 0 2rem; font-size: 2.5rem}
 	mask-composite: exclude;
 }
 #popup-inner{position: relative; width: 100%; margin:2rem auto 1rem; display: flex; font-size: 1.7rem; justify-content: space-evenly}
-#popup-inner .popup-pic{position: relative; width: 40%; height: 357px; display: flex; background: url("../images/kioskpic-bg.png") no-repeat center center; background-size: 100%}
+#popup-inner .popup-pic{position: relative; width: 40%; height: 357px; display: flex; background-size: 100%}
 #popup-inner .popup-pic p{position:absolute; width: 180px; height: 168px; top: 14px; left: 11%; display: flex; justify-content: center; align-items: center}
 #popup-inner .popup-pic p img{max-height: 100%; max-width: 100%}
 #popup-inner .popup-type.tip{width: 90%; padding: 0}
@@ -582,4 +582,140 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.rebate:active i{backgroun
 main.temppay-checkout-page #checkout-pay-inner ul li a.other i{background-image: url(../images/0327/main_otherpayments.png)}
 main.temppay-checkout-page #checkout-pay-inner ul li a.other:active i{background-image: url(../images/0327/main_otherpayments.png); filter: brightness(.95) drop-shadow(0 0 14px rgba(65,33,135,.34)) drop-shadow(0 3px 8px rgba(0,0,0,.16))}
 
+/* 1.2_temppay-popup：現金投入／金額摘要（附圖排版） */
+#popupParagraph.temppay-cash-popup{
+	padding-bottom:11rem;
+}
+#popupParagraph.temppay-cash-popup .temppay-kiosk-wrap{
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	width:100%;
+	box-sizing:border-box;
+}
+#popupParagraph.temppay-cash-popup .temppay-kiosk-img{
+	display:block;
+	max-width:90%;
+	height:auto;
+	margin:20px auto;
+	border: 1px solid rgba(255, 255, 255, .06);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, .35);
+	border-radius: 10px;
+}
+#popupParagraph.temppay-cash-popup .temppay-kiosk-wrap .temppay-denom-bar{
+	align-self:stretch;
+	width:100%;
+}
+#popupParagraph.temppay-cash-popup #popup-inner.temppay-cash-layout{
+	position:relative;
+	flex-direction:column;
+	width:100%;
+	max-width:100%;
+	margin:1.25rem auto 1rem;
+	align-items:stretch;
+	gap:.85rem;
+}
+#popupParagraph.temppay-cash-popup .temppay-cash-panel{
+	position:relative;
+	border:1px solid rgba(112,243,255,.38);
+	border-radius:1rem;
+	padding:2.75rem 1rem 1.35rem;
+	background:rgba(18,18,22,.85);
+	box-shadow:inset 0 0 24px rgba(112,243,255,.06);
+}
+#popupParagraph.temppay-cash-popup .temppay-callout{
+	position:absolute;
+	top:0;
+	right:0;
+	transform:translate(2%,-48%);
+	margin:0;
+	padding:.4rem .95rem .45rem;
+	max-width:min(72%,14.5rem);
+	font-size:1.15rem!important;
+	line-height:1.35!important;
+	font-weight:700;
+	color:#111!important;
+	background:#e6ff00;
+	border-radius:.75rem;
+	box-shadow:0 3px 12px rgba(0,0,0,.4);
+	text-align:center;
+	display:block;
+}
+#popupParagraph.temppay-cash-popup .temppay-summary{
+	border-radius:1rem;
+	padding:1rem 1.15rem 1.15rem;
+	background:#ffffff;
+	border:1px solid rgba(255,255,255,.06);
+	box-shadow:0 6px 20px rgba(0,0,0,.35);
+}
+#popupParagraph.temppay-cash-popup .temppay-summary__row{
+	display:flex;
+	flex-direction:row;
+	align-items:baseline;
+	justify-content:space-between;
+	gap:.75rem;
+}
+#popupParagraph.temppay-cash-popup .temppay-summary__row--due .temppay-summary__label,
+#popupParagraph.temppay-cash-popup .temppay-summary__row--recv .temppay-summary__label{
+	font-size:1.35rem;
+	font-weight:600;
+}
+#popupParagraph.temppay-cash-popup .temppay-summary__row--due .temppay-summary__label{color:var(--main-p)}
+#popupParagraph.temppay-cash-popup .temppay-summary__row--recv .temppay-summary__label{color:var(--main-p)}
+#popupParagraph.temppay-cash-popup .temppay-summary__amt{
+	font-size:1.1rem;
+	font-weight:600;
+	font-variant-numeric:tabular-nums;
+}
+#popupParagraph.temppay-cash-popup .temppay-summary__amt strong{
+	font-size:clamp(1.85rem,4.5vw,2.35rem);
+	font-weight:800;
+	line-height:1.1;
+}
+#popupParagraph.temppay-cash-popup .temppay-summary__amt--pink{color:#f48fb1;text-shadow:0 0 14px rgba(244,143,177,.2)}
+#popupParagraph.temppay-cash-popup .temppay-summary__amt--blue{color:#8fc1f4;text-shadow:0 0 14px rgba(112,243,255,.25)}
+#popupParagraph.temppay-cash-popup .temppay-summary__amt--gray{color:var(--main-p);text-shadow:0 0 14px rgba(0,0,0,.2)}
+#popupParagraph.temppay-cash-popup .temppay-summary__divider{
+	height:1px;
+	margin:.65rem 0;
+	background:rgba(0,0,0,.45);
+	box-shadow:0 1px 0 rgba(255,255,255,.05);
+}
+#popupParagraph.temppay-cash-popup .temppay-summary__row--change{
+	display:grid;
+	grid-template-columns:1fr 1fr;
+	gap:1rem;
+	margin-top:.35rem;
+	padding-top:.75rem;
+	border-top:1px solid rgba(0,0,0,.35);
+}
+#popupParagraph.temppay-cash-popup .temppay-summary__col{
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	text-align:center;
+	gap:.2rem;
+}
+#popupParagraph.temppay-cash-popup .temppay-summary__row--change .temppay-summary__label{
+	font-size:1.2rem;
+	font-weight:600;
+	color:#d4cc7e;
+}
+#popupParagraph.temppay-cash-popup .temppay-summary__amt--gold{color:#d4cc7e}
+#popupParagraph.temppay-cash-popup .temppay-summary__row--change .temppay-summary__amt strong{
+	font-size:clamp(1.5rem,3.8vw,1.95rem);
+}
+#popupParagraph.temppay-cash-popup .temppay-denom-bar{
+	margin:.35rem 0 0;
+	padding:.65rem 1.25rem;
+	font-size:1.05rem!important;
+	line-height:1.45!important;
+	color:#fff!important;
+	text-align:center;
+	background: var(--main-p);
+	border-radius:999px;
+	border:1px solid rgba(255,255,255,.08);
+	box-shadow:inset 0 1px 0 rgba(255,255,255,.05);
+	display:block;
+}
 
