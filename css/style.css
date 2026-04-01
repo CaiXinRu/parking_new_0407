@@ -342,7 +342,7 @@ footer #pat-list-inner p img{width: 100%; max-height: 100%; opacity: .8}
 #payment-out #payment-bt-container.payment-method-grid .pay-tile--nfc .pay-tile__header{background:#2a5a86}
 #payment-out #payment-bt-container.payment-method-grid .pay-tile--scan .pay-tile__header{background:#2a5a86}
 #payment-out #payment-bt-container.payment-method-grid .pay-tile__header{color:#fff;text-align:left;padding-left:1rem;padding-right:1rem}
-#payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(1) .pay-tile__header{background:linear-gradient(90deg,#3d8a5d 0%,#ffffff 190%)}
+#payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(1) .pay-tile__header{background:linear-gradient(90deg,#3d8a5d 0%,#83bc63 60%)}
 #payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(2) .pay-tile__header{background:linear-gradient(90deg,#3C6FB4 0%,#ffffff 190%)}
 #payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(3) .pay-tile__header{background:linear-gradient(90deg,#7D4C9C 0%,#ffffff 190%)}
 #payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(4) .pay-tile__header{background:linear-gradient(90deg,#BD6E52 0%,#ffffff 190%)}
@@ -491,29 +491,132 @@ footer #pat-list-inner p img{width: 100%; max-height: 100%; opacity: .8}
 #checkout-pay-inner ul li a span svg{position: absolute; width: 100%; height: 100%; left: -2%; top: -3%;overflow: visible}
 #checkout-pay-inner ul li a span .line{stroke-dasharray: 260; stroke-width: 1px; fill: transparent; stroke: rgb(234 201 255 / 100%); filter: drop-shadow(0 0 2px #fff) drop-shadow(0 0 2px rgba(219, 219, 219, 0.8)) drop-shadow(0 0 3px rgba(219, 219, 219, 0.5));  animation: svgAnimation 6s linear infinite}
 
-/* 1.1_temppay：圖片置頂、計費表格式、支付方式置底橫列 */
+/* 1.1_temppay：附圖排版（淺紫底、白卡、頂部橫向三欄、明細白卡、底部按鈕） */
+.page-temppay-checkout{background: linear-gradient(165deg, #e4ddf5 0%, #ebe4f6 40%, #e8e0f4 100%); color: var(--main-font)}
+.page-temppay-checkout #header-title div{color: #1e2a4a; border-bottom-color: rgba(65,33,135,.45)}
+main.temppay-checkout-page{background: transparent; color: var(--main-font)}
 main.temppay-checkout-page #payment-main{flex-direction: column; align-items: center; width: 95%; height: auto; min-height: 0; flex-wrap: nowrap; gap: 0}
-main.temppay-checkout-page #checkout-container{width: 100%; max-width: 920px; margin: 0 auto; flex-direction: column; gap: .85rem}
-/* 頂部：停車圖 + 左側車牌徽章 + 下方左欄時間／右欄停車位 */
-main.temppay-checkout-page #checkout-pic-container.checkout-top-card{position: relative; flex-direction: column; align-items: stretch; width: 100%; height: auto; min-height: 0; margin: 0; overflow: hidden; border-radius: 1.15rem; box-shadow: 0 8px 28px rgba(0,0,0,.35), 0 2px 8px rgba(0,0,0,.2); background: #121026}
-main.temppay-checkout-page .checkout-hero{position: relative; width: 100%; min-height: clamp(168px, 28vw, 240px); overflow: hidden; border-radius: 1.15rem 1.15rem 0 0}
-main.temppay-checkout-page #checkout-pic-container .pic{position: absolute; z-index: 1; inset: 0; width: 100%; height: 100%; max-width: none; min-height: 0; margin: 0; border-radius: 0; box-shadow: none; background: var(--main-p) url("../images/pic-orgw.png") no-repeat center center; background-size: min(85%, 320px); filter: blur(1.2px) brightness(.72) saturate(.9)}
-main.temppay-checkout-page .checkout-hero::after{content: ''; position: absolute; z-index: 2; inset: 0; background: linear-gradient(165deg, var(--main-p) 0%, rgba(12,10,28,.82) 55%, var(--main-p) 100%); pointer-events: none}
-main.temppay-checkout-page .plate-badge{position: absolute; z-index: 4; left: clamp(.85rem, 3vw, 1.35rem); top: 80%; transform: translateY(-50%); display: inline-flex; align-items: center; justify-content: center; padding: .55rem 1.15rem .5rem; min-width: 7.5rem; background: #fff; border-radius: .55rem; box-shadow: 0 4px 18px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.85)}
-main.temppay-checkout-page .plate-badge .plate-value{font-size: clamp(1.65rem, 4.2vw, 2.35rem); font-weight: 800; letter-spacing: .12em; color: #111; font-variant-numeric: tabular-nums; line-height: 1.1}
-main.temppay-checkout-page .checkout-meta{display: grid; grid-template-columns: 1fr minmax(7.5rem, 38%); gap: 1rem 1.25rem; align-items: center; padding: 1.1rem clamp(1rem, 3vw, 1.5rem) 1.25rem; background: var(--main-p); border-top: 1px solid rgba(255,255,255,.06)}
-main.temppay-checkout-page .checkout-meta__times{display: flex; flex-direction: column; gap: .75rem; min-width: 0}
-main.temppay-checkout-page .checkout-meta__times .time-item{display: flex; flex-direction: column; gap: .28rem; align-items: flex-start}
-main.temppay-checkout-page .checkout-meta .time-label{font-size: .88rem; font-weight: 600; color: #b8a4e8; letter-spacing: .04em}
-main.temppay-checkout-page .checkout-meta .time-value{font-size: clamp(1rem, 2.2vw, 1.2rem); font-weight: 700; color: #fff; font-variant-numeric: tabular-nums; line-height: 1.3; text-shadow: 0 1px 2px rgba(0,0,0,.25)}
-main.temppay-checkout-page .checkout-meta__slot{display: flex; flex-direction: column; align-items: flex-end; justify-content: center; gap: .35rem; text-align: right; align-self: stretch}
-main.temppay-checkout-page .checkout-meta__slot .slot-label{font-size: .88rem; font-weight: 600; color: #b8a4e8; letter-spacing: .04em}
-main.temppay-checkout-page .checkout-meta__slot .slot-value{font-size: clamp(1.5rem, 4vw, 2.15rem); font-weight: 800; color: #90e0ef; letter-spacing: .06em; font-variant-numeric: tabular-nums; line-height: 1.15; text-shadow: 0 0 18px rgba(144,224,239,.25)}
-/* 底部：明細清單 + 總金額（深色卡） */
-main.temppay-checkout-page #checkout-list-container.checkout-bill-card{width: 100%; min-height: 0; margin-bottom: 1.5rem; padding: 0; overflow: hidden; border-radius: 1.15rem; box-shadow: 0 8px 28px rgba(0,0,0,.3); border: 1px solid rgba(144,224,239,.12); background: var(--main-p); color: #fff}
-main.temppay-checkout-page #checkout-list-container .checkout-inner{padding: 1.15rem clamp(1rem, 3vw, 1.45rem) 1.35rem; display: flex; flex-direction: column; gap: .85rem}
-main.temppay-checkout-page .bill-list-title{margin: 0; font-size: clamp(1.15rem, 2.4vw, 1.35rem); font-weight: 800; letter-spacing: .06em; color: #b8a4e8}
-main.temppay-checkout-page .bill-line-items{list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: .65rem; width: 100%}
+main.temppay-checkout-page #checkout-container{width: 100%; max-width: 920px; margin: 0 auto; flex-direction: column; gap: 1rem}
+/* 頂部白卡：左圖｜中欄車牌+時間｜虛線｜右欄倒數+停車位 */
+main.temppay-checkout-page #checkout-pic-container.checkout-top-card{position: relative; display: block; width: 100%; height: auto; min-height: 0; margin: 0; overflow: visible; background: transparent; box-shadow: none}
+main.temppay-checkout-page .checkout-top-card__row{
+	display: flex;
+	flex-direction: row;
+	align-items: stretch;
+	width: 100%;
+	min-height: clamp(200px, 32vw, 280px);
+	background: #fff;
+	border-radius: 1.25rem;
+	box-shadow: 0 10px 32px rgba(65,33,135,.12), 0 2px 10px rgba(0,0,0,.06);
+	overflow: hidden;
+	border: 1px solid rgba(65,33,135,.08);
+}
+main.temppay-checkout-page .checkout-hero{position: relative; flex: 0 0 38%; min-width: 0; min-height: clamp(200px, 32vw, 280px); overflow: hidden; border-radius: 0}
+main.temppay-checkout-page #checkout-pic-container .pic{position: absolute; z-index: 1; inset: 0; width: 100%; height: 100%; border-radius: 0; box-shadow: none; background: var(--main-p) url("../images/pic-orgw.png") no-repeat center center; background-size: cover; filter: none}
+main.temppay-checkout-page .checkout-hero::after{display: none}
+main.temppay-checkout-page .checkout-top-card__mid{
+	flex: 1 1 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 1rem;
+	padding: 1rem 1rem 1rem 1.15rem;
+	min-width: 0;
+}
+main.temppay-checkout-page .plate-badge{
+	position: relative;
+	z-index: 2;
+	align-self: flex-start;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: .5rem 1.1rem .45rem;
+	min-width: 7.2rem;
+	background: var(--main-font);
+	border-radius: .5rem;
+	box-shadow: 0 2px 8px rgba(65,33,135,.25);
+}
+main.temppay-checkout-page .plate-badge .plate-value{
+	font-size: clamp(1.45rem, 3.5vw, 2rem);
+	font-weight: 800;
+	letter-spacing: .12em;
+	color: #fff;
+	font-variant-numeric: tabular-nums;
+	line-height: 1.1;
+}
+main.temppay-checkout-page .checkout-meta__times{display: flex; flex-direction: column; gap: .65rem; min-width: 0}
+main.temppay-checkout-page .checkout-meta__times .time-item{
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	gap: .45rem;
+}
+main.temppay-checkout-page .time-item__icon{
+	flex-shrink: 0;
+	display: flex;
+	margin-top: .15rem;
+}
+main.temppay-checkout-page .time-item--in .time-item__icon{color: var(--main-font)}
+main.temppay-checkout-page .time-item--out .time-item__icon{color: #16a34a}
+main.temppay-checkout-page .time-item__line{font-size: clamp(.95rem, 2vw, 0.08rem); line-height: 1.45; color: #1e2a4a}
+main.temppay-checkout-page .checkout-meta .time-label{font-weight: 700; color: #412187; letter-spacing: .02em}
+main.temppay-checkout-page .checkout-meta .time-value{font-weight: 600; font-variant-numeric: tabular-nums; color: #2d3a52}
+main.temppay-checkout-page .checkout-top-card__aside{
+	flex: 0 0 auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: .85rem;
+	padding: 1rem 1rem 1.1rem;
+	border-left: 1px dashed #c9c4d8;
+	min-width: clamp(132px, 22%, 160px);
+	background: #faf9fc;
+}
+main.temppay-checkout-page .checkout-orb-wrap.CUT{position: relative; right: auto; bottom: auto; z-index: 1; color: var(--black)}
+main.temppay-checkout-page .checkout-slot-pill{
+	display: inline-flex;
+	flex-direction: row;
+	align-items: center;
+	gap: .4rem;
+	padding: .45rem .65rem .45rem .45rem;
+	background: linear-gradient(180deg, #e8f4ff 0%, #dff0ff 100%);
+	border: 1px solid rgba(56, 130, 200, .22);
+	border-radius: .65rem;
+	box-shadow: inset 0 1px 0 rgba(255,255,255,.8);
+	max-width: 100%;
+}
+main.temppay-checkout-page .slot-chip{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 1.65rem;
+	height: 1.65rem;
+	font-size: .95rem;
+	font-weight: 800;
+	color: #fff;
+	background: linear-gradient(145deg, #3b82f6 0%, #2563eb 100%);
+	border-radius: .4rem;
+	line-height: 1;
+}
+main.temppay-checkout-page .slot-pill__text{display: flex; flex-wrap: wrap; align-items: baseline; gap: .25rem; font-size: clamp(.85rem, 1.6vw, .98rem)}
+main.temppay-checkout-page .slot-pill__text .slot-label{font-weight: 700; color: #1e40af}
+main.temppay-checkout-page .slot-pill__text .slot-value{font-weight: 800; color: #1e3a8a; font-variant-numeric: tabular-nums}
+/* 明細：白底卡 + 淺藍總計列 */
+main.temppay-checkout-page #checkout-list-container.checkout-bill-card{width: 100%; min-height: 0; margin-bottom: 1.35rem; padding: 0; overflow: hidden; border-radius: 1.25rem; box-shadow: 0 10px 32px rgba(65,33,135,.1), 0 2px 10px rgba(0,0,0,.05); border: 1px solid rgba(65,33,135,.1); background: #fff; color: #1e2a4a}
+main.temppay-checkout-page #checkout-list-container .checkout-inner{padding: 1.15rem clamp(1rem, 3vw, 1.45rem) .85rem; display: flex; flex-direction: column; gap: .75rem}
+main.temppay-checkout-page .bill-list-title{
+	margin: 0;
+	display: flex;
+	align-items: center;
+	gap: .5rem;
+	font-size: clamp(1.1rem, 2.2vw, 1.3rem);
+	font-weight: 800;
+	letter-spacing: .06em;
+	color: #412187;
+}
+main.temppay-checkout-page .bill-list-title__icon{flex-shrink: 0; stroke: #412187}
+main.temppay-checkout-page .bill-line-items{list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0; width: 100%}
 /* 覆寫 .checkout-inner ul 的橫向 flex，以及 ul li 的直向堆疊，使每列為「左 bill-desc／右 bill-amt」 */
 main.temppay-checkout-page #checkout-list-container .checkout-inner ul.bill-line-items{
 	display: flex;
@@ -533,45 +636,181 @@ main.temppay-checkout-page #checkout-list-container .checkout-inner ul.bill-line
 	width: 100%;
 	max-width: none;
 	flex-direction: unset;
-	padding: 0;
+	padding: .65rem 0;
+	border-bottom: 1px solid rgba(0,0,0,.08);
 }
+main.temppay-checkout-page #checkout-list-container .checkout-inner ul.bill-line-items li:last-child{border-bottom: none}
 main.temppay-checkout-page #checkout-list-container .checkout-inner ul.bill-line-items li:first-child,
 main.temppay-checkout-page #checkout-list-container .checkout-inner ul.bill-line-items li:nth-child(2),
 main.temppay-checkout-page #checkout-list-container .checkout-inner ul.bill-line-items li:nth-child(n){width: 100%}
 main.temppay-checkout-page #checkout-list-container .checkout-inner ul.bill-line-items li:nth-child(2):before{display: none; content: none}
 main.temppay-checkout-page #checkout-list-container .checkout-inner ul.bill-line-items li span{margin: 0}
-main.temppay-checkout-page #checkout-list-container .checkout-inner ul.bill-line-items li .bill-desc,
-main.temppay-checkout-page #checkout-list-container .checkout-inner ul.bill-line-items li .bill-amt{
-	font-size: clamp(1rem, 2vw, 1.12rem);
-	line-height: 1.45;
-}
+/* 字級對齊 1.1.1.0 rebate-popup .temppay-summary（標籤 1.35rem／金額區 1.1rem + strong 放大） */
 main.temppay-checkout-page #checkout-list-container .checkout-inner ul.bill-line-items li .bill-desc{
 	justify-self: start;
 	text-align: left;
 	min-width: 0;
-	color: rgba(255,255,255,.88);
+	font-size: 1.35rem;
+	line-height: 1.35;
 	font-weight: 600;
+	color: var(--main-p);
 }
-main.temppay-checkout-page #checkout-list-container .checkout-inner ul.bill-line-items li .bill-amt{
+main.temppay-checkout-page #checkout-list-container .checkout-inner ul.bill-line-items li .bill-amt.bill-amt--body{
 	justify-self: end;
 	text-align: right;
+	padding: 0;
 	white-space: nowrap;
-	font-weight: 700;
-	color: #fff;
+	font-size: 1.1rem;
+	font-weight: 600;
+	line-height: 1.35;
+	color: var(--main-p);
+	font-variant-numeric: tabular-nums;
+	text-shadow: 0 0 14px rgba(0, 0, 0, 0.2);
+}
+/* 覆寫 #checkout-list-container .checkout-inner ul li:first-child span:nth-child(2) 的 text-align:center、padding、大字 */
+main.temppay-checkout-page #checkout-list-container .checkout-inner ul.bill-line-items li:first-child span.bill-amt.bill-amt--body{
+	text-align: right;
+	padding: 0;
+	font-size: 1.1rem;
+	line-height: 1.35;
+	font-weight: 600;
+}
+main.temppay-checkout-page #checkout-list-container .checkout-inner ul.bill-line-items li .bill-amt.bill-amt--body strong{
+	font-size: clamp(1.85rem, 4.5vw, 2.35rem);
+	font-weight: 800;
+	line-height: 1.1;
+}
+main.temppay-checkout-page #checkout-list-container .checkout-inner ul.bill-line-items li .bill-amt--discount,
+main.temppay-checkout-page #checkout-list-container .checkout-inner ul.bill-line-items li.bill-line-items__discount .bill-desc{
+	color: #288033;
+	text-shadow: 0 0 14px rgba(112, 243, 255, 0.25);
+}
+main.temppay-checkout-page #checkout-list-container .checkout-inner ul.bill-line-items li .bill-amt--discount{
+	justify-self: end;
+	text-align: right;
+	padding: 0;
+	white-space: nowrap;
+	font-size: 1.1rem;
+	font-weight: 600;
+	line-height: 1.35;
 	font-variant-numeric: tabular-nums;
 }
-main.temppay-checkout-page #checkout-list-container .checkout-inner ul.bill-line-items li .bill-amt--discount{color: #d886ff}
-main.temppay-checkout-page #checkout-list-container .checkout-inner ul.bill-line-items li.bill-line-items__discount .bill-desc{color: rgba(255,255,255,.82)}
-main.temppay-checkout-page .bill-total-row{display: flex; flex-direction: row; align-items: baseline; justify-content: space-between; margin-top: .35rem; padding-top: 1rem; border-top: 1px dashed rgba(144,224,239,.35)}
-main.temppay-checkout-page .bill-total-row .total-label{font-size: clamp(1.05rem, 2.2vw, 1.2rem); font-weight: 800; color: #90e0ef; letter-spacing: .08em}
-main.temppay-checkout-page .bill-total-row .total-value{font-size: clamp(2rem, 5.5vw, 3rem); font-weight: 800; line-height: 1.05; color: #90e0ef; font-variant-numeric: tabular-nums; text-shadow: 0 0 22px rgba(144,224,239,.28)}
-@media (max-width: 520px){
-	main.temppay-checkout-page .checkout-meta{grid-template-columns: 1fr; align-items: stretch}
-	main.temppay-checkout-page .checkout-meta__slot{align-items: flex-start; text-align: left; padding-top: .35rem; border-top: 1px solid rgba(255,255,255,.08)}
+main.temppay-checkout-page #checkout-list-container .checkout-inner ul.bill-line-items li .bill-amt--discount strong{
+	font-size: clamp(1.85rem, 4.5vw, 2.35rem);
+	font-weight: 800;
+	line-height: 1.1;
+	color: inherit;
 }
-main.temppay-checkout-page h2{width: 100%; text-align: center; font-weight: 700; letter-spacing: .06em; color: #3a2d55; font-size: clamp(1.5rem, 2.8vw, 1.85rem)}
+/* 應繳金額：粉系、列放大、半透明底凸顯（需同時加寬 width，否則負 margin 無法拉滿背景） */
+main.temppay-checkout-page #checkout-list-container .checkout-inner ul.bill-line-items li.bill-line-items__due{
+	--bill-bleed: clamp(1rem, 3vw, 1.45rem);
+	align-items: center;
+	box-sizing: border-box;
+	margin-top: .35rem;
+	margin-left: calc(-1 * var(--bill-bleed));
+	margin-right: calc(-1 * var(--bill-bleed));
+	margin-bottom: calc(-1 * .85rem);
+	/* 與 .checkout-inner 左右 padding 相同，拉滿至白卡內緣 */
+	width: calc(100% + 2 * var(--bill-bleed));
+	max-width: none;
+	padding: 1rem var(--bill-bleed) 1.15rem;
+	border-bottom: none;
+	border-radius: 0 0 calc(1.25rem - 1px) calc(1.25rem - 1px);
+	background: rgba(244, 143, 177, 0.22);
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+main.temppay-checkout-page #checkout-list-container .checkout-inner ul.bill-line-items li.bill-line-items__due .bill-desc{
+	font-size: clamp(1.6rem, 3.4vw, 1.95rem);
+	font-weight: 800;
+	color: #ff5555;
+	letter-spacing: .02em;
+	text-shadow: none;
+}
+main.temppay-checkout-page #checkout-list-container .checkout-inner ul.bill-line-items li .bill-amt--due{
+	justify-self: end;
+	text-align: right;
+	padding: 0;
+	white-space: nowrap;
+	font-size: 1.35rem;
+	font-weight: 600;
+	line-height: 1.2;
+	color: #ff5555;
+	font-variant-numeric: tabular-nums;
+	text-shadow: 0 0 18px rgba(244, 143, 177, 0.35);
+}
+main.temppay-checkout-page #checkout-list-container .checkout-inner ul.bill-line-items li .bill-amt--due strong{
+	font-size: clamp(2.35rem, 6vw, 3.35rem);
+	font-weight: 800;
+	line-height: 1.05;
+	color: inherit;
+}
+main.temppay-checkout-page #checkout-list-container.checkout-bill-card > .bill-total-row{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	margin: 0;
+	padding: 1rem 1.15rem 1.1rem clamp(1rem, 3vw, 1.45rem);
+	background: linear-gradient(180deg, #e8f4ff 0%, #dff0ff 100%);
+	border-top: 1px solid rgba(56, 130, 200, .15);
+}
+main.temppay-checkout-page .bill-total-row .total-label{font-size: clamp(1.05rem, 2.2vw, 1.25rem); font-weight: 800; color: #1d4ed8; letter-spacing: .06em}
+main.temppay-checkout-page .bill-total-row .total-value{font-size: clamp(1.85rem, 5vw, 2.75rem); font-weight: 800; line-height: 1.05; color: #dc2626; font-variant-numeric: tabular-nums}
+@media (max-width: 640px){
+	main.temppay-checkout-page .checkout-top-card__row{flex-direction: column; min-height: 0}
+	main.temppay-checkout-page .checkout-hero{flex: 0 0 auto; min-height: 200px; width: 100%}
+	main.temppay-checkout-page .checkout-top-card__aside{
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		border-left: none;
+		border-top: 1px dashed #c9c4d8;
+		min-width: 0;
+		padding: 1rem;
+	}
+}
+main.temppay-checkout-page h2,
+main.temppay-checkout-page h2.temppay-pay-heading{width: 100%; text-align: center; font-weight: 700; letter-spacing: .06em; color: #3a2d55; font-size: clamp(1.5rem, 2.8vw, 1.85rem); padding: 0 0 1.1rem; margin: 0}
+/* 1.1 底部：回首頁（線框）／重新選擇（實心） */
+.page-temppay-checkout #main-bt-container.temppay-main-bt{width: 92%; max-width: 640px; margin: .75rem auto 1rem; justify-content: center; gap: 1rem}
+.page-temppay-checkout #main-bt-container.temppay-main-bt a{
+	width: auto;
+	min-width: 200px;
+	flex: 1 1 200px;
+	max-width: 280px;
+	height: auto;
+	min-height: 72px;
+	padding: 1rem 1.25rem;
+	font-size: 1.65rem;
+	border-radius: 999px;
+	box-shadow: none;
+	margin: 0;
+}
+.page-temppay-checkout #main-bt-container.temppay-main-bt a:before,
+.page-temppay-checkout #main-bt-container.temppay-main-bt a:after{display: none}
+.page-temppay-checkout #main-bt-container.temppay-main-bt a svg{display: none}
+.page-temppay-checkout #main-bt-container.temppay-main-bt a.temppay-bt-back{
+	background: #fff;
+	color: var(--main-font);
+	border: 2px solid var(--main-font);
+	font-weight: 700;
+	letter-spacing: .02em;
+}
+.page-temppay-checkout #main-bt-container.temppay-main-bt a.temppay-bt-back:active{background: #f3effa}
+.page-temppay-checkout #main-bt-container.temppay-main-bt a.temppay-bt-primary{
+	background: var(--main-font);
+	color: #fff;
+	border: 2px solid var(--main-font);
+	font-weight: 700;
+	letter-spacing: .02em;
+}
+.page-temppay-checkout #main-bt-container.temppay-main-bt a.temppay-bt-primary:active{filter: brightness(.94)}
+.page-temppay-checkout #main-bt-container.temppay-main-bt a.left,
+.page-temppay-checkout #main-bt-container.temppay-main-bt a.right{flex-direction: row; justify-content: center}
+.page-temppay-checkout #main-bt-container.temppay-main-bt a i{display: none}
 main.temppay-checkout-page #checkout-paysel{width: 100%; max-width: 920px; margin: 0 auto 2.25rem; display: flex; justify-content: center}
-main.temppay-checkout-page #checkout-pay-inner ul{flex-direction: row; flex-wrap: wrap; justify-content: center; align-items: stretch; gap: .85rem 1.1rem; width: 100%}
+main.temppay-checkout-page #checkout-pay-inner ul.scroll,
+main.temppay-checkout-page #checkout-pay-inner ul{position: relative; top: auto; bottom: auto; flex-direction: row; flex-wrap: wrap; justify-content: center; align-items: stretch; gap: .85rem 1.1rem; width: 100%}
 main.temppay-checkout-page #checkout-pay-inner ul li{width: auto; flex: 1 1 200px; max-width: 300px; margin: 0; padding: .25rem 0}
 main.temppay-checkout-page #checkout-pay-inner ul li a{height: 152px; font-size: 1.65rem; padding-top: .9rem; border-radius: 1.35rem}
 
@@ -679,8 +918,22 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.other:active i{background
 	font-weight:800;
 	line-height:1.1;
 }
-#popupParagraph.temppay-cash-popup .temppay-summary__amt--pink{color:#f48fb1;text-shadow:0 0 14px rgba(244,143,177,.2)}
-#popupParagraph.temppay-cash-popup .temppay-summary__amt--blue{color:#8fc1f4;text-shadow:0 0 14px rgba(112,243,255,.25)}
+/* 應繳金額列：字級大於停車費／優惠折扣，與一般列區隔 */
+#popupParagraph.temppay-cash-popup .temppay-summary__row--payable .temppay-summary__label{
+	font-size:clamp(1.55rem,3.2vw,1.9rem);
+	font-weight:800;
+}
+#popupParagraph.temppay-cash-popup .temppay-summary__row--payable .temppay-summary__amt{
+	font-size:1.3rem;
+	font-weight:600;
+}
+#popupParagraph.temppay-cash-popup .temppay-summary__row--payable .temppay-summary__amt strong{
+	font-size:clamp(2.2rem,5.2vw,3.1rem);
+	font-weight:800;
+	line-height:1.08;
+}
+#popupParagraph.temppay-cash-popup .temppay-summary__amt--pink{color:#ff5555;text-shadow:0 0 14px rgba(244,143,177,.2)}
+#popupParagraph.temppay-cash-popup .temppay-summary__amt--blue{color:#288033;text-shadow:0 0 14px rgba(112,243,255,.25)}
 #popupParagraph.temppay-cash-popup .temppay-summary__amt--gray{color:var(--main-p);text-shadow:0 0 14px rgba(0,0,0,.2)}
 #popupParagraph.temppay-cash-popup .temppay-summary__divider{
 	height:1px;
