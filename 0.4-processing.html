@@ -10,6 +10,19 @@
 </head>
 
 <body>
+	<div id="popup_bg">
+		<div id="popupParagraph" class="popup-inner single icon popup-h1-bar">
+			<h1 style="margin: -2rem -2rem 2rem">系統訊息</h1>
+			<div class="receipt-success-popup__content">
+				<p class="receipt-success-popup__title" style="font-size: 2.15rem; margin-top: 20px">查詢計費資料中<br>請稍後......</p>
+			</div>
+			<div class="popup-buttom-bt">
+				<ul>
+					<li><a href="">確定</a></li>
+				</ul>				
+			</div>
+		</div>
+	</div>
 	<div id="main-container">
 		<header>
 			<div id="header-inner">
@@ -24,36 +37,60 @@
 			</div>			
 			<div id="header-title">
 				<div>南山新市園區C棟停車場</div>
+			</div>
+			<div class="CUT">
+				<div class="orb_graphic">
+					<svg>
+						<defs>
+							<linearGradient id="myGradient" x1="0%" y1="0%"	x2="0%" y2="100%" spreadMethod="pad">
+								<stop offset="0%" stop-color="#412187" stop-opacity="1"/>
+								<stop offset="90%" stop-color="#412187" stop-opacity="1"/>
+							</linearGradient>
+						</defs>
+						<circle class="fill"></circle>
+						<circle class="progress"></circle>
+					</svg>
+					<div class="orb_value count">60</div>
+				</div>
 			</div>			
 			<div class="header-pic"><img class="header-mask" src="images/header-bg.png" alt=""/></div>	
 		</header>
 		<main class="nor">			
-			<h2>請選擇電子支付方式</h2>
-			<div id="payment-out">
-				<div id="payment-bt-container" class="payment-qrcode-grid">
-					<a href="" class="payment-qrcode-card">
-						<div class="payment-qrcode-card__logo"><img src="images/150-line.png" alt="LINE Pay"/></div>
-						<strong class="payment-qrcode-card__title">使用 LINE Pay 付款</strong>
-					</a>
-					<a href="" class="payment-qrcode-card">
-						<div class="payment-qrcode-card__logo"><img src="images/150-street.png" alt="街口支付"/></div>
-						<strong class="payment-qrcode-card__title">使用 街口支付 付款</strong>
-					</a>
-					<a href="" class="payment-qrcode-card">
-						<div class="payment-qrcode-card__logo"><img src="images/150-easypay.png" alt="悠遊付 EasyWallet"/></div>
-						<strong class="payment-qrcode-card__title">使用 悠遊付 付款</strong>
-					</a>
-					<a href="" class="payment-qrcode-card">
-						<div class="payment-qrcode-card__logo"><img src="images/150-twpay.png" alt="TWQR 共通支付"/></div>
-						<strong class="payment-qrcode-card__title">使用 TWQR 付款</strong>
-					</a>
-				</div>
-			</div>							
+			<h2>請輸入統一編號</h2>
+			<div id="nb-container" class="more">
+				<div><input type="text" value="2" maxlength="1"></div>
+				<div><input type="text" value="" maxlength="1"></div>
+				<div><input type="text" value="" maxlength="1"></div>
+				<div><input type="text" value="" maxlength="1"></div>
+				<div><input type="text" value="" maxlength="1"></div>
+				<div><input type="text" value="" maxlength="1"></div>
+				<div><input type="text" value="" maxlength="1"></div>
+				<div><input type="text" value="" maxlength="1"></div>
+			</div>
+			<div id="keyboard-container">
+				<button>1</button>
+				<button>2</button>
+				<button>3</button>
+				<button>4</button>
+				<button>5</button>
+				<button>6</button>
+				<button>7</button>
+				<button>8</button>
+				<button>9</button>
+				<button class="tool">刪除</button>
+				<button>0</button>
+				<button class="tool">清除</button>
+			</div>			
 			<div id="main-bt-container">
 				<a href="" class="left">
 					<svg xmlns="http://www.w3.org/2000/svg">
 						<rect rx="38" ry="38" class="line" height="100%" width="100%" stroke-linejoin="round"/>
-					</svg><i></i>取消
+					</svg><i></i><span>返回</span>
+				</a>
+				<a href="" class="right">
+					<svg xmlns="http://www.w3.org/2000/svg">
+						<rect rx="38" ry="38" class="line" height="100%" width="100%" stroke-linejoin="round"/>
+					</svg><i></i><span>確認</span>
 				</a>
 			</div>
 		</main>

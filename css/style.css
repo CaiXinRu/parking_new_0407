@@ -99,8 +99,8 @@ main h2{padding: 0 0 2rem; font-size: 2.5rem}
 #popupParagraph .note{font-size: 1.8rem; font-weight: 500; color: var(--main-p); background: #dfecff; padding: .2rem .5rem}
 .popup-buttom-bt{position:absolute; width: 100%; display: flex; justify-content: space-around; align-items: center; height: 60px; bottom: 40px}
 .popup-buttom-bt ul{position: relative; width: 100%; display: flex; align-items: stretch; justify-content: space-evenly; height: 100%}
-.popup-buttom-bt ul li{position: relative; width: 40%; height: 100%; display: flex; justify-content: center; align-items: center}
-.popup-buttom-bt ul li a{position: relative; display: flex; width: 250px; height: 100%; justify-content: center; align-items: center; background: var(--main-p) url("../images/popup-bt-bg.png") no-repeat center center; background-size: cover; border-radius: 1.7rem; color: var(--white); font-size: 2.2rem}
+.popup-buttom-bt ul li{position: relative; width: 70%; height: 100%; display: flex; justify-content: center; align-items: center}
+.popup-buttom-bt ul li a{position: relative; display: flex; width: 285px; height: 100%; justify-content: center; align-items: center; background: var(--main-p) url("../images/popup-bt-bg.png") no-repeat center center; background-size: cover; border-radius: 1.7rem; color: var(--white); font-size: 2.2rem}
 #popup-inner .popup-type.tip ul li a{position: relative; display: flex; width: 100px; height: 80px; justify-content: center; align-items: center; background: var(--main-p) url("../images/popup-bt-bg.png") no-repeat center center; background-size: cover; border-radius: 1.7rem; color: var(--white); font-size: 2.2rem}
 .popup-buttom-bt ul li a:active,#popup-inner .popup-type.tip ul li a:active{background: #493a5d}
 .popup-buttom-bt ul li a:active::before,#popup-inner .popup-type.tip ul li a:active::before{background-image: linear-gradient(325deg, #4d415d 30%, #6a5587 80%)}
@@ -195,7 +195,7 @@ main h2{padding: 0 0 2rem; font-size: 2.5rem}
 .receipt-keyboard a:focus,#keyboard-del a:focus{background: var(--main-font); color: var(--white)}
 #keyboard-del{position: relative; width: 52%; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: repeat(1,80px); column-gap: 1.6rem; margin: 1rem auto}
 #keyboard-del a{font-size: 2.3rem; background: radial-gradient(ellipse at center, #ffffff 40%,#d3d2db 100%);border:.1rem solid #bbc3c8; border-radius: 1rem; color:var(--black); font-weight: 600; display: flex; justify-content: center; align-items: center; font-family: Arial, "sans-serif"}
-#main-bt-container{display: flex; justify-content: space-around; align-items: center; margin: .5rem 0; z-index: 20; width: 75%}
+#main-bt-container{display: flex; justify-content: space-around; align-items: center; margin: .5rem 0; z-index: 20; width: 75%; position: absolute; bottom: 115px;}
 #main-bt-container a{position: relative; display: flex; justify-content: center; align-items: center; border-radius: 2rem; font-size: 2.5rem; color: var(--white) ;font-weight: 500; letter-spacing: -.1rem; padding: 0 0 0 .1rem; width: 240px; height: 80px; margin: -1rem .4rem 0}
 #main-bt-container a:after{content: ''; display: flex; width: 80%; height: 20px;position: absolute;z-index: 0; background: radial-gradient(ellipse at center, #b3a6d1 39%,#dcccff 100%); ; border-radius: 100%; filter: blur(2px); bottom: 0; opacity: .2}
 #main-bt-container a:before{content: ''; display: flex; width: 90%; height: 20px;position: absolute;z-index: -1; background: radial-gradient(ellipse at center, rgba(150,140,175,1) 0%,rgba(150,140,175,0.61) 39%,rgba(179,173,214,0) 100%) ; border-radius: 100%; filter: blur(4px); bottom: -16px}
@@ -894,6 +894,17 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.other:active i{background
 	border:1px solid rgba(255,255,255,.06);
 	box-shadow:0 6px 20px rgba(0,0,0,.35);
 }
+#popupParagraph.temppay-cash-popup .temppay-summary__hint{
+	margin:0 0 .65rem;
+	padding:.6rem .85rem;
+	background:#dbdbdb;
+	color:var(--main-p);
+	font-size:1.35rem;
+	font-weight:600;
+	line-height:1.35;
+	text-align:center;
+	border-radius:.5rem;
+}
 #popupParagraph.temppay-cash-popup .temppay-summary__row{
 	display:flex;
 	flex-direction:row;
@@ -977,5 +988,220 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.other:active i{background
 	border:1px solid rgba(255,255,255,.08);
 	box-shadow:inset 0 1px 0 rgba(255,255,255,.05);
 	display:block;
+}
+
+/* 2.4.0 手機載具歸戶完成（成功圖示壓在卡片頂緣、附圖排版） */
+#popupParagraph.receipt-success-popup{
+	overflow: visible;
+	padding: 4.25rem 2rem 9.5rem;
+	box-shadow: 0 12px 40px rgba(0,0,0,.14);
+}
+.receipt-success-popup__icon{
+	position: absolute;
+	left: 50%;
+	top: 0;
+	transform: translate(-50%, -50%);
+	z-index: 2;
+	line-height: 0;
+}
+.receipt-success-popup__icon > img{
+	width: clamp(5.5rem, 18vw, 7.5rem);
+	height: auto;
+	display: block;
+	border-radius: 50%;
+	/* yes.png 圓形未貼滿裁切圓，透明帶需與圖內綠色一致，白 ring 才不會「隔空」 */
+	background-color: #5edd60;
+	box-shadow: 0 0 0 4px #fff, 0 8px 24px rgba(0,0,0,.12);
+}
+/* 警示圖（warning-sign）等：PNG 置於 #4e566e 圓底，附白邊與陰影（同附圖壓在卡片頂緣） */
+.receipt-success-popup__icon-disc{
+	width: clamp(5.5rem, 18vw, 7.5rem);
+	height: clamp(5.5rem, 18vw, 7.5rem);
+	background: #4e566e;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-sizing: border-box;
+	padding: clamp(0.6rem, 2vw, 0.95rem);
+	box-shadow: 0 0 0 4px #fff, 0 8px 24px rgba(0,0,0,.12);
+}
+.receipt-success-popup__icon-disc img{
+	width: 72%;
+	height: auto;
+	max-width: 100%;
+	display: block;
+	border-radius: 0;
+	box-shadow: none;
+}
+.receipt-success-popup__content{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1rem;
+	margin-top: 0.25rem;
+}
+#popupParagraph.receipt-success-popup .receipt-success-popup__content p{
+	display: block;
+	width: 100%;
+	text-align: center;
+	margin: 0;
+	line-height: 1.5;
+	justify-content: center;
+}
+.receipt-success-popup__title{
+	font-size: 2.15rem;
+	font-weight: 700;
+	color: #000;
+}
+.receipt-success-popup__line1,
+.receipt-success-popup__line2{
+	font-size: 1.7rem;
+	color: #000;
+}
+.receipt-success-popup__num{
+	font-size: 2.15rem;
+	font-weight: 700;
+	color: #e53935;
+	margin: 0 0.15em;
+}
+#popupParagraph.receipt-success-popup .popup-buttom-bt ul{
+	justify-content: center;
+}
+#popupParagraph.receipt-success-popup .popup-buttom-bt ul li{
+	width: 82%;
+	max-width: 420px;
+}
+#popupParagraph.receipt-success-popup .popup-buttom-bt ul li a{
+	width: 100%;
+	border-radius: 999px;
+	font-weight: 700;
+	background: #4a5568;
+	background-image: none;
+	box-shadow: 0 4px 14px rgba(0,0,0,.18);
+}
+#popupParagraph.receipt-success-popup .popup-buttom-bt ul li a::before{
+	display: none;
+}
+#popupParagraph.receipt-success-popup .popup-buttom-bt ul li a:active{
+	background: #3d4553;
+}
+
+/* 0.3 客服資訊（雙卡片、附圖排版） */
+#popupParagraph.service-info-popup{
+	padding: 2.25rem 2rem 9.5rem;
+	box-shadow: 0 12px 40px rgba(0,0,0,.14);
+}
+/* 與 popup-h1-bar 併用時：h1 貼頂滿寬灰底（同 1.1.1.0 rebate / temppay） */
+#popupParagraph.service-info-popup.popup-h1-bar{
+	padding: 2rem 2rem 9.5rem;
+}
+#popupParagraph.service-info-popup.popup-h1-bar .service-info-popup__content{
+	margin-top: 0;
+}
+.service-info-popup__content{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	gap: 1.25rem;
+	margin-top: 0.5rem;
+}
+#popupParagraph.service-info-popup .service-info-popup__title{
+	display: block;
+	margin: 0;
+	font-size: 2.15rem;
+	font-weight: 700;
+	color: #000;
+	text-align: center;
+	line-height: 1.3;
+	width: 100%;
+	position: relative;
+}
+.service-info-popup__cards{
+	display: flex;
+	flex-direction: column;
+	gap: 0.85rem;
+	padding: 1rem 1rem 1.15rem;
+	background: #f0f0f2;
+	border-radius: 12px;
+	box-sizing: border-box;
+}
+.service-info-card{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 1rem;
+	padding: 1rem 1.15rem;
+	background: #fff;
+	border-radius: 12px;
+	box-shadow: none;
+	min-height: 0;
+	box-sizing: border-box;
+}
+.service-info-card__text{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	gap: 0.25rem;
+	flex: 1;
+	min-width: 0;
+	text-align: left;
+}
+#popupParagraph.service-info-popup .service-info-card__label{
+	display: block;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	font-size: 1.35rem;
+	font-weight: 700;
+	color: #000;
+	line-height: 1.35;
+	text-align: left;
+	justify-content: flex-start;
+}
+.service-info-card__value{
+	font-size: 1.35rem;
+	font-weight: 400;
+	color: #000;
+	line-height: 1.4;
+}
+.service-info-card__value--phone{
+	font-size: 1.55rem;
+	font-weight: 400;
+	letter-spacing: 0.02em;
+}
+.service-info-card__icon{
+	flex-shrink: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #000;
+}
+.service-info-card__icon--map{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	line-height: 0;
+	width: 2.5rem;
+	height: 2.5rem;
+}
+.service-info-card__icon--map svg{
+	width: 2.5rem;
+	height: 2.5rem;
+	display: block;
+	flex-shrink: 0;
+}
+.service-info-card__icon--phone{
+	width: 2.5rem;
+	height: 2.5rem;
+}
+.service-info-card__icon--phone svg{
+	width: 2.5rem;
+	height: 2.5rem;
+	display: block;
 }
 

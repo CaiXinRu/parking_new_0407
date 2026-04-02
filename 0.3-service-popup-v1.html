@@ -11,18 +11,38 @@
 
 <body>
 	<div id="popup_bg">
-		<div id="popupParagraph" class="popup-inner receipt-success-popup">
-			<div class="receipt-success-popup__icon" aria-hidden="true">
-				<img src="images/0401/yes.png" alt="" width="120" height="120"/>
+		<div id="popupParagraph" class="popup-inner receipt-success-popup service-info-popup popup-h1-bar">
+			<h1>客服資訊</h1>
+			<div class="service-info-popup__content">
+				<div class="service-info-popup__cards">
+					<div class="service-info-card">
+						<div class="service-info-card__icon service-info-card__icon--map" aria-hidden="true">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+								<path d="M8 18c0-6.6 5.4-12 12-12s12 5.4 12 12c0 9-12 22-12 22S8 27 8 18z"/>
+								<circle cx="20" cy="18" r="3" fill="currentColor" stroke="none"/>
+							</svg>
+						</div>
+						<div class="service-info-card__text">
+							<span class="service-info-card__label">本站名稱</span>
+							<span class="service-info-card__value">南山新市園區C棟停車場</span>
+						</div>
+					</div>
+					<div class="service-info-card">
+						<div class="service-info-card__icon service-info-card__icon--phone" aria-hidden="true">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+								<path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+							</svg>
+						</div>
+						<div class="service-info-card__text">
+							<span class="service-info-card__label">聯絡客服</span>
+							<span class="service-info-card__value service-info-card__value--phone">0800 - 123 - 456</span>
+						</div>
+					</div>
+				</div>
 			</div>
-			<div class="receipt-success-popup__content">
-				<p class="receipt-success-popup__title" style="font-size: 2.15rem; margin-top: 20px">發票已存入載具</p>
-				<p class="receipt-success-popup__line1">請於<strong class="receipt-success-popup__num">15</strong>分鐘內</p>
-				<p class="receipt-success-popup__line2">取車出場，歡迎再度光臨</p>
-			</div>
-			<div class="popup-buttom-bt">
+			<div class="popup-buttom-bt receipt-success-popup__actions">
 				<ul>
-					<li><a href="">確定 (5s)</a></li>
+					<li><a href="">關閉 (5s)</a></li>
 				</ul>
 			</div>
 		</div>
