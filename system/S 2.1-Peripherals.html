@@ -1,159 +1,169 @@
 <!doctype html>
 <html>
-<head>
-<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="https://googleapis.com" rel="stylesheet">
-	<link rel="stylesheet" href="../css/reset.css">
-	<link rel="stylesheet" href="../css/style.css">
-	<link href="css/system.css" rel="stylesheet" type="text/css">
-	<title>微程式資訊 Microprogram｜停車場繳費機</title>
-</head>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://googleapis.com" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link href="css/system.css" rel="stylesheet" type="text/css" />
+    <title>微程式資訊 Microprogram｜停車場繳費機</title>
+  </head>
 
-<body class="syt-long">
-	<div id="main-container">
-		<header>
-			<div id="header-inner">
-				<div class="time"><span>2025-09-15</span><span>17:20</span></div>
-				<div class="name"><span><img src="../images/c-logo.png" alt=""/></span></div>
-				<div class="top-tool">
-					<ul>
-						<li><a href=""><i><img src="images/contact-icon.svg" alt=""/></i>客服</a></li>
-						<li><a href=""><i><img src="images/language-icon.svg" alt=""/></i>語系</a></li>
-					</ul>
-				</div>
-			</div>			
-			<div id="header-title">
-				<div>南山新市園區C棟停車場</div>
-			</div>
-			<div class="CUT">
-				<div class="orb_graphic">
-					<svg>
-						<defs>
-							<linearGradient id="myGradient" x1="0%" y1="0%"	x2="0%" y2="100%" spreadMethod="pad">
-								<stop offset="0%" stop-color="#412187" stop-opacity="1"/>
-								<stop offset="90%" stop-color="#412187" stop-opacity="1"/>
-							</linearGradient>
-						</defs>
-						<circle class="fill"></circle>
-						<circle class="progress"></circle>
-					</svg>
-					<div class="orb_value count">60</div>
-				</div>
-			</div>			
-			<div class="header-pic"><img class="header-mask" src="../images/header-bg.png" alt=""/></div>	
-		</header>
-		<main class="nor">			
-			<h2>設備狀態</h2>
-			<div class="system-container">
-				<div id="system-tb-inner">
-					<table>
-						<tr>
-							<td>設備 IP1 (內網)</td>
-							<td></td>
-						</tr>
-						<tr>
-							<td>設備 IP2 (外網)</td>
-							<td>172.16.65.111</td>
-						</tr>
-						<tr>
-							<td>設備 IP3</td>
-							<td></td>
-						</tr>
-						<tr>
-							<td>設備 gateway</td>
-							<td>172.16.65.254</td>
-						</tr>  
-						<tr>
-							<td>設備 DNS 使用中</td>
-							<td>168.95.1.1</td>
-						</tr>  
-						<tr>
-							<td>設備 DNS 1</td>
-							<td>168.95.1.1</td>
-						</tr> 
-						<tr>
-							<td>設備 DNS 2</td>
-							<td>8.8.8.8</td>
-						</tr>  
-						<tr>
-							<td>IPTables狀態</td>
-							<td><button>狀態</button></td>
-						</tr>  
-						<tr>
-							<td>XPS 是否啟用</td>
-							<td>啟用</td>
-						</tr>  
-						<tr>
-							<td>XPS IP</td>
-							<td>172.16.65.111</td>
-						</tr>  
-						<tr>
-							<td>設備 MAC</td>
-							<td>C400ADC8EB36</td>
-						</tr>   
-						<tr>
-							<td>版號資訊</td>
-							<td><button>版號資訊</button></td>
-						</tr>  
-						<tr>
-							<td>外網連線狀況</td>
-							<td>連線正常</td>
-						</tr>   
-						<tr>
-							<td>XPS連線狀況</td>
-							<td>連線正常</td>
-						</tr>  
-						<tr>
-							<td>QR code 掃秒器狀態</td>
-							<td>正常</td>
-						</tr>  
-						<tr>
-							<td>PLC 通訊狀態</td>
-							<td>正常</td>
-						</tr>  
-						<tr>
-							<td>印表機 A 狀態</td>
-							<td>正常(0)</td>
-						</tr>  
-						<tr>
-							<td>印表機 B 狀態</td>
-							<td>正常(0)</td>
-						</tr> 
-						<tr>
-							<td>watchdog 是否啟用</td>
-							<td class="red">停用(0)</td>
-						</tr>   
-					</table>
-				</div>
-			</div>
-			<div id="main-bt-container">
-				<a href="" class="left">
-					<svg xmlns="http://www.w3.org/2000/svg">
-						<rect rx="38" ry="38" class="line" height="100%" width="100%" stroke-linejoin="round"/>
-					</svg><i></i>返回
-				</a>
-			</div>
-		</main>
-		<footer class="inner">		  
-			<div id="pay-list-container">				
-				<div id="pat-list-inner">
-					<p><img src="images/pay_easycard.png" alt=""/></p>
-					<p><img src="images/pay_easypay.png" alt=""/></p>
-					<p><img src="images/pay_ipass.png" alt=""/></p>
-					<p><img src="images/pay_icash2.0.png" alt=""/></p>
-					<p><img src="images/pay_linepay.png" alt=""/></p>
-					<p><img src="images/pay_street.png" alt=""/></p>
-					<p><img src="images/pay_twpay.png" alt=""/></p>
-					<p><img src="images/pay_applepay.png" alt=""/></p>
-					<p><img src="images/pay_googlepay.png" alt=""/></p>
-					<p><img src="images/pay_samsungpay.png" alt=""/></p>
-					<p><img src="images/pay_cash.png" alt=""/></p>
-					<p><img src="images/pay_creditcard.png" alt=""/></p>
-				</div>
-			</div>
-			<div class="footer-pic"><img class="footer-mask" src="../images/footer-bg.png" alt=""/></div>		  
-		</footer>
-	</div>
-</body>
+  <body class="syt-long">
+    <div id="main-container">
+      <header>
+        <div id="header-inner">
+          <div class="time"><span>2025-09-15</span><span>17:20</span></div>
+          <div class="name">
+            <span><img src="../images/0407/inan_logo.png" alt="" /></span>
+          </div>
+          <div class="top-tool">
+            <ul>
+              <li>
+                <a href=""
+                  ><i><img src="images/contact-icon.svg" alt="" /></i>客服</a
+                >
+              </li>
+              <li>
+                <a href=""
+                  ><i><img src="images/language-icon.svg" alt="" /></i>語系</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div id="header-title">
+          <div>南山新市園區C棟停車場</div>
+        </div>
+        <div class="CUT">
+          <div class="orb_graphic">
+            <svg>
+              <defs>
+                <linearGradient id="myGradient" x1="0%" y1="0%" x2="0%" y2="100%" spreadMethod="pad">
+                  <stop offset="0%" stop-color="#412187" stop-opacity="1" />
+                  <stop offset="90%" stop-color="#412187" stop-opacity="1" />
+                </linearGradient>
+              </defs>
+              <circle class="fill"></circle>
+              <circle class="progress"></circle>
+            </svg>
+            <div class="orb_value count">60</div>
+          </div>
+        </div>
+        <div class="header-pic"><img class="header-mask" src="../images/header-bg.png" alt="" /></div>
+      </header>
+      <main class="nor">
+        <h2>設備狀態</h2>
+        <div class="system-container">
+          <div id="system-tb-inner">
+            <table>
+              <tr>
+                <td>設備 IP1 (內網)</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>設備 IP2 (外網)</td>
+                <td>172.16.65.111</td>
+              </tr>
+              <tr>
+                <td>設備 IP3</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>設備 gateway</td>
+                <td>172.16.65.254</td>
+              </tr>
+              <tr>
+                <td>設備 DNS 使用中</td>
+                <td>168.95.1.1</td>
+              </tr>
+              <tr>
+                <td>設備 DNS 1</td>
+                <td>168.95.1.1</td>
+              </tr>
+              <tr>
+                <td>設備 DNS 2</td>
+                <td>8.8.8.8</td>
+              </tr>
+              <tr>
+                <td>IPTables狀態</td>
+                <td><button>狀態</button></td>
+              </tr>
+              <tr>
+                <td>XPS 是否啟用</td>
+                <td>啟用</td>
+              </tr>
+              <tr>
+                <td>XPS IP</td>
+                <td>172.16.65.111</td>
+              </tr>
+              <tr>
+                <td>設備 MAC</td>
+                <td>C400ADC8EB36</td>
+              </tr>
+              <tr>
+                <td>版號資訊</td>
+                <td><button>版號資訊</button></td>
+              </tr>
+              <tr>
+                <td>外網連線狀況</td>
+                <td>連線正常</td>
+              </tr>
+              <tr>
+                <td>XPS連線狀況</td>
+                <td>連線正常</td>
+              </tr>
+              <tr>
+                <td>QR code 掃秒器狀態</td>
+                <td>正常</td>
+              </tr>
+              <tr>
+                <td>PLC 通訊狀態</td>
+                <td>正常</td>
+              </tr>
+              <tr>
+                <td>印表機 A 狀態</td>
+                <td>正常(0)</td>
+              </tr>
+              <tr>
+                <td>印表機 B 狀態</td>
+                <td>正常(0)</td>
+              </tr>
+              <tr>
+                <td>watchdog 是否啟用</td>
+                <td class="red">停用(0)</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div id="main-bt-container">
+          <a href="" class="left">
+            <svg xmlns="http://www.w3.org/2000/svg">
+              <rect rx="38" ry="38" class="line" height="100%" width="100%" stroke-linejoin="round" /></svg
+            ><i></i>返回
+          </a>
+        </div>
+      </main>
+      <footer class="inner">
+        <div id="pay-list-container">
+          <div id="pat-list-inner">
+            <p><img src="images/pay_easycard.png" alt="" /></p>
+            <p><img src="images/pay_easypay.png" alt="" /></p>
+            <p><img src="images/pay_ipass.png" alt="" /></p>
+            <p><img src="images/pay_icash2.0.png" alt="" /></p>
+            <p><img src="images/pay_linepay.png" alt="" /></p>
+            <p><img src="images/pay_street.png" alt="" /></p>
+            <p><img src="images/pay_twpay.png" alt="" /></p>
+            <p><img src="images/pay_applepay.png" alt="" /></p>
+            <p><img src="images/pay_googlepay.png" alt="" /></p>
+            <p><img src="images/pay_samsungpay.png" alt="" /></p>
+            <p><img src="images/pay_cash.png" alt="" /></p>
+            <p><img src="images/pay_creditcard.png" alt="" /></p>
+          </div>
+        </div>
+        <div class="footer-pic"><img class="footer-mask" src="../images/footer-bg.png" alt="" /></div>
+      </footer>
+    </div>
+  </body>
 </html>
