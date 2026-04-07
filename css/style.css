@@ -68,7 +68,10 @@ header .header-pic{position: absolute;z-index: 2;width: 100%; height: var(--head
 main{position: relative; width: 100%; display: flex; align-items: center; flex-direction: column; min-height: 93%; background: linear-gradient(145deg, #efefef 0%, #ffffff 52%, #ffffff 80%, #dfdfdf 89%);margin: -100px 0 0; color: var(--main-font)}
 main.nor{padding: 9rem 0}
 main h2{padding: 0 0 2rem; font-size: 2.5rem}
-#popup_bg{position: absolute; top: 0; left: 0; width:100%; height: var(--mainsize-h); display:flex; justify-content: center; align-items: center;background-color:#000000d1 ;backdrop-filter: blur(5px); z-index: 98}
+/* 模糊放在 ::before，避免在 flex 容器本體套用 backdrop-filter 時部分解析度合成異常 */
+#popup_bg{position: fixed; inset: 0; width: 100%; min-height: 100vh; min-height: 100dvh; display: flex; justify-content: center; align-items: center; background: transparent; z-index: 98; isolation: isolate}
+#popup_bg::before{content: ''; position: absolute; inset: 0; z-index: 0; background-color: rgba(0, 0, 0, 0.93); pointer-events: none}
+#popup_bg > *{position: relative; z-index: 1}
 #popupParagraph{background: var(--white); color: var(--font-grey-d); width: 80%; min-height: 200px; max-width: 650px; position: relative; border-radius: 2rem; padding:2rem 2rem 10rem; display: flex; flex-direction: column;align-items: center}
 #popupParagraph h1{text-align: center; font-size: 2.5rem; margin:1rem 0 2rem}
 #popupParagraph .CUT{right: 20px;  bottom: unset}
@@ -204,6 +207,7 @@ main h2{padding: 0 0 2rem; font-size: 2.5rem}
 #keyboard-del{position: relative; width: 52%; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: repeat(1,80px); column-gap: 1.6rem; margin: 1rem auto}
 #keyboard-del a{font-size: 2.3rem; background: radial-gradient(ellipse at center, #ffffff 40%,#d3d2db 100%);border:.1rem solid #bbc3c8; border-radius: 1rem; color:var(--black); font-weight: 600; display: flex; justify-content: center; align-items: center; font-family: Arial, "sans-serif"}
 #main-bt-container{display: flex; justify-content: space-around; align-items: center; margin: .5rem 0; z-index: 20; width: 75%; position: absolute; bottom: 115px;}
+body.page-home #main-bt-container{bottom: 180px;}
 #main-bt-container a{position: relative; display: flex; justify-content: center; align-items: center; border-radius: 2rem; font-size: 2.5rem; color: var(--white) ;font-weight: 500; letter-spacing: -.1rem; padding: 0 0 0 .1rem; width: 240px; height: 80px; margin: -1rem .4rem 0}
 #main-bt-container a:after{content: ''; display: flex; width: 80%; height: 20px;position: absolute;z-index: 0; background: radial-gradient(ellipse at center, #b3a6d1 39%,#dcccff 100%); ; border-radius: 100%; filter: blur(2px); bottom: 0; opacity: .2}
 #main-bt-container a:before{content: ''; display: flex; width: 90%; height: 20px;position: absolute;z-index: -1; background: radial-gradient(ellipse at center, rgba(150,140,175,1) 0%,rgba(150,140,175,0.61) 39%,rgba(179,173,214,0) 100%) ; border-radius: 100%; filter: blur(4px); bottom: -16px}
@@ -267,6 +271,9 @@ footer.inner #pay-list-container{display: none}
 footer .footer-pic{position: absolute;z-index: 2;width: 100%; height: 190px}
 footer .footer-pic:before{content: ''; position: absolute; background: url("../images/mplogo-bg.svg") no-repeat center center; background-size: 100%; width: 115px; height: 125px; right: 5px; top: 41%; z-index: 2;filter: drop-shadow(1px 0 1px #cdcdcd) drop-shadow(0 1px 2px #ffffff) drop-shadow(0 0 px #ffffffb0) blur(0.2px);}
 footer .footer-pic:after{content: ''; position: absolute; z-index: 1; background: url("../images/mplogo-bg2.svg") no-repeat center center; background-size: 100%; width: 117px; height: 125px; animation: glow-breathing 1s ease-in-out infinite;pointer-events: none; right: 5px; top: 41%}
+body.page-home footer .footer-pic{position: absolute;z-index: 2;width: 100%; height: var(--footer-h)}
+body.page-home footer .footer-pic:before{content: ''; position: absolute; background: url("../images/mplogo-bg.svg") no-repeat center center; background-size: 100%; width: 115px; height: 98px; right: 5px; top: 41%; z-index: 2;filter: drop-shadow(1px 0 1px #cdcdcd) drop-shadow(0 1px 2px #ffffff) drop-shadow(0 0 px #ffffffb0) blur(0.2px);}
+body.page-home footer .footer-pic:after{content: ''; position: absolute; z-index: 1; background: url("../images/mplogo-bg2.svg") no-repeat center center; background-size: 100%; width: 117px; height: 100px; animation: glow-breathing 1s ease-in-out infinite;pointer-events: none; right: 5px; top: 41%}
 @keyframes glow-breathing {
     0%, 100% {
         filter: drop-shadow(0 0 1px #fff) drop-shadow(0 0 2px rgba(255, 255, 255, 0.7));
@@ -843,18 +850,25 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.other:active i{background
 #popupParagraph.temppay-cash-popup .temppay-kiosk-wrap{
 	display:flex;
 	flex-direction:column;
-	align-items:center;
-	width:100%;
+	align-items:stretch;
+	justify-content:center;
+	width:min(380px, 90%);
+	aspect-ratio:1 / 1;
+	margin:20px auto;
 	box-sizing:border-box;
+	overflow:hidden;
+	background:#fff;
+	border-radius:10px;
+	box-shadow:0 6px 20px rgba(0, 0, 0, .35);
+	border:1px solid rgba(0, 0, 0, .06);
 }
 #popupParagraph.temppay-cash-popup .temppay-kiosk-img{
 	display:block;
-	max-width:90%;
-	height:auto;
-	margin:20px auto;
-	border: 1px solid rgba(255, 255, 255, .06);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, .35);
-	border-radius: 10px;
+	flex:1 1 auto;
+	min-height:0;
+	width:100%;
+	height:100%;
+	object-fit:contain;
 }
 #popupParagraph.temppay-cash-popup .temppay-kiosk-wrap .temppay-denom-bar{
 	align-self:stretch;
