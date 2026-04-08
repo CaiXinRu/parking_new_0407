@@ -282,13 +282,41 @@ header .header-pic {
   text-align: center;
 }
 #header-title div {
-  border-bottom: 0.14rem solid var(--font-grey);
-  padding: 0 1.5rem 0.5rem;
+  position: relative;
+  border-bottom: none;
+  padding: 0 1.5rem 0.55rem;
   margin: 0 0 1rem;
   font-weight: 600;
   max-width: 60%;
   max-height: 90px;
   overflow: hidden;
+  color: #0a0a0a;
+  text-shadow:
+    0 0 10px rgba(255, 255, 255, 0.95),
+    0 0 22px rgba(255, 255, 255, 0.55),
+    0 0 38px rgba(255, 255, 255, 0.28);
+}
+#header-title div::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 0.16rem;
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.4) 20%,
+    rgba(255, 255, 255, 0.98) 50%,
+    rgba(255, 255, 255, 0.4) 80%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  box-shadow:
+    0 0 12px rgba(255, 255, 255, 0.9),
+    0 0 26px rgba(255, 255, 255, 0.5),
+    0 0 44px rgba(255, 255, 255, 0.22);
+  pointer-events: none;
 }
 .donate-qr {
   position: absolute;
@@ -340,9 +368,24 @@ main {
   align-items: center;
   flex-direction: column;
   min-height: 93%;
-  background: linear-gradient(145deg, #efefef 0%, #ffffff 52%, #ffffff 80%, #dfdfdf 89%);
   margin: -100px 0 0;
   color: var(--main-font);
+  overflow: hidden;
+}
+main::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: url("/images/0407/wallpaper.png") center center no-repeat;
+  background-size: cover;
+  filter: blur(3px);
+  opacity: 0.8;
+  pointer-events: none;
+}
+main > * {
+  position: relative;
+  z-index: 1;
 }
 main.nor {
   padding: 9rem 0;
@@ -350,6 +393,10 @@ main.nor {
 main h2 {
   padding: 0 0 2rem;
   font-size: 2.5rem;
+  text-shadow:
+    0 0 10px rgba(255, 255, 255, 0.95),
+    0 0 22px rgba(255, 255, 255, 0.55),
+    0 0 36px rgba(255, 255, 255, 0.28);
 }
 main.pick-main {
   align-items: center;
@@ -1283,6 +1330,8 @@ footer #pat-list-inner p img {
   border: 10px solid #f0f2fa;
   background: #fff;
   box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.45),
+    0 0 24px rgba(255, 255, 255, 0.28),
     0 14px 40px rgba(42, 36, 82, 0.22),
     0 6px 16px rgba(0, 0, 0, 0.12),
     0 2px 4px rgba(0, 0, 0, 0.08);
@@ -1296,6 +1345,8 @@ footer #pat-list-inner p img {
 #b-bt-container a.pick-type:active {
   transform: scale(0.985);
   box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.4),
+    0 0 18px rgba(255, 255, 255, 0.22),
     0 8px 26px rgba(42, 36, 82, 0.18),
     0 3px 10px rgba(0, 0, 0, 0.1);
 }
@@ -1363,6 +1414,9 @@ footer #pat-list-inner p img {
   letter-spacing: 0.12rem;
   color: #121212;
   line-height: 1.15;
+  text-shadow:
+    0 0 8px rgba(255, 255, 255, 0.85),
+    0 0 18px rgba(255, 255, 255, 0.4);
 }
 #b-bt-container .pick-en {
   font-size: 1.2rem;
@@ -1371,6 +1425,9 @@ footer #pat-list-inner p img {
   text-transform: uppercase;
   font-family: Arial, Helvetica, sans-serif;
   color: #121212;
+  text-shadow:
+    0 0 8px rgba(255, 255, 255, 0.85),
+    0 0 18px rgba(255, 255, 255, 0.4);
 }
 #b-bt-container a.car .pick-en,
 #b-bt-container a.sct .pick-en {
@@ -2525,7 +2582,6 @@ footer #pat-list-inner p img {
 }
 .page-temppay-checkout #header-title div {
   color: #1e2a4a;
-  border-bottom-color: rgba(65, 33, 135, 0.45);
 }
 main.temppay-checkout-page {
   background: transparent;
