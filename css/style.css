@@ -271,7 +271,7 @@ header .header-pic {
   padding: 0 1.5rem 0.55rem;
   margin: 0 0 1rem;
   font-weight: 600;
-  max-width: 60%;
+  max-width: 85%;
   max-height: 90px;
   overflow: hidden;
   color: #0a0a0a;
@@ -306,11 +306,10 @@ header .header-pic {
   position: absolute;
   z-index: 9;
   overflow: hidden;
-  top: 135px;
+  top: 158px;
   left: 0;
   padding: 15px 20px 15px 15px;
-  /* background-color: #eed5a1; */
-  color: var(--main-font);
+  color: var(--white);
   text-align: center;
   line-height: 1.4rem;
   font-size: 1.2rem;
@@ -318,6 +317,7 @@ header .header-pic {
 .donate-qr > p {
   position: relative;
   z-index: 1;
+  top: -1px;
 }
 .donate-qr:after {
   content: "";
@@ -325,12 +325,11 @@ header .header-pic {
   width: 100%;
   height: 100%;
   position: absolute;
-  border: 1px solid #ac81d5;
   border-left: none;
   top: 0;
   left: 0;
   border-radius: 0 2rem 2rem 0;
-  background-color: #eed5a1;
+  background-color: var(--main-p);
   -webkit-mask-image: url(../images/header-bgmask.png);
   mask-image: url(../images/code-mask.png);
   mask-repeat: no-repeat;
@@ -536,6 +535,7 @@ main.pick-main h2 {
 }
 #popupParagraph p {
   font-size: 1.7rem;
+  font-weight: 600;
   line-height: 3rem;
   position: relative;
   width: auto;
@@ -568,7 +568,9 @@ main.pick-main h2 {
 }
 .popup-buttom-bt ul li {
   position: relative;
-  width: 70%;
+  width: auto;
+  max-width: 100%;
+  flex: 0 1 auto;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -577,10 +579,13 @@ main.pick-main h2 {
 .popup-buttom-bt ul li a {
   position: relative;
   display: flex;
-  width: 285px;
+  width: auto;
+  max-width: 100%;
   height: 100%;
+  padding: 0 3.8rem;
   justify-content: center;
   align-items: center;
+  white-space: nowrap;
   background: var(--main-p) url("../images/popup-bt-bg.png") no-repeat center center;
   background-size: cover;
   border-radius: 1.7rem;
@@ -1502,18 +1507,9 @@ footer #pat-list-inner p img {
   content: "";
   position: absolute;
   inset: 0;
-  border: 3px solid var(--main-font);
+  border: 5px solid #08bf5b;
   border-radius: 14px;
   z-index: 11;
-  pointer-events: none;
-}
-#lice-bt-container a.lice-card:active::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 14px;
-  background: rgba(58, 66, 91, 0.41);
-  z-index: 10;
   pointer-events: none;
 }
 #lice-bt-container .lice-card__media {
@@ -1607,6 +1603,13 @@ footer #pat-list-inner p img {
   font-size: 0.95rem;
   color: #9ca3af;
   white-space: nowrap;
+}
+#lice-bt-container a.lice-card:active .lice-card__select-label {
+  color: #08bf5b;
+}
+#lice-bt-container a.lice-card:active .lice-card__check svg circle,
+#lice-bt-container a.lice-card:active .lice-card__check svg path {
+  stroke: #08bf5b;
 }
 #checkout-pic-container .type:before {
   content: "";
@@ -1775,9 +1778,7 @@ footer #pat-list-inner p img {
   color: #3d8a5d;
 }
 #payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(1) .pay-tile__art img {
-  filter: drop-shadow(0 0 5px rgba(89, 158, 97, 0.55)) drop-shadow(0 0 8px rgba(89, 158, 97, 0.38))
-    drop-shadow(0 0 4px rgba(89, 158, 97, 0.22)) drop-shadow(0 0.35rem 0.75rem rgba(0, 0, 0, 0.14))
-    drop-shadow(0 0.12rem 0.35rem rgba(0, 0, 0, 0.1));
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.55))
 }
 #payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(2) .pay-tile__badge {
   background: #3c6fb4;
@@ -1786,9 +1787,7 @@ footer #pat-list-inner p img {
   color: #3c6fb4;
 }
 #payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(2) .pay-tile__art img {
-  filter: drop-shadow(0 0 5px rgba(60, 111, 180, 0.55)) drop-shadow(0 0 8px rgba(60, 111, 180, 0.38))
-    drop-shadow(0 0 4px rgba(60, 111, 180, 0.22)) drop-shadow(0 0.35rem 0.75rem rgba(0, 0, 0, 0.14))
-    drop-shadow(0 0.12rem 0.35rem rgba(0, 0, 0, 0.1));
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.55))
 }
 #payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(3) .pay-tile__badge {
   background: #7d4c9c;
@@ -1797,9 +1796,7 @@ footer #pat-list-inner p img {
   color: #7d4c9c;
 }
 #payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(3) .pay-tile__art img {
-  filter: drop-shadow(0 0 5px rgba(125, 76, 156, 0.55)) drop-shadow(0 0 8px rgba(125, 76, 156, 0.38))
-    drop-shadow(0 0 4px rgba(125, 76, 156, 0.22)) drop-shadow(0 0.35rem 0.75rem rgba(0, 0, 0, 0.14))
-    drop-shadow(0 0.12rem 0.35rem rgba(0, 0, 0, 0.1));
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.55))
 }
 #payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(4) .pay-tile__badge {
   background: #e8b845;
@@ -1808,9 +1805,7 @@ footer #pat-list-inner p img {
   color: #e8b845;
 }
 #payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(4) .pay-tile__art img {
-  filter: drop-shadow(0 0 5px rgba(232, 184, 69, 0.55)) drop-shadow(0 0 8px rgba(232, 184, 69, 0.38))
-    drop-shadow(0 0 4px rgba(232, 184, 69, 0.22)) drop-shadow(0 0.35rem 0.75rem rgba(0, 0, 0, 0.14))
-    drop-shadow(0 0.12rem 0.35rem rgba(0, 0, 0, 0.1));
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.55))
 }
 #payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(5) .pay-tile__badge {
   background: #dc5ca7;
@@ -1819,9 +1814,7 @@ footer #pat-list-inner p img {
   color: #dc5ca7;
 }
 #payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(5) .pay-tile__art img {
-  filter: drop-shadow(0 0 5px rgba(232, 69, 150, 0.55)) drop-shadow(0 0 8px rgba(232, 69, 150, 0.38))
-    drop-shadow(0 0 4px rgba(232, 69, 150, 0.22)) drop-shadow(0 0.35rem 0.75rem rgba(0, 0, 0, 0.14))
-    drop-shadow(0 0.12rem 0.35rem rgba(0, 0, 0, 0.1));
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.55))
 }
 #payment-out #payment-bt-container.payment-method-grid .pay-tile__inner {
   display: flex;
@@ -1875,7 +1868,7 @@ footer #pat-list-inner p img {
   padding: 0.22rem 0.72rem;
   border-radius: 999px;
   font-size: 1.75rem;
-  font-weight: 700;
+  font-weight: 400;
   color: #fff;
   flex-shrink: 0;
   line-height: 1.2;
@@ -2654,7 +2647,7 @@ main.temppay-checkout-page .checkout-photo-loc {
   position: absolute;
   z-index: 3;
   right: 0.55rem;
-  bottom: 0.55rem;
+  bottom: 0.85rem;
   display: inline-flex;
   align-items: center;
   gap: 0.3rem;
@@ -2725,7 +2718,7 @@ main.temppay-checkout-page .plate-badge {
   box-shadow: none;
 }
 main.temppay-checkout-page .plate-badge .plate-value {
-  font-size: clamp(1.85rem, 4.6vw, 2.75rem);
+  font-size: clamp(1.85rem, 6.5vw, 2.75rem);
   font-weight: 800;
   letter-spacing: 0.12em;
   color: #2c3e50;
@@ -2791,7 +2784,7 @@ main.temppay-checkout-page .time-pill {
   background: #e06666;
   color: #fff;
   font-size: 1rem;
-  font-weight: 800;
+  font-weight: 400;
   letter-spacing: 0.2em;
   text-indent: 0.2em;
   border-radius: 0.35rem;
@@ -2843,7 +2836,7 @@ main.temppay-checkout-page .bill-list-title {
   align-items: center;
   gap: 0.5rem;
   font-size: clamp(1.1rem, 2.2vw, 1.3rem);
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 0.06em;
   color: #412187;
 }
@@ -2898,12 +2891,12 @@ main.temppay-checkout-page .bill-line__icon svg {
   display: block;
 }
 main.temppay-checkout-page .bill-line__icon--list {
-  background: #e5e7eb;
+  background: var(--keybg);
   color: #4b5563;
 }
 main.temppay-checkout-page .bill-line__icon--discount {
-  background: #d1fae5;
-  color: #059669;
+  background: #baf0d2;
+  color: #08bf5b;
 }
 main.temppay-checkout-page #checkout-list-container .checkout-inner ul.bill-line-items li:first-child,
 main.temppay-checkout-page #checkout-list-container .checkout-inner ul.bill-line-items li:nth-child(2),
@@ -2971,7 +2964,7 @@ main.temppay-checkout-page
   ul.bill-line-items
   li.bill-line-items__discount
   .bill-desc {
-  color: #49a720;
+  color: #08bf5b;
   text-shadow: 0 0 14px rgba(112, 243, 255, 0.25);
 }
 main.temppay-checkout-page #checkout-list-container .checkout-inner ul.bill-line-items li .bill-amt--discount {
@@ -3088,6 +3081,7 @@ main.temppay-checkout-page h2.temppay-pay-heading {
   background: linear-gradient(180deg, var(--main-p) 0%, var(--main-p) 100%);
   border-radius: 999px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  text-shadow: 0 0 0 BLACK;
 }
 .page-temppay-checkout #main-bt-container.temppay-main-bt {
   width: 92%;
@@ -3220,7 +3214,7 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.checkout-pay-tile.cash .c
   background: linear-gradient(180deg, #ffa033 0%, #f57c00 100%);
 }
 main.temppay-checkout-page #checkout-pay-inner ul li a.checkout-pay-tile.rebate .checkout-pay-tile__head {
-  background: linear-gradient(180deg, #45c06f 0%, #2a9d57 100%);
+  background: linear-gradient(180deg, #08bf5ac6 0%, #08bf5b 100%);
 }
 main.temppay-checkout-page #checkout-pay-inner ul li a.checkout-pay-tile.other .checkout-pay-tile__head {
   background: linear-gradient(180deg, #4a9ef0 0%, #2b7fd9 100%);
@@ -3347,7 +3341,7 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.other:active i {
 #popupParagraph.temppay-cash-popup .temppay-summary__hint {
   margin: 0 0 0.65rem;
   padding: 0.6rem 0.85rem;
-  background: #dbdbdb;
+  background: var(--keybg);
   color: var(--main-p);
   font-size: 1.35rem;
   font-weight: 600;
@@ -3402,7 +3396,7 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.other:active i {
   text-shadow: 0 0 14px rgba(244, 143, 177, 0.2);
 }
 #popupParagraph.temppay-cash-popup .temppay-summary__amt--blue {
-  color: #49a720;
+  color: #08bf5b;
   text-shadow: 0 0 14px rgba(112, 243, 255, 0.25);
 }
 #popupParagraph.temppay-cash-popup .temppay-summary__amt--gray {
