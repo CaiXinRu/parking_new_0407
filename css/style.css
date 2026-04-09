@@ -842,6 +842,14 @@ main.pick-main h2 {
   background: none;
   caret-color: transparent;
   z-index: 2;
+  text-shadow:
+    -1px -1px 0 var(--white),
+    1px -1px 0 var(--white),
+    -1px 1px 0 var(--white),
+    1px 1px 0 var(--white),
+    0 0 10px rgba(255, 255, 255, 0.95),
+    0 0 22px rgba(255, 255, 255, 0.95),
+    0 0 38px rgba(255, 255, 255, 0.95);
 }
 #nb-container div:focus-within::after {
   transform: scale(1.2);
