@@ -82,21 +82,21 @@
 }
 .orb_value {
   position: absolute;
-  top: -2px;
+  top: -4px;
   left: 0;
   width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2.6rem;
+  font-size: 2.4rem;
   letter-spacing: -0.1rem;
 }
 .orb_value:before {
   content: "秒";
   position: absolute;
-  bottom: 17px;
-  right: 12px;
+  bottom: 20px;
+  right: 11px;
   width: 25px;
   height: 25px;
   display: flex;
@@ -154,9 +154,10 @@ header .header-pic {
   text-indent: 7px;
 }
 #header-inner .time span:last-child {
-  text-indent: 4px;
-  letter-spacing: 0.15rem;
-  font-size: 3rem;
+  text-indent: 15px;
+  letter-spacing: 0.65rem;
+  font-size: 2.5rem;
+  transform: translateY(-10px);
   text-shadow:
     1px 1px 2px #00000099,
     1px 0 5px #ffffff21,
@@ -164,23 +165,6 @@ header .header-pic {
     -1px 0 5px #ffffff21,
     0 -1px 5px #ffffff21,
     0 0 8px #ffffffa8;
-}
-#header-inner .time span:first-child:after {
-  content: "";
-  display: flex;
-  width: 100%;
-  height: 25px;
-  position: absolute;
-  bottom: -25%;
-}
-#header-inner .time span:last-child:after {
-  content: "";
-  display: flex;
-  width: 97%;
-  height: 25px;
-  position: absolute;
-  bottom: -36%;
-  left: 5%;
 }
 #header-inner .name {
   position: relative;
@@ -393,7 +377,7 @@ main.nor {
 main h2 {
   padding: 0 0 2rem;
   font-size: 2.5rem;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.95);
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.95);
 }
 main.pick-main {
   align-items: center;
@@ -2757,8 +2741,8 @@ main.temppay-checkout-page .checkout-top-card__headrow .orb_graphic svg {
 }
 main.temppay-checkout-page .checkout-top-card__headrow .orb_value {
   font-size: 2.4rem;
-  top: -4px;
-  left: 3px;
+  top: -7px;
+  left: 4px;
 }
 main.temppay-checkout-page .checkout-top-card__headrow .orb_value:before {
   bottom: 15px;
@@ -3016,7 +3000,7 @@ main.temppay-checkout-page .bill-total-bar {
 /* 大於 .bill-desc（1.35rem）之明細標籤 */
 main.temppay-checkout-page .bill-total-bar__label {
   font-size: clamp(1.55rem, 3.4vw, 2rem);
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 0.08em;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
 }
@@ -3088,7 +3072,7 @@ main.temppay-checkout-page h2.temppay-pay-heading {
   width: auto;
   max-width: min(100%, 520px);
   text-align: center;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 0.12em;
   color: #fff;
   font-size: clamp(1.25rem, 2.5vw, 1.55rem);
