@@ -309,10 +309,15 @@ header .header-pic {
   top: 135px;
   left: 0;
   padding: 15px 20px 15px 15px;
-  color: #ac81d5;
+  /* background-color: #eed5a1; */
+  color: var(--main-font);
   text-align: center;
   line-height: 1.4rem;
   font-size: 1.2rem;
+}
+.donate-qr > p {
+  position: relative;
+  z-index: 1;
 }
 .donate-qr:after {
   content: "";
@@ -325,6 +330,7 @@ header .header-pic {
   top: 0;
   left: 0;
   border-radius: 0 2rem 2rem 0;
+  background-color: #eed5a1;
   -webkit-mask-image: url(../images/header-bgmask.png);
   mask-image: url(../images/code-mask.png);
   mask-repeat: no-repeat;
@@ -332,6 +338,7 @@ header .header-pic {
 }
 .donate-qr .code {
   position: relative;
+  z-index: 1;
   display: flex;
   width: 80px;
   height: 80px;
