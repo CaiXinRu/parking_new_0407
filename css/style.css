@@ -375,8 +375,8 @@ main::before {
   inset: 0;
   z-index: 0;
   /* background: white; */
-  /* background: url("/images/0407/wallpaper_tcmf.png") center center no-repeat; */
-  background: url("/images/0407/wallpaper_asus.png") center center no-repeat;
+  background: url("/images/0407/wallpaper_tcmf.png") center center no-repeat;
+  /* background: url("/images/0407/wallpaper_asus.png") center center no-repeat; */
   background-size: cover;
   opacity: 0.7;
   pointer-events: none;
