@@ -135,7 +135,7 @@ header .header-pic {
   align-items: center;
   padding: 0 1rem;
   z-index: 10;
-  height: 102PX;
+  height: 102px;
 }
 #header-inner .time {
   position: relative;
@@ -277,10 +277,15 @@ header .header-pic {
   max-height: 90px;
   overflow: hidden;
   color: #0a0a0a;
+  -webkit-text-stroke: 0.2px var(--white);
   text-shadow:
+    -1px -1px 0 var(--white),
+    1px -1px 0 var(--white),
+    -1px 1px 0 var(--white),
+    1px 1px 0 var(--white),
     0 0 10px rgba(255, 255, 255, 0.95),
-    0 0 22px rgba(255, 255, 255, 0.55),
-    0 0 38px rgba(255, 255, 255, 0.28);
+    0 0 22px rgba(255, 255, 255, 0.95),
+    0 0 38px rgba(255, 255, 255, 0.95);
 }
 #header-title div::after {
   content: "";
@@ -370,9 +375,10 @@ main::before {
   inset: 0;
   z-index: 0;
   background: white;
+  /* background: url("/images/0407/wallpaper_tcmf.png") center center no-repeat; */
+  /* background: url("/images/0407/wallpaper_asus.png") center center no-repeat; */
   background-size: cover;
-  filter: blur(3px);
-  opacity: 0.8;
+  opacity: 0.7;
   pointer-events: none;
 }
 main > * {
@@ -385,7 +391,14 @@ main.nor {
 main h2 {
   padding: 0 0 2rem;
   font-size: 2.5rem;
-  text-shadow: 0 0 20px rgba(255, 255, 255, 0.95);
+  text-shadow:
+    -1px -1px 0 var(--white),
+    1px -1px 0 var(--white),
+    -1px 1px 0 var(--white),
+    1px 1px 0 var(--white),
+    0 0 10px rgba(255, 255, 255, 0.95),
+    0 0 22px rgba(255, 255, 255, 0.95),
+    0 0 38px rgba(255, 255, 255, 0.95);
 }
 main.pick-main {
   align-items: center;
@@ -1328,7 +1341,7 @@ footer #pat-list-inner p img {
     0 0 0 1px rgba(255, 255, 255, 0.45),
     0 0 24px rgba(255, 255, 255, 0.28),
     0 14px 40px rgba(42, 36, 82, 0.22),
-    0 6px 16px rgba(0, 0, 0, 0.12),
+    0 6px 16px rgba(0, 0, 0, 0.65),
     0 2px 4px rgba(0, 0, 0, 0.08);
   text-decoration: none;
   color: inherit;
@@ -1667,7 +1680,7 @@ footer #pat-list-inner p img {
   color: var(--black);
   background: var(--white);
   border-radius: 15px;
-  box-shadow:0 0 15px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
   padding: 1.75rem 1.25rem 1.5rem;
   -webkit-tap-highlight-color: transparent;
 }
@@ -1780,7 +1793,7 @@ footer #pat-list-inner p img {
   color: #3d8a5d;
 }
 #payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(1) .pay-tile__art img {
-  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.55))
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.55));
 }
 #payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(2) .pay-tile__badge {
   background: #3c6fb4;
@@ -1789,7 +1802,7 @@ footer #pat-list-inner p img {
   color: #3c6fb4;
 }
 #payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(2) .pay-tile__art img {
-  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.55))
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.55));
 }
 #payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(3) .pay-tile__badge {
   background: #7d4c9c;
@@ -1798,7 +1811,7 @@ footer #pat-list-inner p img {
   color: #7d4c9c;
 }
 #payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(3) .pay-tile__art img {
-  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.55))
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.55));
 }
 #payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(4) .pay-tile__badge {
   background: #e8b845;
@@ -1807,7 +1820,7 @@ footer #pat-list-inner p img {
   color: #e8b845;
 }
 #payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(4) .pay-tile__art img {
-  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.55))
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.55));
 }
 #payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(5) .pay-tile__badge {
   background: #dc5ca7;
@@ -1816,7 +1829,7 @@ footer #pat-list-inner p img {
   color: #dc5ca7;
 }
 #payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(5) .pay-tile__art img {
-  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.55))
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.55));
 }
 #payment-out #payment-bt-container.payment-method-grid .pay-tile__inner {
   display: flex;
@@ -1914,7 +1927,7 @@ footer #pat-list-inner p img {
   padding: 0.32rem 0.6rem;
   background: #fff;
   border-radius: 0.55rem;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
 }
 #payment-out #payment-bt-container.payment-method-grid .pay-tile__logos img {
   height: 44px;
@@ -3189,7 +3202,7 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.checkout-pay-tile {
   min-height: 155px;
   border-radius: 1.25rem;
   overflow: hidden;
-  box-shadow:0 0 15px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
   color: inherit;
 }
 main.temppay-checkout-page #checkout-pay-inner ul li a.checkout-pay-tile:active {
