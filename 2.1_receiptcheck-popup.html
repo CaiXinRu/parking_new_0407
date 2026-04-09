@@ -59,70 +59,88 @@
       </header>
       <main class="nor">
         <h2>請點選發票領取方式</h2>
-        <div id="payment-out">
-          <div id="payment-bt-container" class="rec">
-            <ul class="scroll">
-              <li>
-                <a href="" class="paper">
-                  <span>
-                    <svg xmlns="http://www.w3.org/2000/svg">
-                      <rect rx="23" ry="23" class="line" height="104%" width="104%" stroke-linejoin="round" /></svg
-                    ><i></i> </span
-                  >紙本發票
-                </a>
-                <div class="payment-list-container">
-                  <p>直接印出收據</p>
+        <div id="payment-out" style="margin-top: -0.5rem;">
+          <div id="payment-bt-container" class="payment-method-grid">
+            <a href="2.1_receiptcheck-popup.html" class="pay-tile pay-tile--place">
+              <div class="pay-tile__header">紙本發票</div>
+              <div class="pay-tile__inner">
+                <div class="pay-tile__left">
+                  <div class="pay-tile__instruction">
+                    <span class="pay-tile__badge">列印</span>
+                    <p class="pay-tile__hint">直接印出收據</p>
+                  </div>
                 </div>
-              </li>
-              <li>
-                <a href="" class="tax">
-                  <span>
-                    <svg xmlns="http://www.w3.org/2000/svg">
-                      <rect rx="23" ry="23" class="line" height="104%" width="104%" stroke-linejoin="round" /></svg
-                    ><i></i> </span
-                  >統一編號
-                </a>
-                <div class="payment-list-container">
-                  <p>公司報帳用</p>
+                <div class="pay-tile__right">
+                  <div class="pay-tile__art">
+                    <img src="images/0327/invoice_paper.png" alt="" />
+                  </div>
                 </div>
-              </li>
-              <li>
-                <a href="" class="mobile">
-                  <span>
-                    <svg xmlns="http://www.w3.org/2000/svg">
-                      <rect rx="23" ry="23" class="line" height="104%" width="104%" stroke-linejoin="round" /></svg
-                    ><i></i> </span
-                  >手機載具
-                </a>
-                <div class="payment-list-container">
-                  <p>掃描您的手機條碼</p>
+              </div>
+            </a>
+            <a href="2.2-receipttax.html" class="pay-tile pay-tile--nfc">
+              <div class="pay-tile__header">統一編號</div>
+              <div class="pay-tile__inner">
+                <div class="pay-tile__left">
+                  <div class="pay-tile__instruction">
+                    <span class="pay-tile__badge">統編</span>
+                    <p class="pay-tile__hint">公司報帳用</p>
+                  </div>
                 </div>
-              </li>
-              <li>
-                <a href="" class="benefit">
-                  <span>
-                    <svg xmlns="http://www.w3.org/2000/svg">
-                      <rect rx="23" ry="23" class="line" height="104%" width="104%" stroke-linejoin="round" /></svg
-                    ><i></i> </span
-                  >愛心捐
-                </a>
-                <div class="payment-list-container">
-                  <p>幫助社福團體</p>
+                <div class="pay-tile__right">
+                  <div class="pay-tile__art">
+                    <img src="images/0327/invoice_ein.png" alt="" />
+                  </div>
                 </div>
-              </li>
-              <li>
-                <a href="" class="card">
-                  <span>
-                    <svg xmlns="http://www.w3.org/2000/svg">
-                      <rect rx="23" ry="23" class="line" height="104%" width="104%" stroke-linejoin="round" /></svg
-                    ><i></i> </span
-                  >票證載具
-                </a>
-                <div class="payment-list-container">
-                  <p>悠遊卡 / 一卡通</p>
+              </div>
+            </a>
+            <a href="2.4-receiptphone.html" class="pay-tile pay-tile--scan">
+              <div class="pay-tile__header">手機載具</div>
+              <div class="pay-tile__inner">
+                <div class="pay-tile__left">
+                  <div class="pay-tile__instruction">
+                    <span class="pay-tile__badge">掃碼</span>
+                    <p class="pay-tile__hint">掃描或輸入手機載具</p>
+                  </div>
                 </div>
-              </li>
-            </ul>
+                <div class="pay-tile__right">
+                  <div class="pay-tile__art">
+                    <img src="images/0327/qrcode_carried.png" alt="" />
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="" class="pay-tile pay-tile--nfc">
+              <div class="pay-tile__header">票證載具</div>
+              <div class="pay-tile__inner">
+                <div class="pay-tile__left">
+                  <div class="pay-tile__instruction">
+                    <span class="pay-tile__badge">感應</span>
+                    <p class="pay-tile__hint">悠遊卡 / 一卡通</p>
+                  </div>
+                </div>
+                <div class="pay-tile__right">
+                  <div class="pay-tile__art">
+                    <img src="images/0327/payment_cardSense.png" alt="" />
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="2.3-receiptdonate.html" class="pay-tile pay-tile--place">
+              <div class="pay-tile__header">愛心捐</div>
+              <div class="pay-tile__inner">
+                <div class="pay-tile__left">
+                  <div class="pay-tile__instruction">
+                    <span class="pay-tile__badge">捐贈</span>
+                    <p class="pay-tile__hint">幫助社福團體</p>
+                  </div>
+                </div>
+                <div class="pay-tile__right">
+                  <div class="pay-tile__art">
+                    <img src="images/0327/invoice_donate.png" alt="" />
+                  </div>
+                </div>
+              </div>
+            </a>
           </div>
         </div>
       </main>

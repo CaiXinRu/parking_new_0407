@@ -9,7 +9,7 @@
     <title>微程式資訊 Microprogram｜停車場繳費機</title>
   </head>
 
-  <body>
+  <body class="page-home">
     <div id="popup_bg">
       <div id="popupParagraph" class="popup-inner receipt-success-popup">
         <div class="receipt-success-popup__icon" aria-hidden="true">
@@ -52,97 +52,28 @@
         <div id="header-title">
           <div>微程式資訊總部 台中停車場</div>
         </div>
-        <div class="CUT">
-          <div class="orb_graphic">
-            <svg>
-              <defs>
-                <linearGradient id="myGradient" x1="0%" y1="0%" x2="0%" y2="100%" spreadMethod="pad">
-                  <stop offset="0%" stop-color="#412187" stop-opacity="1" />
-                  <stop offset="90%" stop-color="#412187" stop-opacity="1" />
-                </linearGradient>
-              </defs>
-              <circle class="fill"></circle>
-              <circle class="progress"></circle>
-            </svg>
-            <div class="orb_value count">60</div>
-          </div>
-        </div>
         <div class="header-pic"><img class="header-mask" src="images/header-bg.png" alt="" /></div>
       </header>
       <main class="nor">
-        <h2>請掃描或輸入手機載具</h2>
-        <div id="nb-container" class="more">
-          <div><input type="text" value="/" maxlength="1" /></div>
-          <div><input type="text" value="" maxlength="1" /></div>
-          <div><input type="text" value="" maxlength="1" /></div>
-          <div><input type="text" value="" maxlength="1" /></div>
-          <div><input type="text" value="" maxlength="1" /></div>
-          <div><input type="text" value="" maxlength="1" /></div>
-          <div><input type="text" value="" maxlength="1" /></div>
-          <div><input type="text" value="" maxlength="1" /></div>
-        </div>
-        <div id="keyb-container">
-          <div class="receipt-keyboard">
-            <a href="">0</a>
-            <a href="">1</a>
-            <a href="">2</a>
-            <a href="">3</a>
-            <a href="">4</a>
-            <a href="">5</a>
-            <a href="">6</a>
-            <a href="">7</a>
-            <a href="">8</a>
-            <a href="">9</a>
-            <a href="">A</a>
-            <a href="">B</a>
-            <a href="">C</a>
-            <a href="">D</a>
-            <a href="">E</a>
-            <a href="">F</a>
-            <a href="">G</a>
-            <a href="">H</a>
-            <a href="">I</a>
-            <a href="">J</a>
-            <a href="">K</a>
-            <a href="">L</a>
-            <a href="">M</a>
-            <a href="">N</a>
-            <a href="">O</a>
-            <a href="">P</a>
-            <a href="">Q</a>
-            <a href="">R</a>
-            <a href="">S</a>
-            <a href="">T</a>
-            <a href="">U</a>
-            <a href="">V</a>
-            <a href="">W</a>
-            <a href="">X</a>
-            <a href="">Y</a>
-            <a href="">Z</a>
-            <a href="">/</a>
-            <a href="">.</a>
-            <a href="">-</a>
-            <a href="">+</a>
-          </div>
-          <div id="keyboard-del">
-            <a href="">刪除</a>
-            <a href="">清除</a>
-          </div>
-        </div>
-        <div id="main-bt-container">
-          <a href="" class="left">
-            <svg xmlns="http://www.w3.org/2000/svg">
-              <rect rx="38" ry="38" class="line" height="100%" width="100%" stroke-linejoin="round" /></svg
-            ><i></i><span>返回</span>
+        <h2>請選擇繳費車種</h2>
+        <div id="b-bt-container">
+          <a href="0.2-indexNum-2btn.html" class="car pick-type">
+            <span class="pick-icon-ring"><i></i></span>
+            <span class="pick-text">
+              <span class="pick-zh">汽車</span>
+              <span class="pick-en">CAR</span>
+            </span>
           </a>
-          <a href="" class="right">
-            <svg xmlns="http://www.w3.org/2000/svg">
-              <rect rx="38" ry="38" class="line" height="100%" width="100%" stroke-linejoin="round" /></svg
-            ><i></i><span>確認</span>
+          <a href="" class="sct pick-type">
+            <span class="pick-icon-ring"><i></i></span>
+            <span class="pick-text">
+              <span class="pick-zh">機車</span>
+              <span class="pick-en">MOTORCYCLE</span>
+            </span>
           </a>
         </div>
       </main>
-      <footer class="inner">
+      <footer>
         <div id="pay-list-container">
           <div id="pat-list-inner">
             <p><img src="images/pay_easycard.png" alt="" /></p>

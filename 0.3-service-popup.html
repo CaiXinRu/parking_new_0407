@@ -9,7 +9,7 @@
     <title>微程式資訊 Microprogram｜停車場繳費機</title>
   </head>
 
-  <body>
+  <body class="page-home">
     <div id="popup_bg">
       <div id="popupParagraph" class="popup-inner receipt-success-popup service-info-popup popup-h1-bar">
         <h1>客服資訊</h1>
@@ -108,10 +108,9 @@
         <div class="header-pic"><img class="header-mask" src="images/header-bg.png" alt="" /></div>
       </header>
       <main class="nor">
-        <h2>請掃描或輸入手機載具</h2>
+        <h2>輸入完整車牌號碼</h2>
         <div id="nb-container" class="more">
-          <div><input type="text" value="/" maxlength="1" /></div>
-          <div><input type="text" value="" maxlength="1" /></div>
+          <div><input type="text" value="8" maxlength="1" /></div>
           <div><input type="text" value="" maxlength="1" /></div>
           <div><input type="text" value="" maxlength="1" /></div>
           <div><input type="text" value="" maxlength="1" /></div>
@@ -120,7 +119,7 @@
           <div><input type="text" value="" maxlength="1" /></div>
         </div>
         <div id="keyb-container">
-          <div class="receipt-keyboard">
+          <div class="receipt-keyboard EN">
             <a href="">0</a>
             <a href="">1</a>
             <a href="">2</a>
@@ -157,30 +156,19 @@
             <a href="">X</a>
             <a href="">Y</a>
             <a href="">Z</a>
-            <a href="">/</a>
-            <a href="">.</a>
-            <a href="">-</a>
-            <a href="">+</a>
-          </div>
-          <div id="keyboard-del">
-            <a href="">刪除</a>
-            <a href="">清除</a>
+            <a href="" class="del">刪除</a>
+            <a href="" class="clear">清除</a>
           </div>
         </div>
         <div id="main-bt-container">
-          <a href="" class="left">
-            <svg xmlns="http://www.w3.org/2000/svg">
-              <rect rx="38" ry="38" class="line" height="100%" width="100%" stroke-linejoin="round" /></svg
-            ><i></i><span>返回</span>
-          </a>
-          <a href="" class="right">
+          <a href="0.3-service-popup.html" class="right">
             <svg xmlns="http://www.w3.org/2000/svg">
               <rect rx="38" ry="38" class="line" height="100%" width="100%" stroke-linejoin="round" /></svg
             ><i></i><span>確認</span>
           </a>
         </div>
       </main>
-      <footer class="inner">
+      <footer>
         <div id="pay-list-container">
           <div id="pat-list-inner">
             <p><img src="images/pay_easycard.png" alt="" /></p>
