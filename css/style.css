@@ -10,8 +10,10 @@
   --main-p: #4e566e;
   --font-grey: #5d5d5d;
   --font-grey-d: #534f4f;
+  --font-green: #08bf5b;
+  --font-red: #e06666;
   --main-font: #412187;
-  --red-color: #ff0000;
+  --beige-bg: #eed5a1;
 }
 .scroll {
   position: absolute;
@@ -2401,6 +2403,211 @@ footer #pat-list-inner p img {
 .parking #checkout-list-container .checkout-inner ul li:first-child span:first-child {
   margin: 0 0 0.5rem;
 }
+
+/* 3.0 車輛位置資訊 — 附圖版型 */
+main.nor.parking-loc-page h2.parking-loc-page-title {
+  width: 100%;
+  max-width: var(--mainsize-w);
+  margin: 0 auto;
+  padding: 0 1rem 1.25rem;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--black);
+  text-shadow: none;
+  letter-spacing: 0.02em;
+}
+main.nor.parking-loc-page #payment-main.parking-loc-main {
+  width: 100%;
+  height: auto;
+  min-height: 58%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  padding: 0 1.5rem 1rem;
+  box-sizing: border-box;
+}
+main.nor.parking-loc-page #checkout-container.parking.parking-loc {
+  box-sizing: border-box;
+  width: 77%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 1.1rem;
+}
+.parking-loc-card-photo {
+  background: var(--white);
+  border-radius: 1rem;
+  padding: 1.25rem 1.25rem 1.5rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+}
+.parking-loc-photo {
+  border-radius: 0.65rem;
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+  background: var(--main-p) url("../images/pic-orgw.png") no-repeat center center;
+  background-size: 200px;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.06);
+}
+.parking-loc-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.parking-loc-eyebrow {
+  margin: 0;
+  padding: 1rem 0 0.35rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #8a8a8a;
+  text-align: center;
+}
+.parking-loc-plate-box {
+  margin: 0 auto;
+  max-width: 22rem;
+  padding: 0.55rem 1.25rem;
+  text-align: center;
+  font-size: 1.85rem;
+  font-weight: 700;
+  font-family: ui-monospace, "Cascadia Code", "Segoe UI Mono", monospace;
+  letter-spacing: 0.12em;
+  color: var(--black);
+  background: #ececec;
+  border-radius: 0.5rem;
+}
+.parking-loc-strip {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  min-height: 5.5rem;
+  padding: 0.85rem 1rem 0.85rem 0;
+  background: var(--white);
+  border-radius: 1rem;
+  box-shadow: 0 0 14px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+}
+.parking-loc-strip-accent {
+  flex: 0 0 12px;
+  width: 12px;
+  margin-right: 1rem;
+  border-radius: 0 8px 8px 0;
+  align-self: center;
+  min-height: 72%;
+}
+.parking-loc-strip-floor .parking-loc-strip-accent {
+  background: linear-gradient(180deg, #08bf5ac6 0%, var(--font-green) 100%);
+}
+.parking-loc-strip-space .parking-loc-strip-accent {
+  background: linear-gradient(180deg, #eda0a0 0%, var(--font-red) 100%);
+}
+.parking-loc-strip-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+  padding: 0.15rem 0;
+}
+.parking-loc-strip-text .parking-loc-eyebrow {
+  text-align: left;
+  padding: 0 0 0.35rem;
+}
+.parking-loc-val-floor {
+  margin: 0;
+  font-size: 2.15rem;
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--font-green);
+}
+.parking-loc-val-space {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--font-red);
+}
+.parking-loc-pill {
+  flex: 0 0 auto;
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 3.5rem;
+  min-height: 3.5rem;
+  margin-left: 0.5rem;
+  border-radius: 0.65rem;
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+.parking-loc-pill-floor {
+  color: var(--font-green);
+  background: #baf0d2;
+  padding: 0 0.85rem;
+}
+.parking-loc-pill-space {
+  background: #f1d3d3;
+  padding: 0.35rem;
+}
+.parking-loc-pill-space .parking-loc-car-ico {
+  display: block;
+  flex-shrink: 0;
+  width: 2.25rem;
+  height: 2.25rem;
+  color: var(--font-red);
+}
+.parking-loc-notice {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-top: 0.25rem;
+  padding: 1rem 1.15rem;
+  background: var(--beige-bg);
+  border-radius: 0.85rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+.parking-loc-notice-ico {
+  flex-shrink: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-top: 0.1rem;
+  border: 2px solid var(--black);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+  font-style: italic;
+  line-height: 1;
+  color: var(--black);
+}
+.parking-loc-notice-txt {
+  margin: 0;
+  flex: 1;
+  font-size: 1.25rem;
+  line-height: 1.45;
+  font-weight: 500;
+  color: var(--black);
+  text-shadow: 0 0 25px var(--white);
+}
+.parking-loc-notice-txt .parking-loc-em {
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
 #checkout-list-container .timer {
   margin: 0 0 0 1.5rem;
 }
