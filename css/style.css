@@ -370,8 +370,8 @@ main::before {
   position: absolute;
   inset: 0;
   z-index: 0;
-  /* background: white; */
-  background: url("/images/0407/wallpaper_tcmf.png") center center no-repeat;
+  background: white;
+  /* background: url("/images/0407/wallpaper_tcmf.png") center center no-repeat; */
   /* background: url("/images/0407/wallpaper_asus.png") center center no-repeat; */
   background-size: cover;
   opacity: 0.7;
@@ -542,7 +542,6 @@ main.pick-main h2 {
 }
 #popupParagraph p {
   font-size: 1.7rem;
-  font-weight: 600;
   line-height: 3rem;
   position: relative;
   width: auto;
@@ -3276,6 +3275,9 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.other:active i {
 /* 1.2_temppay-popup：現金投入／金額摘要（附圖排版） */
 #popupParagraph.temppay-cash-popup {
   padding-bottom: 11rem;
+}
+#popupParagraph.temppay-cash-popup > h1 + p {
+  font-weight: 600;
 }
 #popupParagraph.temppay-cash-popup .temppay-kiosk-wrap {
   display: flex;
