@@ -2432,7 +2432,7 @@ main.nor.parking-loc-page #payment-main.parking-loc-main {
 }
 main.nor.parking-loc-page #checkout-container.parking.parking-loc {
   box-sizing: border-box;
-  width: 77%;
+  width: 80%;
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
