@@ -269,6 +269,9 @@ header .header-pic {
   color: #000000;
   text-align: center;
 }
+#main-container.page-temppay-checkout #header-title {
+  bottom: -15px;
+}
 #header-title div {
   position: relative;
   border-bottom: none;
@@ -393,6 +396,11 @@ main h2 {
     0 0 10px rgba(255, 255, 255, 0.95),
     0 0 22px rgba(255, 255, 255, 0.95),
     0 0 38px rgba(255, 255, 255, 0.95);
+}
+main.nor h2.receipt-method-heading {
+  position: relative;
+  top: -10px;
+  padding: 0 0 1.05rem;
 }
 main.pick-main {
   align-items: center;
@@ -1640,6 +1648,9 @@ footer #pat-list-inner p img {
   margin: 0.5rem auto 1rem;
   justify-content: center;
   align-items: center;
+}
+#payment-out.payment-out--tight {
+  margin-top: -0.5rem;
 }
 #payment-out #payment-bt-container {
   position: relative;
@@ -3730,10 +3741,20 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.other:active i {
   line-height: 1.5;
   justify-content: center;
 }
+#popupParagraph .receipt-success-popup__content p.popup-content-text-mt {
+  margin-top: 20px;
+}
 .receipt-success-popup__title {
   font-size: 2.15rem;
   font-weight: 700;
   color: #000;
+}
+#popupParagraph.receipt-success-popup .receipt-success-popup__content p.receipt-success-popup__title--xl {
+  font-size: 3.15rem;
+  margin-top: 20px;
+}
+#popupParagraph.receipt-success-popup .receipt-success-popup__content p.receipt-success-popup__title--spaced {
+  margin-top: 20px;
 }
 .receipt-success-popup__line1,
 .receipt-success-popup__line2 {
