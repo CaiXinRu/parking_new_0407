@@ -465,22 +465,6 @@ main.nor h2.receipt-method-heading {
   top: -10px;
   padding: 0 0 1.05rem;
 }
-main.pick-main {
-  align-items: center;
-  width: 100%;
-  box-sizing: border-box;
-}
-main.pick-main h2 {
-  color: var(--black);
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  width: 100%;
-  max-width: var(--mainsize-w);
-  text-align: center;
-  box-sizing: border-box;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
 /* 模糊放在 ::before，避免在 flex 容器本體套用 backdrop-filter 時部分解析度合成異常 */
 #popup_bg {
   position: fixed;
@@ -541,77 +525,6 @@ main.pick-main h2 {
   width: calc(100% + 4rem);
   box-sizing: border-box;
   border-radius: 2rem 2rem 0 0;
-}
-#popupParagraph.single.icon h1 {
-  margin: 1rem 0 6rem;
-}
-#popupParagraph.single.icon #popup-inner .popup-pic {
-  background: none;
-  justify-content: center;
-  align-items: center;
-  height: 140px;
-}
-#popupParagraph.single.icon #popup-inner .popup-pic p {
-  position: relative;
-  top: unset;
-  left: unset;
-  justify-content: center;
-  align-items: center;
-}
-#popupParagraph.single.icon #popup-inner .popup-pic p img {
-  position: absolute;
-  z-index: 1;
-  animation: ball 2s ease-in-out infinite;
-}
-
-@keyframes ball {
-  0%,
-  100% {
-    top: -10px;
-  }
-  50% {
-    top: 0;
-  }
-}
-#popupParagraph.single.icon #popup-inner .popup-pic p:after {
-  content: "";
-  display: flex;
-  width: 36%;
-  height: 22px;
-  position: absolute;
-  bottom: -4px;
-  left: 32%;
-  background: radial-gradient(circle, rgb(213 213 213) 0%, rgb(241 241 241 / 75%) 100%);
-  border-radius: 100%;
-  filter: blur(2px);
-  z-index: 0;
-  animation: ballsh 2s ease-in-out infinite;
-}
-
-@keyframes ballsh {
-  0%,
-  100% {
-    width: 16%;
-    height: 16px;
-    left: 42%;
-  }
-  50% {
-    width: 36%;
-    height: 22px;
-    left: 32%;
-  }
-}
-#popupParagraph.single #popup-inner .popup-pic {
-  width: 100%;
-  height: 246px;
-  background: url("../images/kioskpic-bgs.png") no-repeat center center;
-  background-size: 100%;
-}
-#popupParagraph.single #popup-inner .popup-pic p {
-  width: 347px;
-  height: 168px;
-  top: 35px;
-  left: 30%;
 }
 #popupParagraph p {
   font-size: 1.7rem;
@@ -716,27 +629,6 @@ main.pick-main h2 {
   font-size: 1.7rem;
   justify-content: space-evenly;
 }
-#popup-inner .popup-pic {
-  position: relative;
-  width: 40%;
-  height: 357px;
-  display: flex;
-  background-size: 100%;
-}
-#popup-inner .popup-pic p {
-  position: absolute;
-  width: 180px;
-  height: 168px;
-  top: 14px;
-  left: 11%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#popup-inner .popup-pic p img {
-  max-height: 100%;
-  max-width: 100%;
-}
 #popup-inner .popup-type.tip {
   width: 90%;
   padding: 0;
@@ -812,43 +704,6 @@ main.pick-main h2 {
   font-size: 2.4rem;
   font-weight: 600;
   line-height: 2.8rem;
-}
-#popup-inner .popup-type ul li.fee-ca {
-  min-height: 125px;
-  background: var(--main-p);
-  color: var(--white);
-  border-radius: 2.5rem 2.5rem 0 0;
-  padding: 1.5rem 0 1rem;
-  box-shadow:
-    inset 2px 2px 8px #00000047,
-    2px 7px 5px var(--white),
-    2px 0 7px #c9c9c9;
-  z-index: 1;
-}
-#popup-inner .popup-type ul li.fee-ca::before {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  bottom: 0;
-  width: 100%;
-  height: 12px;
-  background: linear-gradient(to bottom, transparent, white);
-}
-#popup-inner .popup-type ul li.fee-am {
-  min-height: 155px;
-  color: var(--black);
-  box-shadow:
-    inset -3px 7px 4px var(--white),
-    inset 2px 2px 8px #00000012,
-    2px 2px 6px #e3e3e3;
-  z-index: 0;
-  margin: -10px 0 0;
-  border-radius: 0 0 2.5rem 2.5rem;
-}
-#popup-inner .popup-type ul li.fee-am p span:nth-child(2) {
-  font-size: 4rem;
-  font-weight: 600;
-  line-height: 4rem;
 }
 #nb-container {
   display: flex;
@@ -1522,43 +1377,6 @@ footer #pat-list-inner p img {
 #b-bt-container a.sct:active .pick-icon-ring i {
   background-image: url("../images/0327/vehicle_scooter.png");
 }
-#type-container {
-  position: relative;
-  width: 80%;
-  min-height: 600px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  font-size: 2rem;
-  color: var(--black);
-  background: linear-gradient(145deg, #efefef 0%, #d9d9d9 52%, var(--white) 80%);
-  border-radius: 1.9rem;
-  margin: 0 auto 5rem;
-}
-#type-container::after {
-  content: "";
-  position: absolute;
-  z-index: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  font-weight: 600;
-  border-width: 3px;
-  border-style: solid;
-  border-color: transparent;
-  border-radius: 1.9rem;
-  background-image: linear-gradient(
-    143deg,
-    var(--grad-lilac-start) 30%,
-    var(--lavender-tint) 70%,
-    var(--grad-lilac-end) 80%
-  );
-  background-origin: border-box;
-  mask-image: linear-gradient(white, white), linear-gradient(white, white);
-  mask-clip: padding-box, border-box;
-  mask-composite: exclude;
-}
 #lice-out {
   position: relative;
   width: 90%;
@@ -1790,13 +1608,6 @@ footer #pat-list-inner p img {
   color: var(--black);
   margin: 0 0 0.45rem;
   line-height: 1.25;
-}
-#payment-out #payment-bt-container.payment-qrcode-grid .payment-qrcode-card__desc {
-  display: block;
-  font-size: 1.35rem;
-  font-weight: 400;
-  color: #666;
-  line-height: 1.35;
 }
 #payment-out #payment-bt-container.payment-method-grid {
   display: grid;
@@ -2099,69 +1910,6 @@ footer #pat-list-inner p img {
   filter: drop-shadow(2px 2px 1px var(--overlay-black-15));
   margin: -43px 0 0;
 }
-#payment-out #payment-bt-container.qrcode ul {
-  align-content: flex-start;
-}
-#payment-out #payment-bt-container.qrcode ul li {
-  width: 27%;
-  margin: 0 3% 2rem;
-  height: 150px;
-}
-#payment-out #payment-bt-container.qrcode ul li a {
-  width: 100%;
-  margin: 0 1.5%;
-  height: 100%;
-  justify-content: center;
-}
-#payment-out #payment-bt-container.qrcode ul li a:active span {
-  background: #e3e6e8;
-}
-#payment-out #payment-bt-container.qrcode ul li a i {
-  width: 80%;
-  height: 80%;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-}
-#payment-out #payment-bt-container.qrcode ul li a i img {
-  max-width: 100%;
-  max-height: 100%;
-}
-#payment-out #payment-bt-container.pay ul li a {
-  color: var(--white);
-}
-#payment-out #payment-bt-container.pay ul li a i {
-  margin: -60px 0 0;
-}
-#payment-out #payment-bt-container.pay ul li:first-child a:active span,
-#payment-out #payment-bt-container.pay ul li:nth-child(2) a:active span,
-#payment-out #payment-bt-container.pay ul li:nth-child(3) a:active span {
-  opacity: 0.8;
-}
-#payment-out #payment-bt-container.pay ul li:first-child a span {
-  background: linear-gradient(135deg, #f43f5e 0%, #fb4e3c 100%);
-  box-shadow: inset 0 -1px 30px #db2f2a;
-}
-#payment-out #payment-bt-container.pay ul li:nth-child(2) a span {
-  background: linear-gradient(135deg, #34c3a2 0%, #62d3b0 100%);
-  box-shadow: inset 0 -1px 30px #349d7f;
-}
-#payment-out #payment-bt-container.pay ul li:nth-child(3) a span {
-  background: linear-gradient(135deg, #dd9f2e 0%, #fdb22a 100%);
-  box-shadow: inset 0 -1px 30px #f9a915;
-}
-#payment-out #payment-bt-container ul li a.qrcode i {
-  background: url("../images/pay-qrcode-w.svg") no-repeat center center;
-  background-size: 100%;
-}
-#payment-out #payment-bt-container ul li a.iccard i {
-  background: url("../images/pay-iccard-w.svg") no-repeat center center;
-  background-size: 100%;
-}
-#payment-out #payment-bt-container ul li a.card i {
-  background: url("../images/pay-card-w.svg") no-repeat center center;
-  background-size: 100%;
-}
 #payment-out #payment-bt-container.rebate ul li a.recard i {
   background: url("../images/pay-card.svg") no-repeat center center;
   background-size: 100%;
@@ -2192,49 +1940,6 @@ footer #pat-list-inner p img {
 }
 #payment-out #payment-bt-container.rebate ul li a.coupon:active i {
   background: url("../images/rebaet-coupon-w.svg") no-repeat center center;
-  background-size: 100%;
-}
-#payment-out #payment-bt-container.rec {
-  height: 853px;
-}
-#payment-out #payment-bt-container.rec ul li a.paper i {
-  background: url("../images/rec-paper.svg") no-repeat center center;
-  background-size: 100%;
-}
-#payment-out #payment-bt-container.rec ul li a.paper:active i {
-  background: url("../images/rec-paper-w.svg") no-repeat center center;
-  background-size: 100%;
-}
-#payment-out #payment-bt-container.rec ul li a.tax i {
-  background: url("../images/rec-tax.svg") no-repeat center center;
-  background-size: 100%;
-}
-#payment-out #payment-bt-container.rec ul li a.tax:active i {
-  background: url("../images/rec-tax-w.svg") no-repeat center center;
-  background-size: 100%;
-}
-#payment-out #payment-bt-container.rec ul li a.mobile i {
-  background: url("../images/rec-mobile.svg") no-repeat center center;
-  background-size: 100%;
-}
-#payment-out #payment-bt-container.rec ul li a.mobile:active i {
-  background: url("../images/rec-mobile-w.svg") no-repeat center center;
-  background-size: 100%;
-}
-#payment-out #payment-bt-container.rec ul li a.benefit i {
-  background: url("../images/rec-benefit.svg") no-repeat center center;
-  background-size: 100%;
-}
-#payment-out #payment-bt-container.rec ul li a.benefit:active i {
-  background: url("../images/rec-benefit-w.svg") no-repeat center center;
-  background-size: 100%;
-}
-#payment-out #payment-bt-container.rec ul li a.card i {
-  background: url("../images/rec-card.svg") no-repeat center center;
-  background-size: 100%;
-}
-#payment-out #payment-bt-container.rec ul li a.card:active i {
-  background: url("../images/rec-card-w.svg") no-repeat center center;
   background-size: 100%;
 }
 #payment-out #payment-bt-container ul li a span {
@@ -2282,37 +1987,8 @@ footer #pat-list-inner p img {
   font-weight: 600;
   margin: 1rem 0 0;
 }
-#payment-out #payment-bt-container .payment-list-container .pm-mark {
-  position: absolute;
-  display: flex;
-  flex-wrap: wrap;
-  min-width: 90%;
-  justify-content: space-evenly;
-  align-items: center;
-  color: var(--font-grey-d);
-  font-weight: 600;
-  width: 90%;
-  bottom: 30px;
-  left: 2.5%;
-  background: #ffffff63;
-  border-radius: 5rem;
-}
-#payment-out #payment-bt-container .payment-list-container .pm-mark span {
-  display: flex;
-  width: 40px;
-  height: 40px;
-}
-#payment-out #payment-bt-container .payment-list-container .pm-mark span img {
-  max-width: 100%;
-  max-height: 100%;
-}
-#payment-out #payment-bt-container.rebate .payment-list-container,
-#payment-out #payment-bt-container.rec .payment-list-container {
+#payment-out #payment-bt-container.rebate .payment-list-container {
   font-size: 1.5rem;
-}
-#payment-out #payment-bt-container.rec ul li a {
-  height: 200px;
-  padding: 0 0 1.5rem;
 }
 #payment-main {
   position: relative;
@@ -3317,29 +2993,6 @@ main.temppay-checkout-page .bill-total-bar__amt strong {
   line-height: 1;
   letter-spacing: 0.02em;
 }
-main.temppay-checkout-page #checkout-list-container.checkout-bill-card > .bill-total-row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  margin: 0;
-  padding: 1rem 1.15rem 1.1rem clamp(1rem, 3vw, 1.45rem);
-  background: linear-gradient(180deg, #e8f4ff 0%, #dff0ff 100%);
-  border-top: 1px solid rgba(56, 130, 200, 0.15);
-}
-main.temppay-checkout-page .bill-total-row .total-label {
-  font-size: clamp(1.05rem, 2.2vw, 1.25rem);
-  font-weight: 800;
-  color: #1d4ed8;
-  letter-spacing: 0.06em;
-}
-main.temppay-checkout-page .bill-total-row .total-value {
-  font-size: clamp(1.85rem, 5vw, 2.75rem);
-  font-weight: 800;
-  line-height: 1.05;
-  color: #dc2626;
-  font-variant-numeric: tabular-nums;
-}
 @media (max-width: 640px) {
   main.temppay-checkout-page .checkout-top-card__row {
     flex-direction: column;
@@ -3380,61 +3033,6 @@ main.temppay-checkout-page h2.temppay-pay-heading {
   border-radius: 999px;
   box-shadow: 0 6px 20px var(--overlay-black-12);
   text-shadow: 0 0 0 BLACK;
-}
-.page-temppay-checkout #main-bt-container.temppay-main-bt {
-  width: 92%;
-  max-width: 640px;
-  margin: 0.75rem auto 1rem;
-  justify-content: center;
-  gap: 1rem;
-}
-.page-temppay-checkout #main-bt-container.temppay-main-bt a {
-  width: auto;
-  min-width: 200px;
-  flex: 1 1 200px;
-  max-width: 280px;
-  height: auto;
-  min-height: 72px;
-  padding: 1rem 1.25rem;
-  font-size: 1.65rem;
-  border-radius: 999px;
-  box-shadow: none;
-  margin: 0;
-}
-.page-temppay-checkout #main-bt-container.temppay-main-bt a:before,
-.page-temppay-checkout #main-bt-container.temppay-main-bt a:after {
-  display: none;
-}
-.page-temppay-checkout #main-bt-container.temppay-main-bt a svg {
-  display: none;
-}
-.page-temppay-checkout #main-bt-container.temppay-main-bt a.temppay-bt-back {
-  background: var(--white);
-  color: var(--main-font);
-  border: 2px solid var(--main-font);
-  font-weight: 700;
-  letter-spacing: 0.02em;
-}
-.page-temppay-checkout #main-bt-container.temppay-main-bt a.temppay-bt-back:active {
-  background: #f3effa;
-}
-.page-temppay-checkout #main-bt-container.temppay-main-bt a.temppay-bt-primary {
-  background: var(--main-font);
-  color: var(--white);
-  border: 2px solid var(--main-font);
-  font-weight: 700;
-  letter-spacing: 0.02em;
-}
-.page-temppay-checkout #main-bt-container.temppay-main-bt a.temppay-bt-primary:active {
-  filter: brightness(0.94);
-}
-.page-temppay-checkout #main-bt-container.temppay-main-bt a.left,
-.page-temppay-checkout #main-bt-container.temppay-main-bt a.right {
-  flex-direction: row;
-  justify-content: center;
-}
-.page-temppay-checkout #main-bt-container.temppay-main-bt a i {
-  display: none;
 }
 main.temppay-checkout-page #checkout-paysel {
   width: 100%;
@@ -3593,10 +3191,6 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.other:active i {
   height: 100%;
   object-fit: contain;
 }
-#popupParagraph.temppay-cash-popup .temppay-kiosk-wrap .temppay-denom-bar {
-  align-self: stretch;
-  width: 100%;
-}
 #popupParagraph.temppay-cash-popup #popup-inner.temppay-cash-layout {
   position: relative;
   flex-direction: column;
@@ -3605,14 +3199,6 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.other:active i {
   margin: 1.25rem auto 1rem;
   align-items: stretch;
   gap: 0.85rem;
-}
-#popupParagraph.temppay-cash-popup .temppay-cash-panel {
-  position: relative;
-  border: 1px solid rgba(112, 243, 255, 0.38);
-  border-radius: 1rem;
-  padding: 2.75rem 1rem 1.35rem;
-  background: rgba(18, 18, 22, 0.85);
-  box-shadow: inset 0 0 24px rgba(112, 243, 255, 0.06);
 }
 #popupParagraph.temppay-cash-popup .temppay-callout {
   position: absolute;
@@ -3736,19 +3322,6 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.other:active i {
 #popupParagraph.temppay-cash-popup .temppay-summary__row--change .temppay-summary__amt strong {
   font-size: clamp(1.5rem, 3.8vw, 1.95rem);
 }
-#popupParagraph.temppay-cash-popup .temppay-denom-bar {
-  margin: 0.35rem 0 0;
-  padding: 0.65rem 1.25rem;
-  font-size: 1.05rem !important;
-  line-height: 1.45 !important;
-  color: var(--white) !important;
-  text-align: center;
-  background: var(--main-p);
-  border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: inset 0 1px 0 var(--overlay-white-05);
-  display: block;
-}
 
 /* 2.4.0 手機載具歸戶完成（成功圖示壓在卡片頂緣、附圖排版） */
 #popupParagraph.message-popup {
@@ -3860,17 +3433,6 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.other:active i {
   align-items: stretch;
   gap: 1.25rem;
   margin-top: 0.5rem;
-}
-#popupParagraph.service-info-popup .service-info-popup__title {
-  display: block;
-  margin: 0;
-  font-size: 2.15rem;
-  font-weight: 700;
-  color: var(--black);
-  text-align: center;
-  line-height: 1.3;
-  width: 100%;
-  position: relative;
 }
 .service-info-popup__cards {
   display: flex;
