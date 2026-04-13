@@ -3678,12 +3678,12 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.other:active i {
 }
 
 /* 2.4.0 手機載具歸戶完成（成功圖示壓在卡片頂緣、附圖排版） */
-#popupParagraph.receipt-success-popup {
+#popupParagraph.message-popup {
   overflow: visible;
   padding: 4.25rem 2rem 9.5rem;
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.14);
 }
-.receipt-success-popup__icon {
+.message-popup__icon {
   position: absolute;
   left: 50%;
   top: 0;
@@ -3691,7 +3691,7 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.other:active i {
   z-index: 2;
   line-height: 0;
 }
-.receipt-success-popup__icon > img {
+.message-popup__icon > img {
   width: clamp(5.5rem, 18vw, 7.5rem);
   height: auto;
   display: block;
@@ -3703,7 +3703,7 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.other:active i {
     0 8px 24px rgba(0, 0, 0, 0.12);
 }
 /* 警示圖（warning-sign）等：PNG 置於 #4e566e 圓底，附白邊與陰影（同附圖壓在卡片頂緣） */
-.receipt-success-popup__icon-disc {
+.message-popup__icon-disc {
   width: clamp(5.5rem, 18vw, 7.5rem);
   height: clamp(5.5rem, 18vw, 7.5rem);
   background: #4e566e;
@@ -3717,7 +3717,7 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.other:active i {
     0 0 0 4px #fff,
     0 8px 24px rgba(0, 0, 0, 0.12);
 }
-.receipt-success-popup__icon-disc img {
+.message-popup__icon-disc img {
   width: 72%;
   height: auto;
   max-width: 100%;
@@ -3725,7 +3725,7 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.other:active i {
   border-radius: 0;
   box-shadow: none;
 }
-.receipt-success-popup__content {
+.message-popup__content {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -3733,7 +3733,7 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.other:active i {
   gap: 1rem;
   margin-top: 0.25rem;
 }
-#popupParagraph.receipt-success-popup .receipt-success-popup__content p {
+#popupParagraph.message-popup .message-popup__content p {
   display: block;
   width: 100%;
   text-align: center;
@@ -3741,27 +3741,27 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.other:active i {
   line-height: 1.5;
   justify-content: center;
 }
-#popupParagraph .receipt-success-popup__content p.popup-content-text-mt {
+#popupParagraph .message-popup__content p.popup-content-text-mt {
   margin-top: 20px;
 }
-.receipt-success-popup__title {
+.message-popup__title {
   font-size: 2.15rem;
   font-weight: 700;
   color: #000;
 }
-#popupParagraph.receipt-success-popup .receipt-success-popup__content p.receipt-success-popup__title--xl {
+#popupParagraph.message-popup .message-popup__content p.message-popup__title--xl {
   font-size: 3.15rem;
   margin-top: 20px;
 }
-#popupParagraph.receipt-success-popup .receipt-success-popup__content p.receipt-success-popup__title--spaced {
+#popupParagraph.message-popup .message-popup__content p.message-popup__title--spaced {
   margin-top: 20px;
 }
-.receipt-success-popup__line1,
-.receipt-success-popup__line2 {
+.message-popup__line1,
+.message-popup__line2 {
   font-size: 1.7rem;
   color: #000;
 }
-.receipt-success-popup__num {
+.message-popup__num {
   font-size: 2.15rem;
   font-weight: 700;
   color: #e53935;
