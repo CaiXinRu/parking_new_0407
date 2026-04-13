@@ -3390,7 +3390,7 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.other:active i {
 #popupParagraph .message-popup__content p.popup-content-text-mt {
   margin-top: 20px;
 }
-.message-popup__title {
+#popupParagraph.message-popup .message-popup__content p.message-popup__title {
   font-size: 2.15rem;
   font-weight: 700;
   color: var(--black);
