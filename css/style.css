@@ -8,12 +8,73 @@
   --black: #000000;
   --keybg: #dbdbdb;
   --main-p: #4e566e;
-  --font-grey: #5d5d5d;
   --font-grey-d: #534f4f;
   --font-green: #08bf5b;
   --font-red: #e06666;
   --main-font: #412187;
   --beige-bg: #eed5a1;
+  --chrome-border: #bbc3c8;
+  --cta-blue: #2a5a86;
+  --white-glow-mid: #ffffff5b;
+  --white-glow-faint: #ffffff21;
+  --white-glow-strong: #ffffffb0;
+  --surface-tint: #f0f2fa;
+  --gold-accent: #e8b845;
+  --pink-accent: #dc5ca7;
+  --gray-radial: #d3d2db;
+  --purple-mid: #7d4c9c;
+  --text-slate: #4b5563;
+  --text-slate-d: #475569;
+  --green-mid: #3d8a5d;
+  --blue-mid: #3c6fb4;
+  --text-dark: #121212;
+  --off-white: #fdfdfd;
+  --lavender-tint: #fdf7ff;
+  --surface-soft: #fafafa;
+  --surface-cream: #f7f6f3;
+  --grad-lilac-start: #ece8ed;
+  --grad-lilac-end: #eae4eb;
+  --line-soft: #e8e8ef;
+  --olive-soft: #d4cc7e;
+  --line-gray: #cdcdcd;
+  --border-gray: #bdbdbd;
+  --mint-soft: #baf0d2;
+  --gray-mid: #b0b0b0;
+  --purple-deep: #71239e;
+  --indigo-deep: #363685;
+  --navy-dark: #1e2a4a;
+  --font-green-soft: #08bf5ac6;
+  --white-dim: #ffffff38;
+  --white-dim-inner: #ffffff30;
+  --overlay-white-95: rgba(255, 255, 255, 0.95);
+  --overlay-black-60: rgba(0, 0, 0, 0.6);
+  --overlay-black-55: rgba(0, 0, 0, 0.55);
+  --overlay-white-90: rgba(255, 255, 255, 0.9);
+  --overlay-black-40: rgba(0, 0, 0, 0.4);
+  --overlay-black-08: rgba(0, 0, 0, 0.08);
+  --overlay-white-40: rgba(255, 255, 255, 0.4);
+  --overlay-black-35: rgba(0, 0, 0, 0.35);
+  --overlay-black-30: rgba(0, 0, 0, 0.3);
+  --overlay-black-15: rgba(0, 0, 0, 0.15);
+  --overlay-black-12: rgba(0, 0, 0, 0.12);
+  --main-font-34: rgba(65, 33, 135, 0.34);
+  --ink-34: rgba(45, 39, 57, 0.34);
+  --overlay-white-85: rgba(255, 255, 255, 0.85);
+  --overlay-white-60: rgba(255, 255, 255, 0.6);
+  --overlay-white-53: rgba(255, 255, 255, 0.53);
+  --overlay-white-22: rgba(255, 255, 255, 0.22);
+  --overlay-white-05: rgba(255, 255, 255, 0.05);
+  --gray-solid: rgba(239, 239, 239, 1);
+  --keybg-80: rgba(219, 219, 219, 0.8);
+  --keybg-50: rgba(219, 219, 219, 0.5);
+  --cyan-glow-25: rgba(112, 243, 255, 0.25);
+  --overlay-black-20: rgba(0, 0, 0, 0.2);
+  --overlay-black-16: rgba(0, 0, 0, 0.16);
+  --overlay-black-14: rgba(0, 0, 0, 0.14);
+  --overlay-black-10: rgba(0, 0, 0, 0.1);
+  --overlay-black-06: rgba(0, 0, 0, 0.06);
+  --transparent: rgba(0, 0, 0, 0);
+  --lilac-100: rgb(234 201 255 / 100%);
 }
 .scroll {
   position: absolute;
@@ -63,7 +124,8 @@
 }
 .orb_graphic svg circle.fill {
   stroke: #dfdbdf;
-  filter: drop-shadow(2px 0 0 #fff) drop-shadow(-2px 0 0 #fff) drop-shadow(0 2px 0 #fff) drop-shadow(0 -2px 0 #fff);
+  filter: drop-shadow(2px 0 0 var(--white)) drop-shadow(-2px 0 0 var(--white)) drop-shadow(0 2px 0 var(--white))
+    drop-shadow(0 -2px 0 var(--white));
 }
 .orb_graphic svg circle.progress {
   stroke: url(#myGradient);
@@ -163,10 +225,10 @@ header .header-pic {
   transform: translateY(-15px);
   text-shadow:
     1px 1px 2px #00000099,
-    1px 0 5px #ffffff21,
-    0 0px 5px #ffffff21,
-    -1px 0 5px #ffffff21,
-    0 -1px 5px #ffffff21,
+    1px 0 5px var(--white-glow-faint),
+    0 0px 5px var(--white-glow-faint),
+    -1px 0 5px var(--white-glow-faint),
+    0 -1px 5px var(--white-glow-faint),
     0 0 8px #ffffffa8;
 }
 #header-inner .name {
@@ -181,9 +243,10 @@ header .header-pic {
 #header-inner .name img {
   max-width: 100%;
   max-height: 100%;
-  filter: drop-shadow(1.5px 0 0 #ffffff5b) drop-shadow(-1.5px 0 0 #ffffff5b) drop-shadow(0 1.5px 0 #ffffff5b)
-    drop-shadow(0 -1.5px 0 #ffffff5b) drop-shadow(1.5px 1.5px 0 #ffffff5b) drop-shadow(-1.5px -1.5px 0 #ffffff5b)
-    drop-shadow(1.5px -1.5px 0 #ffffff5b) drop-shadow(-1.5px 1.5px 0 #ffffff5b);
+  filter: drop-shadow(1.5px 0 0 var(--white-glow-mid)) drop-shadow(-1.5px 0 0 var(--white-glow-mid))
+    drop-shadow(0 1.5px 0 var(--white-glow-mid)) drop-shadow(0 -1.5px 0 var(--white-glow-mid))
+    drop-shadow(1.5px 1.5px 0 var(--white-glow-mid)) drop-shadow(-1.5px -1.5px 0 var(--white-glow-mid))
+    drop-shadow(1.5px -1.5px 0 var(--white-glow-mid)) drop-shadow(-1.5px 1.5px 0 var(--white-glow-mid));
 }
 #header-inner .top-tool {
   position: relative;
@@ -226,11 +289,11 @@ header .header-pic {
   font-size: 0.8rem;
   font-weight: 500;
   letter-spacing: 0.02rem;
-  background: #eed5a1;
+  background: var(--beige-bg);
   border-radius: 22px;
-  filter: drop-shadow(0 0 1px rgba(255, 255, 255, 0.9)) drop-shadow(0 0 1px rgba(0, 0, 0, 1))
-    drop-shadow(0 0 1px rgba(255, 255, 255, 0.9)) drop-shadow(0 0 3px rgba(255, 255, 255, 0.6));
-  color: #000000;
+  filter: drop-shadow(0 0 1px var(--overlay-white-90)) drop-shadow(0 0 1px rgba(0, 0, 0, 1))
+    drop-shadow(0 0 1px var(--overlay-white-90)) drop-shadow(0 0 3px var(--overlay-white-60));
+  color: var(--black);
   border: 1px solid var(--white);
 }
 #header-inner .top-tool ul li a:active {
@@ -266,7 +329,7 @@ header .header-pic {
   height: 104px;
   z-index: 8;
   font-size: 1.7rem;
-  color: #000000;
+  color: var(--black);
   text-align: center;
 }
 #main-container.page-temppay-checkout #header-title {
@@ -284,9 +347,9 @@ header .header-pic {
   color: #0a0a0a;
   -webkit-text-stroke: 0.2px var(--white);
   text-shadow:
-    0 0 10px rgba(255, 255, 255, 0.95),
-    0 0 22px rgba(255, 255, 255, 0.95),
-    0 0 38px rgba(255, 255, 255, 0.95);
+    0 0 10px var(--overlay-white-95),
+    0 0 22px var(--overlay-white-95),
+    0 0 38px var(--overlay-white-95);
 }
 #header-title div::after {
   content: "";
@@ -298,16 +361,16 @@ header .header-pic {
   border-radius: 999px;
   background: linear-gradient(
     90deg,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 0.4) 20%,
+    var(--transparent) 0%,
+    var(--overlay-black-40) 20%,
     rgba(0, 0, 0, 0.98) 50%,
-    rgba(0, 0, 0, 0.4) 80%,
-    rgba(0, 0, 0, 0) 100%
+    var(--overlay-black-40) 80%,
+    var(--transparent) 100%
   );
   box-shadow:
-    0 0 12px rgba(255, 255, 255, 0.9),
+    0 0 12px var(--overlay-white-90),
     0 0 26px rgba(255, 255, 255, 0.5),
-    0 0 44px rgba(255, 255, 255, 0.22);
+    0 0 44px var(--overlay-white-22);
   pointer-events: none;
 }
 .donate-qr {
@@ -393,9 +456,9 @@ main h2 {
   padding: 0 0 2rem;
   font-size: 2.5rem;
   text-shadow:
-    0 0 10px rgba(255, 255, 255, 0.95),
-    0 0 22px rgba(255, 255, 255, 0.95),
-    0 0 38px rgba(255, 255, 255, 0.95);
+    0 0 10px var(--overlay-white-95),
+    0 0 22px var(--overlay-white-95),
+    0 0 38px var(--overlay-white-95);
 }
 main.nor h2.receipt-method-heading {
   position: relative;
@@ -471,7 +534,7 @@ main.pick-main h2 {
   color: var(--black);
 }
 #popupParagraph.popup-h1-bar h1 {
-  background: #4e566e;
+  background: var(--main-p);
   color: var(--white);
   margin: -2rem -2rem 2rem;
   padding: 1.25rem 2rem;
@@ -758,7 +821,7 @@ main.pick-main h2 {
   padding: 1.5rem 0 1rem;
   box-shadow:
     inset 2px 2px 8px #00000047,
-    2px 7px 5px #ffffff,
+    2px 7px 5px var(--white),
     2px 0 7px #c9c9c9;
   z-index: 1;
 }
@@ -775,7 +838,7 @@ main.pick-main h2 {
   min-height: 155px;
   color: var(--black);
   box-shadow:
-    inset -3px 7px 4px #fff,
+    inset -3px 7px 4px var(--white),
     inset 2px 2px 8px #00000012,
     2px 2px 6px #e3e3e3;
   z-index: 0;
@@ -821,7 +884,7 @@ main.pick-main h2 {
   position: absolute;
   display: flex;
   border-radius: 0.5rem;
-  border: solid 1px #bdbdbd;
+  border: solid 1px var(--border-gray);
   width: 100%;
   height: 100%;
   transform: scale(1);
@@ -833,7 +896,7 @@ main.pick-main h2 {
   position: relative;
   width: 100%;
   height: 100%;
-  border: 1px solid #bdbdbd;
+  border: 1px solid var(--border-gray);
   border-radius: 0.5rem;
   font-size: 4rem;
   text-align: center;
@@ -871,7 +934,12 @@ main.pick-main h2 {
   border-style: solid;
   border-color: transparent;
   border-radius: 1.9rem;
-  background-image: linear-gradient(143deg, #ece8ed 30%, #fdf7ff 70%, #eae4eb 80%);
+  background-image: linear-gradient(
+    143deg,
+    var(--grad-lilac-start) 30%,
+    var(--lavender-tint) 70%,
+    var(--grad-lilac-end) 80%
+  );
   background-origin: border-box;
   mask-image: linear-gradient(white, white), linear-gradient(white, white);
   mask-clip: padding-box, border-box;
@@ -881,8 +949,8 @@ main.pick-main h2 {
   font-size: 2.2rem;
 }
 #keyboard-container button {
-  background: radial-gradient(ellipse at center, #ffffff 50%, #d3d2db 95%);
-  border: 0.1rem solid #bbc3c8;
+  background: radial-gradient(ellipse at center, var(--white) 50%, var(--gray-radial) 95%);
+  border: 0.1rem solid var(--chrome-border);
   border-radius: 1.5rem;
   font-size: 2.6rem;
   color: var(--black);
@@ -916,8 +984,8 @@ main.pick-main h2 {
 }
 .receipt-keyboard a {
   font-size: 2rem;
-  background: radial-gradient(ellipse at center, #ffffff 50%, #d3d2db 95%);
-  border: 0.1rem solid #bbc3c8;
+  background: radial-gradient(ellipse at center, var(--white) 50%, var(--gray-radial) 95%);
+  border: 0.1rem solid var(--chrome-border);
   border-radius: 1rem;
   color: var(--black);
   font-weight: 600;
@@ -943,14 +1011,14 @@ main.pick-main h2 {
   grid-column: span 4;
   font-size: 2.4rem;
   letter-spacing: -0.1rem;
-  background: radial-gradient(ellipse at center, #fdfdfd 49%, #b0b0b0 140%);
+  background: radial-gradient(ellipse at center, var(--off-white) 49%, var(--gray-mid) 140%);
 }
 
 .receipt-keyboard.EN a.clear {
   grid-column: span 4;
   font-size: 2.4rem;
   letter-spacing: -0.1rem;
-  background: radial-gradient(ellipse at center, #fdfdfd 49%, #b0b0b0 140%);
+  background: radial-gradient(ellipse at center, var(--off-white) 49%, var(--gray-mid) 140%);
   padding: 0 0 0 0.5rem;
 }
 .receipt-keyboard.EN a.del:focus,
@@ -974,8 +1042,8 @@ main.pick-main h2 {
 }
 #keyboard-del a {
   font-size: 2.3rem;
-  background: radial-gradient(ellipse at center, #ffffff 40%, #d3d2db 100%);
-  border: 0.1rem solid #bbc3c8;
+  background: radial-gradient(ellipse at center, var(--white) 40%, var(--gray-radial) 100%);
+  border: 0.1rem solid var(--chrome-border);
   border-radius: 1rem;
   color: var(--black);
   font-weight: 600;
@@ -1044,7 +1112,7 @@ body.page-home #main-bt-container {
 }
 #main-bt-container a.left:active,
 #main-bt-container a.right:active {
-  background: #412187;
+  background: var(--main-font);
 }
 #main-bt-container a:active:before {
   bottom: -8px;
@@ -1111,7 +1179,7 @@ body.page-home #main-bt-container {
   position: relative;
 }
 #main-bt-container a.left {
-  background: linear-gradient(to right, #71239e 0%, #363685 61%);
+  background: linear-gradient(to right, var(--purple-deep) 0%, var(--indigo-deep) 61%);
 }
 #main-bt-container a.left i {
   background: url("../images/mb-left-icon.png") no-repeat center center;
@@ -1119,7 +1187,7 @@ body.page-home #main-bt-container {
   margin: 0 0.5rem 0 0;
 }
 #main-bt-container a.right {
-  background: linear-gradient(to right, #363685 39%, #71239e 100%);
+  background: linear-gradient(to right, var(--indigo-deep) 39%, var(--purple-deep) 100%);
   flex-direction: row-reverse;
 }
 #main-bt-container a.right i {
@@ -1211,7 +1279,8 @@ footer .footer-pic:before {
   right: 5px;
   top: 41%;
   z-index: 2;
-  filter: drop-shadow(1px 0 1px #cdcdcd) drop-shadow(0 1px 2px #ffffff) drop-shadow(0 0 px #ffffffb0) blur(0.2px);
+  filter: drop-shadow(1px 0 1px var(--line-gray)) drop-shadow(0 1px 2px var(--white))
+    drop-shadow(0 0 px var(--white-glow-strong)) blur(0.2px);
 }
 footer .footer-pic:after {
   content: "";
@@ -1242,7 +1311,8 @@ body.page-home footer .footer-pic:before {
   right: 5px;
   top: 41%;
   z-index: 2;
-  filter: drop-shadow(1px 0 1px #cdcdcd) drop-shadow(0 1px 2px #ffffff) drop-shadow(0 0 px #ffffffb0) blur(0.2px);
+  filter: drop-shadow(1px 0 1px var(--line-gray)) drop-shadow(0 1px 2px var(--white))
+    drop-shadow(0 0 px var(--white-glow-strong)) blur(0.2px);
 }
 body.page-home footer .footer-pic:after {
   content: "";
@@ -1260,12 +1330,12 @@ body.page-home footer .footer-pic:after {
 @keyframes glow-breathing {
   0%,
   100% {
-    filter: drop-shadow(0 0 1px #fff) drop-shadow(0 0 2px rgba(255, 255, 255, 0.7));
+    filter: drop-shadow(0 0 1px var(--white)) drop-shadow(0 0 2px rgba(255, 255, 255, 0.7));
   }
 
   50% {
-    filter: drop-shadow(0 0 2px #fff) drop-shadow(0 0 3px rgba(255, 255, 255, 0.9))
-      drop-shadow(0 0 5px rgba(255, 255, 255, 0.6));
+    filter: drop-shadow(0 0 2px var(--white)) drop-shadow(0 0 3px var(--overlay-white-90))
+      drop-shadow(0 0 5px var(--overlay-white-60));
   }
 }
 .footer-mask {
@@ -1283,12 +1353,12 @@ footer #pay-list-container {
   min-height: 80px;
   max-height: 120px;
   border-radius: 5rem;
-  background: #ffffff38;
+  background: var(--white-dim);
   backdrop-filter: blur(5px);
   z-index: 10;
   box-shadow:
     0 0 7px #5d5d5dad,
-    inset 2px 1px 5px #ffffff30;
+    inset 2px 1px 5px var(--white-dim-inner);
   margin: 0 0 2rem;
 }
 footer #pat-list-inner {
@@ -1337,14 +1407,14 @@ footer #pat-list-inner p img {
   min-height: 360px;
   padding: 0;
   border-radius: 24px;
-  border: 10px solid #f0f2fa;
-  background: #fff;
+  border: 10px solid var(--surface-tint);
+  background: var(--white);
   box-shadow:
     0 0 0 1px rgba(255, 255, 255, 0.45),
     0 0 24px rgba(255, 255, 255, 0.28),
     0 14px 40px rgba(42, 36, 82, 0.22),
     0 6px 16px rgba(0, 0, 0, 0.65),
-    0 2px 4px rgba(0, 0, 0, 0.08);
+    0 2px 4px var(--overlay-black-08);
   text-decoration: none;
   color: inherit;
   -webkit-tap-highlight-color: transparent;
@@ -1355,10 +1425,10 @@ footer #pat-list-inner p img {
 #b-bt-container a.pick-type:active {
   transform: scale(0.985);
   box-shadow:
-    0 0 0 1px rgba(255, 255, 255, 0.4),
-    0 0 18px rgba(255, 255, 255, 0.22),
+    0 0 0 1px var(--overlay-white-40),
+    0 0 18px var(--overlay-white-22),
     0 8px 26px rgba(42, 36, 82, 0.18),
-    0 3px 10px rgba(0, 0, 0, 0.1);
+    0 3px 10px var(--overlay-black-10);
 }
 #b-bt-container .pick-icon-ring {
   display: flex;
@@ -1371,7 +1441,7 @@ footer #pat-list-inner p img {
   padding: 1.35rem 0.75rem 1.1rem;
   box-sizing: border-box;
   border-radius: 0;
-  background: #fff;
+  background: var(--white);
 }
 #b-bt-container .pick-icon-ring i {
   display: block;
@@ -1380,7 +1450,7 @@ footer #pat-list-inner p img {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
-  filter: drop-shadow(0 10px 16px rgba(42, 36, 90, 0.2)) drop-shadow(0 10px 3px rgba(0, 0, 0, 0.1));
+  filter: drop-shadow(0 10px 16px rgba(42, 36, 90, 0.2)) drop-shadow(0 10px 3px var(--overlay-black-10));
 }
 #b-bt-container a.car .pick-icon-ring i {
   background-image: url("../images/0327/vehicle_car.png");
@@ -1399,7 +1469,7 @@ footer #pat-list-inner p img {
   padding: 1.5rem 1rem 1.85rem;
   margin-top: -18px;
   padding-top: 1.65rem;
-  background: #f0f2fa;
+  background: var(--surface-tint);
   flex-shrink: 0;
 }
 #b-bt-container .pick-text::before {
@@ -1409,7 +1479,7 @@ footer #pat-list-inner p img {
   left: 0;
   right: 0;
   height: 36px;
-  background: #f0f2fa;
+  background: var(--surface-tint);
   border-radius: 50% 50% 0 0 / 100% 100% 0 0;
   pointer-events: none;
   z-index: 0;
@@ -1422,11 +1492,11 @@ footer #pat-list-inner p img {
   font-size: 2.6rem;
   font-weight: 700;
   letter-spacing: 0.12rem;
-  color: #121212;
+  color: var(--text-dark);
   line-height: 1.15;
   text-shadow:
-    0 0 8px rgba(255, 255, 255, 0.85),
-    0 0 18px rgba(255, 255, 255, 0.4);
+    0 0 8px var(--overlay-white-85),
+    0 0 18px var(--overlay-white-40);
 }
 #b-bt-container .pick-en {
   font-size: 1.2rem;
@@ -1434,17 +1504,17 @@ footer #pat-list-inner p img {
   letter-spacing: 0.18rem;
   text-transform: uppercase;
   font-family: inherit;
-  color: #121212;
+  color: var(--text-dark);
   text-shadow:
-    0 0 8px rgba(255, 255, 255, 0.85),
-    0 0 18px rgba(255, 255, 255, 0.4);
+    0 0 8px var(--overlay-white-85),
+    0 0 18px var(--overlay-white-40);
 }
 #b-bt-container a.car .pick-en,
 #b-bt-container a.sct .pick-en {
-  color: #121212;
+  color: var(--text-dark);
 }
 #b-bt-container a.pick-type:active .pick-icon-ring {
-  background: #fafafa;
+  background: var(--surface-soft);
 }
 #b-bt-container a.car:active .pick-icon-ring i {
   background-image: url("../images/0327/vehicle_car.png");
@@ -1462,7 +1532,7 @@ footer #pat-list-inner p img {
   text-align: center;
   font-size: 2rem;
   color: var(--black);
-  background: linear-gradient(145deg, #efefef 0%, #d9d9d9 52%, #ffffff 80%);
+  background: linear-gradient(145deg, #efefef 0%, #d9d9d9 52%, var(--white) 80%);
   border-radius: 1.9rem;
   margin: 0 auto 5rem;
 }
@@ -1478,7 +1548,12 @@ footer #pat-list-inner p img {
   border-style: solid;
   border-color: transparent;
   border-radius: 1.9rem;
-  background-image: linear-gradient(143deg, #ece8ed 30%, #fdf7ff 70%, #eae4eb 80%);
+  background-image: linear-gradient(
+    143deg,
+    var(--grad-lilac-start) 30%,
+    var(--lavender-tint) 70%,
+    var(--grad-lilac-end) 80%
+  );
   background-origin: border-box;
   mask-image: linear-gradient(white, white), linear-gradient(white, white);
   mask-clip: padding-box, border-box;
@@ -1512,7 +1587,7 @@ footer #pat-list-inner p img {
   position: relative;
   overflow: hidden;
   border-radius: 14px;
-  background: #ffffff;
+  background: var(--white);
   text-decoration: none;
   color: #3d4d66;
   box-shadow:
@@ -1524,7 +1599,7 @@ footer #pat-list-inner p img {
   content: "";
   position: absolute;
   inset: 0;
-  border: 5px solid #08bf5b;
+  border: 5px solid var(--font-green);
   border-radius: 14px;
   z-index: 11;
   pointer-events: none;
@@ -1551,7 +1626,7 @@ footer #pat-list-inner p img {
   justify-content: space-between;
   gap: 10px;
   padding: 10px 14px 12px;
-  background: #fafafa;
+  background: var(--surface-soft);
 }
 #lice-bt-container .lice-card__info {
   display: flex;
@@ -1565,8 +1640,8 @@ footer #pat-list-inner p img {
   display: inline-block;
   padding: 4px 12px;
   border-radius: 8px;
-  background: #e06666;
-  color: #ffffff;
+  background: var(--font-red);
+  color: var(--white);
   font-size: 1.25rem;
   font-weight: 700;
   letter-spacing: 0.04em;
@@ -1578,7 +1653,7 @@ footer #pat-list-inner p img {
   gap: 8px;
   font-size: 0.95rem;
   font-weight: 500;
-  color: #4b5563;
+  color: var(--text-slate);
 }
 #lice-bt-container .lice-card__entry-text {
   display: flex;
@@ -1590,7 +1665,7 @@ footer #pat-list-inner p img {
 }
 #lice-bt-container .lice-card__entry-label,
 #lice-bt-container .lice-card__entry-value {
-  color: #4b5563;
+  color: var(--text-slate);
 }
 #lice-bt-container .lice-card__entry-value {
   letter-spacing: 0.02em;
@@ -1622,11 +1697,11 @@ footer #pat-list-inner p img {
   white-space: nowrap;
 }
 #lice-bt-container a.lice-card:active .lice-card__select-label {
-  color: #08bf5b;
+  color: var(--font-green);
 }
 #lice-bt-container a.lice-card:active .lice-card__check svg circle,
 #lice-bt-container a.lice-card:active .lice-card__check svg path {
-  stroke: #08bf5b;
+  stroke: var(--font-green);
 }
 #checkout-pic-container .type:before {
   content: "";
@@ -1685,7 +1760,7 @@ footer #pat-list-inner p img {
   color: var(--black);
   background: var(--white);
   border-radius: 15px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 15px var(--overlay-black-40);
   padding: 1.75rem 1.25rem 1.5rem;
   -webkit-tap-highlight-color: transparent;
 }
@@ -1744,9 +1819,9 @@ footer #pat-list-inner p img {
   border-radius: 1.15rem;
   overflow: hidden;
   box-shadow:
-    0 8px 24px rgba(0, 0, 0, 0.3),
-    0 2px 8px rgba(0, 0, 0, 0.3);
-  background: #f7f6f3;
+    0 8px 24px var(--overlay-black-30),
+    0 2px 8px var(--overlay-black-30);
+  background: var(--surface-cream);
   -webkit-tap-highlight-color: transparent;
 }
 #payment-out #payment-bt-container.payment-method-grid .pay-tile:active {
@@ -1756,107 +1831,107 @@ footer #pat-list-inner p img {
 #payment-out #payment-bt-container.payment-method-grid .pay-tile__header {
   font-size: 1.65rem;
   font-weight: 700;
-  color: #fff;
+  color: var(--white);
   text-align: center;
   padding: 0.55rem 0.85rem;
   line-height: 1.2;
 }
 #payment-out #payment-bt-container.payment-method-grid .pay-tile--place .pay-tile__header {
-  background: #2a5a86;
+  background: var(--cta-blue);
 }
 #payment-out #payment-bt-container.payment-method-grid .pay-tile--nfc .pay-tile__header {
-  background: #2a5a86;
+  background: var(--cta-blue);
 }
 #payment-out #payment-bt-container.payment-method-grid .pay-tile--scan .pay-tile__header {
-  background: #2a5a86;
+  background: var(--cta-blue);
 }
 #payment-out #payment-bt-container.payment-method-grid .pay-tile__header {
-  color: #fff;
+  color: var(--white);
   text-align: left;
   padding-left: 1rem;
   padding-right: 1rem;
 }
 #payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(1) .pay-tile__header {
-  background: linear-gradient(90deg, #3d8a5d 0%, #83bc63 60%);
+  background: linear-gradient(90deg, var(--green-mid) 0%, #83bc63 60%);
 }
 #payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(2) .pay-tile__header {
-  background: linear-gradient(90deg, #3c6fb4 0%, #ffffff 190%);
+  background: linear-gradient(90deg, var(--blue-mid) 0%, var(--white) 190%);
 }
 #payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(3) .pay-tile__header {
-  background: linear-gradient(90deg, #7d4c9c 0%, #ffffff 190%);
+  background: linear-gradient(90deg, var(--purple-mid) 0%, var(--white) 190%);
 }
 #payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(4) .pay-tile__header {
-  background: linear-gradient(90deg, #e8b845 0%, #ffffff 190%);
+  background: linear-gradient(90deg, var(--gold-accent) 0%, var(--white) 190%);
 }
 #payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(5) .pay-tile__header {
-  background: linear-gradient(90deg, #dc5ca7 0%, #ffffff 190%);
+  background: linear-gradient(90deg, var(--pink-accent) 0%, var(--white) 190%);
 }
 #payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(1) .pay-tile__badge {
-  background: #3d8a5d;
+  background: var(--green-mid);
 }
 #payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(1) .pay-tile__hint {
-  color: #3d8a5d;
+  color: var(--green-mid);
 }
 #payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(1) .pay-tile__art img {
-  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.55));
+  filter: drop-shadow(0 0 5px var(--overlay-black-55));
 }
 #payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(2) .pay-tile__badge {
-  background: #3c6fb4;
+  background: var(--blue-mid);
 }
 #payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(2) .pay-tile__hint {
-  color: #3c6fb4;
+  color: var(--blue-mid);
 }
 #payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(2) .pay-tile__art img {
-  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.55));
+  filter: drop-shadow(0 0 5px var(--overlay-black-55));
 }
 #payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(3) .pay-tile__badge {
-  background: #7d4c9c;
+  background: var(--purple-mid);
 }
 #payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(3) .pay-tile__hint {
-  color: #7d4c9c;
+  color: var(--purple-mid);
 }
 #payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(3) .pay-tile__art img {
-  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.55));
+  filter: drop-shadow(0 0 5px var(--overlay-black-55));
 }
 #payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(4) .pay-tile__badge {
-  background: #e8b845;
+  background: var(--gold-accent);
 }
 #payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(4) .pay-tile__hint {
-  color: #e8b845;
+  color: var(--gold-accent);
 }
 #payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(4) .pay-tile__art img {
-  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.55));
+  filter: drop-shadow(0 0 5px var(--overlay-black-55));
 }
 #payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(5) .pay-tile__badge {
-  background: #dc5ca7;
+  background: var(--pink-accent);
 }
 #payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(5) .pay-tile__hint {
-  color: #dc5ca7;
+  color: var(--pink-accent);
 }
 #payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(5) .pay-tile__art img {
-  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.55));
+  filter: drop-shadow(0 0 5px var(--overlay-black-55));
 }
 #payment-out #payment-bt-container.payment-method-grid .pay-tile__inner {
   display: flex;
   flex-direction: row;
   align-items: stretch;
   min-height: 100px;
-  background: #f7f6f3;
+  background: var(--surface-cream);
 }
 #payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(1) .pay-tile__inner {
-  background: linear-gradient(to bottom left, #edffe5, #ffffff);
+  background: linear-gradient(to bottom left, #edffe5, var(--white));
 }
 #payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(2) .pay-tile__inner {
-  background: linear-gradient(to bottom left, #d6f2fb, #ffffff);
+  background: linear-gradient(to bottom left, #d6f2fb, var(--white));
 }
 #payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(3) .pay-tile__inner {
-  background: linear-gradient(to bottom left, #ffe9fa, #ffffff);
+  background: linear-gradient(to bottom left, #ffe9fa, var(--white));
 }
 #payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(4) .pay-tile__inner {
-  background: linear-gradient(to bottom left, #fff8dc, #ffffff);
+  background: linear-gradient(to bottom left, #fff8dc, var(--white));
 }
 #payment-out #payment-bt-container.payment-method-grid .pay-tile:nth-child(5) .pay-tile__inner {
-  background: linear-gradient(to bottom left, #ffdcf2, #ffffff);
+  background: linear-gradient(to bottom left, #ffdcf2, var(--white));
 }
 #payment-out #payment-bt-container.payment-method-grid .pay-tile__left {
   flex: 1 1 72%;
@@ -1889,18 +1964,18 @@ footer #pat-list-inner p img {
   border-radius: 999px;
   font-size: 1.75rem;
   font-weight: 400;
-  color: #fff;
+  color: var(--white);
   flex-shrink: 0;
   line-height: 1.2;
 }
 #payment-out #payment-bt-container.payment-method-grid .pay-tile--place .pay-tile__badge {
-  background: #2a5a86;
+  background: var(--cta-blue);
 }
 #payment-out #payment-bt-container.payment-method-grid .pay-tile--nfc .pay-tile__badge {
-  background: #2a5a86;
+  background: var(--cta-blue);
 }
 #payment-out #payment-bt-container.payment-method-grid .pay-tile--scan .pay-tile__badge {
-  background: #2a5a86;
+  background: var(--cta-blue);
 }
 #payment-out #payment-bt-container.payment-method-grid .pay-tile__hint {
   margin: 0;
@@ -1912,13 +1987,13 @@ footer #pat-list-inner p img {
   text-align: left;
 }
 #payment-out #payment-bt-container.payment-method-grid .pay-tile--place .pay-tile__hint {
-  color: #2a5a86;
+  color: var(--cta-blue);
 }
 #payment-out #payment-bt-container.payment-method-grid .pay-tile--nfc .pay-tile__hint {
-  color: #2a5a86;
+  color: var(--cta-blue);
 }
 #payment-out #payment-bt-container.payment-method-grid .pay-tile--scan .pay-tile__hint {
-  color: #2a5a86;
+  color: var(--cta-blue);
 }
 #payment-out #payment-bt-container.payment-method-grid .pay-tile__logos {
   display: flex;
@@ -1930,9 +2005,9 @@ footer #pat-list-inner p img {
   flex: 0 0 auto;
   width: fit-content;
   padding: 0.32rem 0.6rem;
-  background: #fff;
+  background: var(--white);
   border-radius: 0.55rem;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 4px var(--overlay-black-30);
 }
 #payment-out #payment-bt-container.payment-method-grid .pay-tile__logos img {
   height: 44px;
@@ -2021,7 +2096,7 @@ footer #pat-list-inner p img {
   display: flex;
   width: 175px;
   height: 135px;
-  filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.15));
+  filter: drop-shadow(2px 2px 1px var(--overlay-black-15));
   margin: -43px 0 0;
 }
 #payment-out #payment-bt-container.qrcode ul {
@@ -2173,11 +2248,11 @@ footer #pat-list-inner p img {
   justify-content: center;
   align-items: center;
   box-shadow:
-    1px 0 2px #bbc3c8,
-    -1px 0 2px #bbc3c8,
-    0 1px 2px #bbc3c8,
-    0 -1px 2px #bbc3c8,
-    inset 0 -1px 30px #bbc3c8;
+    1px 0 2px var(--chrome-border),
+    -1px 0 2px var(--chrome-border),
+    0 1px 2px var(--chrome-border),
+    0 -1px 2px var(--chrome-border),
+    inset 0 -1px 30px var(--chrome-border);
   bottom: 0;
 }
 #payment-out #payment-bt-container ul li a span svg {
@@ -2192,9 +2267,8 @@ footer #pat-list-inner p img {
   stroke-dasharray: 260;
   stroke-width: 1px;
   fill: transparent;
-  stroke: rgb(234 201 255 / 100%);
-  filter: drop-shadow(0 0 2px #fff) drop-shadow(0 0 2px rgba(219, 219, 219, 0.8))
-    drop-shadow(0 0 3px rgba(219, 219, 219, 0.5));
+  stroke: var(--lilac-100);
+  filter: drop-shadow(0 0 2px var(--white)) drop-shadow(0 0 2px var(--keybg-80)) drop-shadow(0 0 3px var(--keybg-50));
   animation: svgAnimation 6s linear infinite;
 }
 #payment-out #payment-bt-container .payment-list-container {
@@ -2278,10 +2352,10 @@ footer #pat-list-inner p img {
   background: var(--main-p) url("../images/pic-orgw.png") no-repeat center center;
   background-size: 293px;
   box-shadow:
-    2px 0 1px #bbc3c8,
-    0 2px 1px #bbc3c8,
-    -2px 0 1px #bbc3c8,
-    0 -2px 1px #bbc3c8;
+    2px 0 1px var(--chrome-border),
+    0 2px 1px var(--chrome-border),
+    -2px 0 1px var(--chrome-border),
+    0 -2px 1px var(--chrome-border);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2294,7 +2368,7 @@ footer #pat-list-inner p img {
 #checkout-pic-container .type {
   position: absolute;
   z-index: 2;
-  background: #fff;
+  background: var(--white);
   min-width: 86%;
   bottom: 0;
   right: 0;
@@ -2304,7 +2378,7 @@ footer #pat-list-inner p img {
   justify-content: space-evenly;
   padding: 2px 10px 2px 0;
   border-radius: 0 0 0.5rem;
-  color: #000;
+  color: var(--black);
   font-size: 1.7rem;
 }
 #checkout-pic-container .type span {
@@ -2336,17 +2410,17 @@ footer #pat-list-inner p img {
   color: var(--black);
   background: linear-gradient(
     180deg,
-    rgba(239, 239, 239, 1) 0%,
-    rgba(255, 255, 255, 0.53) 19%,
-    rgba(255, 255, 255, 0.53) 84%,
-    rgba(239, 239, 239, 1) 100%
+    var(--gray-solid) 0%,
+    var(--overlay-white-53) 19%,
+    var(--overlay-white-53) 84%,
+    var(--gray-solid) 100%
   );
   border-radius: 2.5rem;
   padding: 2rem;
   font-size: 1.3rem;
   box-shadow:
-    0 -2px 1px #e8e8ef,
-    0 2px 1px #e8e8ef;
+    0 -2px 1px var(--line-soft),
+    0 2px 1px var(--line-soft);
 }
 #checkout-list-container .checkout-inner {
   position: relative;
@@ -2457,7 +2531,7 @@ main.nor.parking-loc-page #checkout-container.parking.parking-loc {
   background: var(--white);
   border-radius: 1rem;
   padding: 1.25rem 1.25rem 1.5rem;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 15px var(--overlay-black-60);
 }
 .parking-loc-photo {
   border-radius: 0.65rem;
@@ -2465,7 +2539,7 @@ main.nor.parking-loc-page #checkout-container.parking.parking-loc {
   aspect-ratio: 16 / 10;
   background: var(--main-p) url("../images/pic-orgw.png") no-repeat center center;
   background-size: 200px;
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.06);
+  box-shadow: inset 0 0 0 1px var(--overlay-black-06);
 }
 .parking-loc-photo img {
   display: block;
@@ -2505,7 +2579,7 @@ main.nor.parking-loc-page #checkout-container.parking.parking-loc {
   padding: 0.85rem 1rem 0.85rem 0;
   background: var(--white);
   border-radius: 1rem;
-  box-shadow: 0 0 14px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 14px var(--overlay-black-60);
   overflow: hidden;
 }
 .parking-loc-strip-accent {
@@ -2517,7 +2591,7 @@ main.nor.parking-loc-page #checkout-container.parking.parking-loc {
   min-height: 72%;
 }
 .parking-loc-strip-floor .parking-loc-strip-accent {
-  background: linear-gradient(180deg, #08bf5ac6 0%, var(--font-green) 100%);
+  background: linear-gradient(180deg, var(--font-green-soft) 0%, var(--font-green) 100%);
 }
 .parking-loc-strip-space .parking-loc-strip-accent {
   background: linear-gradient(180deg, #eda0a0 0%, var(--font-red) 100%);
@@ -2563,7 +2637,7 @@ main.nor.parking-loc-page #checkout-container.parking.parking-loc {
 }
 .parking-loc-pill-floor {
   color: var(--font-green);
-  background: #baf0d2;
+  background: var(--mint-soft);
   padding: 0 0.85rem;
 }
 .parking-loc-pill-space {
@@ -2741,7 +2815,7 @@ main.nor.parking-loc-page #checkout-container.parking.parking-loc {
   display: flex;
   width: 140px;
   height: 86px;
-  filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.15));
+  filter: drop-shadow(2px 2px 1px var(--overlay-black-15));
   margin: 0 0 -43px;
 }
 #checkout-pay-inner ul li a.cash i {
@@ -2779,11 +2853,11 @@ main.nor.parking-loc-page #checkout-container.parking.parking-loc {
   justify-content: center;
   align-items: center;
   box-shadow:
-    1px 0 2px #bbc3c8,
-    -1px 0 2px #bbc3c8,
-    0 1px 2px #bbc3c8,
-    0 -1px 2px #bbc3c8,
-    inset 0 -1px 30px #bbc3c8;
+    1px 0 2px var(--chrome-border),
+    -1px 0 2px var(--chrome-border),
+    0 1px 2px var(--chrome-border),
+    0 -1px 2px var(--chrome-border),
+    inset 0 -1px 30px var(--chrome-border);
   bottom: 0;
 }
 #checkout-pay-inner ul li a span svg {
@@ -2798,9 +2872,8 @@ main.nor.parking-loc-page #checkout-container.parking.parking-loc {
   stroke-dasharray: 260;
   stroke-width: 1px;
   fill: transparent;
-  stroke: rgb(234 201 255 / 100%);
-  filter: drop-shadow(0 0 2px #fff) drop-shadow(0 0 2px rgba(219, 219, 219, 0.8))
-    drop-shadow(0 0 3px rgba(219, 219, 219, 0.5));
+  stroke: var(--lilac-100);
+  filter: drop-shadow(0 0 2px var(--white)) drop-shadow(0 0 2px var(--keybg-80)) drop-shadow(0 0 3px var(--keybg-50));
   animation: svgAnimation 6s linear infinite;
 }
 
@@ -2810,7 +2883,7 @@ main.nor.parking-loc-page #checkout-container.parking.parking-loc {
   color: var(--main-font);
 }
 .page-temppay-checkout #header-title div {
-  color: #1e2a4a;
+  color: var(--navy-dark);
 }
 main.temppay-checkout-page {
   background: transparent;
@@ -2850,9 +2923,9 @@ main.temppay-checkout-page .checkout-top-card__row {
   align-items: stretch;
   width: 100%;
   min-height: clamp(210px, 34vw, 300px);
-  background: #fff;
+  background: var(--white);
   border-radius: 1.25rem;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 15px var(--overlay-black-60);
   overflow: hidden;
   border: 1px solid rgba(65, 33, 135, 0.08);
 }
@@ -2878,18 +2951,18 @@ main.temppay-checkout-page .checkout-photo-loc {
   gap: 0.3rem;
   max-width: calc(100% - 1.2rem);
   padding: 0.32rem 0.5rem 0.32rem 0.38rem;
-  background: #fff;
+  background: var(--white);
   border: 1.5px solid #93c5fd;
   border-radius: 999px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 8px var(--overlay-black-08);
   font-size: clamp(0.75rem, 1.7vw, 0.88rem);
   font-weight: 700;
-  color: #475569;
+  color: var(--text-slate-d);
   line-height: 1.2;
 }
 main.temppay-checkout-page .checkout-photo-loc__icon {
   display: flex;
-  color: #475569;
+  color: var(--text-slate-d);
   flex-shrink: 0;
 }
 main.temppay-checkout-page .checkout-photo-loc__text {
@@ -3006,8 +3079,8 @@ main.temppay-checkout-page .time-pill {
   align-items: center;
   justify-content: center;
   padding: 0.22rem 0.55rem;
-  background: #e06666;
-  color: #fff;
+  background: var(--font-red);
+  color: var(--white);
   font-size: 1rem;
   font-weight: 400;
   letter-spacing: 0.2em;
@@ -3020,7 +3093,7 @@ main.temppay-checkout-page .time-date {
   font-size: clamp(1.1rem, 2.4vw, 1.3rem);
   font-weight: 600;
   font-variant-numeric: tabular-nums;
-  color: #475569;
+  color: var(--text-slate-d);
   line-height: 1.35;
 }
 main.temppay-checkout-page .time-time {
@@ -3044,10 +3117,10 @@ main.temppay-checkout-page #checkout-list-container.checkout-bill-card {
   padding: 0;
   overflow: hidden;
   border-radius: 1.25rem;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 15px var(--overlay-black-60);
   border: 1px solid rgba(65, 33, 135, 0.1);
-  background: #fff;
-  color: #1e2a4a;
+  background: var(--white);
+  color: var(--navy-dark);
 }
 main.temppay-checkout-page #checkout-list-container .checkout-inner {
   padding: 1.15rem clamp(1rem, 3vw, 1.45rem) 0.65rem;
@@ -3063,11 +3136,11 @@ main.temppay-checkout-page .bill-list-title {
   font-size: clamp(1.1rem, 2.2vw, 1.3rem);
   font-weight: 700;
   letter-spacing: 0.06em;
-  color: #412187;
+  color: var(--main-font);
 }
 main.temppay-checkout-page .bill-list-title__icon {
   flex-shrink: 0;
-  stroke: #412187;
+  stroke: var(--main-font);
 }
 main.temppay-checkout-page .bill-line-items {
   list-style: none;
@@ -3098,10 +3171,10 @@ main.temppay-checkout-page #checkout-list-container .checkout-inner ul.bill-line
   max-width: none;
   flex-direction: unset;
   padding: 0.65rem 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid var(--overlay-black-08);
 }
 main.temppay-checkout-page #checkout-list-container .checkout-inner ul.bill-line-items li:last-child {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid var(--overlay-black-08);
 }
 main.temppay-checkout-page .bill-line__icon {
   display: flex;
@@ -3117,11 +3190,11 @@ main.temppay-checkout-page .bill-line__icon svg {
 }
 main.temppay-checkout-page .bill-line__icon--list {
   background: var(--keybg);
-  color: #4b5563;
+  color: var(--text-slate);
 }
 main.temppay-checkout-page .bill-line__icon--discount {
-  background: #baf0d2;
-  color: #08bf5b;
+  background: var(--mint-soft);
+  color: var(--font-green);
 }
 main.temppay-checkout-page #checkout-list-container .checkout-inner ul.bill-line-items li:first-child,
 main.temppay-checkout-page #checkout-list-container .checkout-inner ul.bill-line-items li:nth-child(2),
@@ -3156,7 +3229,7 @@ main.temppay-checkout-page #checkout-list-container .checkout-inner ul.bill-line
   line-height: 1.35;
   color: var(--main-p);
   font-variant-numeric: tabular-nums;
-  text-shadow: 0 0 14px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 0 14px var(--overlay-black-20);
 }
 /* 覆寫 #checkout-list-container .checkout-inner ul li:first-child span:nth-child(2) 的 text-align:center、padding、大字 */
 main.temppay-checkout-page
@@ -3189,8 +3262,8 @@ main.temppay-checkout-page
   ul.bill-line-items
   li.bill-line-items__discount
   .bill-desc {
-  color: #08bf5b;
-  text-shadow: 0 0 14px rgba(112, 243, 255, 0.25);
+  color: var(--font-green);
+  text-shadow: 0 0 14px var(--cyan-glow-25);
 }
 main.temppay-checkout-page #checkout-list-container .checkout-inner ul.bill-line-items li .bill-amt--discount {
   justify-self: end;
@@ -3217,8 +3290,8 @@ main.temppay-checkout-page .bill-total-bar {
   gap: 1rem;
   margin: 0;
   padding: 1rem clamp(1rem, 3vw, 1.45rem) 1.1rem;
-  background: #e06666;
-  color: #fff;
+  background: var(--font-red);
+  color: var(--white);
   border-radius: 0 0 calc(1.25rem - 1px) calc(1.25rem - 1px);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12);
 }
@@ -3227,7 +3300,7 @@ main.temppay-checkout-page .bill-total-bar__label {
   font-size: clamp(1.55rem, 3.4vw, 2rem);
   font-weight: 700;
   letter-spacing: 0.08em;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  text-shadow: 0 1px 2px var(--overlay-black-15);
 }
 main.temppay-checkout-page .bill-total-bar__amt {
   display: inline-flex;
@@ -3299,13 +3372,13 @@ main.temppay-checkout-page h2.temppay-pay-heading {
   text-align: center;
   font-weight: 700;
   letter-spacing: 0.12em;
-  color: #fff;
+  color: var(--white);
   font-size: clamp(1.25rem, 2.5vw, 1.55rem);
   padding: 0.55rem 1.85rem;
   margin: 0 0 1rem;
   background: linear-gradient(180deg, var(--main-p) 0%, var(--main-p) 100%);
   border-radius: 999px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 6px 20px var(--overlay-black-12);
   text-shadow: 0 0 0 BLACK;
 }
 .page-temppay-checkout #main-bt-container.temppay-main-bt {
@@ -3336,7 +3409,7 @@ main.temppay-checkout-page h2.temppay-pay-heading {
   display: none;
 }
 .page-temppay-checkout #main-bt-container.temppay-main-bt a.temppay-bt-back {
-  background: #fff;
+  background: var(--white);
   color: var(--main-font);
   border: 2px solid var(--main-font);
   font-weight: 700;
@@ -3347,7 +3420,7 @@ main.temppay-checkout-page h2.temppay-pay-heading {
 }
 .page-temppay-checkout #main-bt-container.temppay-main-bt a.temppay-bt-primary {
   background: var(--main-font);
-  color: #fff;
+  color: var(--white);
   border: 2px solid var(--main-font);
   font-weight: 700;
   letter-spacing: 0.02em;
@@ -3412,7 +3485,7 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.checkout-pay-tile {
   min-height: 155px;
   border-radius: 1.25rem;
   overflow: hidden;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 15px var(--overlay-black-60);
   color: inherit;
 }
 main.temppay-checkout-page #checkout-pay-inner ul li a.checkout-pay-tile:active {
@@ -3427,7 +3500,7 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.checkout-pay-tile .checko
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
+  color: var(--white);
   font-weight: 700;
   font-size: clamp(1.25rem, 2vw, 1.65rem);
   letter-spacing: 0.1em;
@@ -3439,7 +3512,7 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.checkout-pay-tile.cash .c
   background: linear-gradient(180deg, #ffa033 0%, #f57c00 100%);
 }
 main.temppay-checkout-page #checkout-pay-inner ul li a.checkout-pay-tile.rebate .checkout-pay-tile__head {
-  background: linear-gradient(180deg, #08bf5ac6 0%, #08bf5b 100%);
+  background: linear-gradient(180deg, var(--font-green-soft) 0%, var(--font-green) 100%);
 }
 main.temppay-checkout-page #checkout-pay-inner ul li a.checkout-pay-tile.other .checkout-pay-tile__head {
   background: linear-gradient(180deg, #4a9ef0 0%, #2b7fd9 100%);
@@ -3449,7 +3522,7 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.checkout-pay-tile .checko
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #fff;
+  background: var(--white);
 }
 main.temppay-checkout-page #checkout-pay-inner ul li a.checkout-pay-tile i {
   width: min(90%, 240px);
@@ -3461,33 +3534,33 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.checkout-pay-tile i {
   background-size: contain;
 }
 
-/* 1.1_temppay 支付方式圖示（0327 PNG）：--main-font (#412187) 淡光暈 + 輕陰影 */
+/* 1.1_temppay 支付方式圖示（0327 PNG）：--main-font (var(--main-font)) 淡光暈 + 輕陰影 */
 main.temppay-checkout-page #checkout-pay-inner ul li a.cash i,
 main.temppay-checkout-page #checkout-pay-inner ul li a.rebate i,
 main.temppay-checkout-page #checkout-pay-inner ul li a.other i {
   background-size: contain;
-  filter: drop-shadow(0 0 6px rgba(45, 39, 57, 0.34));
+  filter: drop-shadow(0 0 6px var(--ink-34));
 }
 main.temppay-checkout-page #checkout-pay-inner ul li a.cash i {
   background-image: url(../images/0327/main_cash.png);
 }
 main.temppay-checkout-page #checkout-pay-inner ul li a.cash:active i {
   background-image: url(../images/0327/main_cash.png);
-  filter: brightness(0.95) drop-shadow(0 0 6px rgba(45, 39, 57, 0.34));
+  filter: brightness(0.95) drop-shadow(0 0 6px var(--ink-34));
 }
 main.temppay-checkout-page #checkout-pay-inner ul li a.rebate i {
   background-image: url(../images/0327/coupons_qrcode.png);
 }
 main.temppay-checkout-page #checkout-pay-inner ul li a.rebate:active i {
   background-image: url(../images/0327/coupons_qrcode.png);
-  filter: brightness(0.95) drop-shadow(0 0 14px rgba(65, 33, 135, 0.34)) drop-shadow(0 3px 8px rgba(0, 0, 0, 0.16));
+  filter: brightness(0.95) drop-shadow(0 0 14px var(--main-font-34)) drop-shadow(0 3px 8px var(--overlay-black-16));
 }
 main.temppay-checkout-page #checkout-pay-inner ul li a.other i {
   background-image: url(../images/0327/main_otherpayments.png);
 }
 main.temppay-checkout-page #checkout-pay-inner ul li a.other:active i {
   background-image: url(../images/0327/main_otherpayments.png);
-  filter: brightness(0.95) drop-shadow(0 0 14px rgba(65, 33, 135, 0.34)) drop-shadow(0 3px 8px rgba(0, 0, 0, 0.16));
+  filter: brightness(0.95) drop-shadow(0 0 14px var(--main-font-34)) drop-shadow(0 3px 8px var(--overlay-black-16));
 }
 
 /* 1.2_temppay-popup：現金投入／金額摘要（附圖排版） */
@@ -3507,10 +3580,10 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.other:active i {
   margin: 20px auto;
   box-sizing: border-box;
   overflow: hidden;
-  background: #fff;
+  background: var(--white);
   border-radius: 10px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
-  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 6px 20px var(--overlay-black-35);
+  border: 1px solid var(--overlay-black-06);
 }
 #popupParagraph.temppay-cash-popup .temppay-kiosk-img {
   display: block;
@@ -3555,16 +3628,16 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.other:active i {
   color: #111 !important;
   background: #e6ff00;
   border-radius: 0.75rem;
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 3px 12px var(--overlay-black-40);
   text-align: center;
   display: block;
 }
 #popupParagraph.temppay-cash-popup .temppay-summary {
   border-radius: 1rem;
   padding: 1rem 1.15rem 1.15rem;
-  background: #ffffff;
+  background: var(--white);
   border: 1px solid rgba(255, 255, 255, 0.06);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 6px 20px var(--overlay-black-35);
 }
 #popupParagraph.temppay-cash-popup .temppay-summary__hint {
   margin: 0 0 0.65rem;
@@ -3620,22 +3693,22 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.other:active i {
   line-height: 1.08;
 }
 #popupParagraph.temppay-cash-popup .temppay-summary__amt--pink {
-  color: #e06666;
+  color: var(--font-red);
   text-shadow: 0 0 14px rgba(244, 143, 177, 0.2);
 }
 #popupParagraph.temppay-cash-popup .temppay-summary__amt--blue {
-  color: #08bf5b;
-  text-shadow: 0 0 14px rgba(112, 243, 255, 0.25);
+  color: var(--font-green);
+  text-shadow: 0 0 14px var(--cyan-glow-25);
 }
 #popupParagraph.temppay-cash-popup .temppay-summary__amt--gray {
   color: var(--main-p);
-  text-shadow: 0 0 14px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 0 14px var(--overlay-black-20);
 }
 #popupParagraph.temppay-cash-popup .temppay-summary__divider {
   height: 1px;
   margin: 0.65rem 0;
   background: rgba(0, 0, 0, 0.45);
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05);
+  box-shadow: 0 1px 0 var(--overlay-white-05);
 }
 #popupParagraph.temppay-cash-popup .temppay-summary__row--change {
   display: grid;
@@ -3643,7 +3716,7 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.other:active i {
   gap: 1rem;
   margin-top: 0.35rem;
   padding-top: 0.75rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.35);
+  border-top: 1px solid var(--overlay-black-35);
 }
 #popupParagraph.temppay-cash-popup .temppay-summary__col {
   display: flex;
@@ -3655,10 +3728,10 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.other:active i {
 #popupParagraph.temppay-cash-popup .temppay-summary__row--change .temppay-summary__label {
   font-size: 1.2rem;
   font-weight: 600;
-  color: #d4cc7e;
+  color: var(--olive-soft);
 }
 #popupParagraph.temppay-cash-popup .temppay-summary__amt--gold {
-  color: #d4cc7e;
+  color: var(--olive-soft);
 }
 #popupParagraph.temppay-cash-popup .temppay-summary__row--change .temppay-summary__amt strong {
   font-size: clamp(1.5rem, 3.8vw, 1.95rem);
@@ -3668,12 +3741,12 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.other:active i {
   padding: 0.65rem 1.25rem;
   font-size: 1.05rem !important;
   line-height: 1.45 !important;
-  color: #fff !important;
+  color: var(--white) !important;
   text-align: center;
   background: var(--main-p);
   border-radius: 999px;
   border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  box-shadow: inset 0 1px 0 var(--overlay-white-05);
   display: block;
 }
 
@@ -3681,7 +3754,7 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.other:active i {
 #popupParagraph.message-popup {
   overflow: visible;
   padding: 4.25rem 2rem 9.5rem;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.14);
+  box-shadow: 0 12px 40px var(--overlay-black-14);
 }
 .message-popup__icon {
   position: absolute;
@@ -3699,14 +3772,14 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.other:active i {
   /* yes.png 圓形未貼滿裁切圓，透明帶需與圖內綠色一致，白 ring 才不會「隔空」 */
   background-color: #5edd60;
   box-shadow:
-    0 0 0 4px #fff,
-    0 8px 24px rgba(0, 0, 0, 0.12);
+    0 0 0 4px var(--white),
+    0 8px 24px var(--overlay-black-12);
 }
-/* 警示圖（warning-sign）等：PNG 置於 #4e566e 圓底，附白邊與陰影（同附圖壓在卡片頂緣） */
+/* 警示圖（warning-sign）等：PNG 置於 var(--main-p) 圓底，附白邊與陰影（同附圖壓在卡片頂緣） */
 .message-popup__icon-disc {
   width: clamp(5.5rem, 18vw, 7.5rem);
   height: clamp(5.5rem, 18vw, 7.5rem);
-  background: #4e566e;
+  background: var(--main-p);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -3714,8 +3787,8 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.other:active i {
   box-sizing: border-box;
   padding: clamp(0.6rem, 2vw, 0.95rem);
   box-shadow:
-    0 0 0 4px #fff,
-    0 8px 24px rgba(0, 0, 0, 0.12);
+    0 0 0 4px var(--white),
+    0 8px 24px var(--overlay-black-12);
 }
 .message-popup__icon-disc img {
   width: 72%;
@@ -3747,7 +3820,7 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.other:active i {
 .message-popup__title {
   font-size: 2.15rem;
   font-weight: 700;
-  color: #000;
+  color: var(--black);
 }
 #popupParagraph.message-popup .message-popup__content p.message-popup__title--xl {
   font-size: 3.15rem;
@@ -3759,7 +3832,7 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.other:active i {
 .message-popup__line1,
 .message-popup__line2 {
   font-size: 1.7rem;
-  color: #000;
+  color: var(--black);
 }
 .message-popup__num {
   font-size: 2.15rem;
@@ -3771,7 +3844,7 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.other:active i {
 /* 0.3 客服資訊（雙卡片、附圖排版） */
 #popupParagraph.service-info-popup {
   padding: 2.25rem 2rem 9.5rem;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.14);
+  box-shadow: 0 12px 40px var(--overlay-black-14);
 }
 /* 與 popup-h1-bar 併用時：h1 貼頂滿寬灰底（同 1.1.1.0 rebate / temppay） */
 #popupParagraph.service-info-popup.popup-h1-bar {
@@ -3793,7 +3866,7 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.other:active i {
   margin: 0;
   font-size: 2.15rem;
   font-weight: 700;
-  color: #000;
+  color: var(--black);
   text-align: center;
   line-height: 1.3;
   width: 100%;
@@ -3815,7 +3888,7 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.other:active i {
   align-items: center;
   gap: 1rem;
   padding: 1rem 1.15rem;
-  background: #fff;
+  background: var(--white);
   border-radius: 12px;
   box-shadow: none;
   min-height: 0;
@@ -3838,7 +3911,7 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.other:active i {
   padding: 0;
   font-size: 1.35rem;
   font-weight: 700;
-  color: #000;
+  color: var(--black);
   line-height: 1.35;
   text-align: left;
   justify-content: flex-start;
@@ -3846,7 +3919,7 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.other:active i {
 .service-info-card__value {
   font-size: 1.35rem;
   font-weight: 400;
-  color: #000;
+  color: var(--black);
   line-height: 1.4;
 }
 .service-info-card__value--phone {
@@ -3859,7 +3932,7 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.other:active i {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #000;
+  color: var(--black);
 }
 .service-info-card__icon--map {
   display: flex;
