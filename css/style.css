@@ -3164,13 +3164,13 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.other:active i {
   filter: brightness(0.95) drop-shadow(0 0 14px var(--main-font-34)) drop-shadow(0 3px 8px var(--overlay-black-16));
 }
 
-#popupParagraph.temppay-cash-popup {
+#popupParagraph.temppay-popup {
   padding-bottom: 11rem;
 }
-#popupParagraph.temppay-cash-popup > h1 + p {
+#popupParagraph.temppay-popup > h1 + p {
   font-weight: 600;
 }
-#popupParagraph.temppay-cash-popup .temppay-kiosk-wrap {
+#popupParagraph.temppay-popup .temppay-kiosk-wrap {
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -3185,7 +3185,7 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.other:active i {
   box-shadow: 0 6px 20px var(--overlay-black-35);
   border: 1px solid var(--overlay-black-06);
 }
-#popupParagraph.temppay-cash-popup .temppay-kiosk-img {
+#popupParagraph.temppay-popup .temppay-kiosk-img {
   display: block;
   flex: 1 1 auto;
   min-height: 0;
@@ -3193,7 +3193,7 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.other:active i {
   height: 100%;
   object-fit: contain;
 }
-#popupParagraph.temppay-cash-popup #popup-inner.temppay-cash-layout {
+#popupParagraph.temppay-popup #popup-inner.temppay-cash-layout {
   position: relative;
   flex-direction: column;
   width: 100%;
@@ -3202,7 +3202,7 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.other:active i {
   align-items: stretch;
   gap: 0.85rem;
 }
-#popupParagraph.temppay-cash-popup .temppay-callout {
+#popupParagraph.temppay-popup .temppay-callout {
   position: absolute;
   top: 0;
   right: 0;
@@ -3220,14 +3220,14 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.other:active i {
   text-align: center;
   display: block;
 }
-#popupParagraph.temppay-cash-popup .temppay-summary {
+#popupParagraph.temppay-popup .temppay-summary {
   border-radius: 1rem;
   padding: 1rem 1.15rem 1.15rem;
   background: var(--white);
   border: 1px solid rgba(255, 255, 255, 0.06);
   box-shadow: 0 6px 20px var(--overlay-black-35);
 }
-#popupParagraph.temppay-cash-popup .temppay-summary__hint {
+#popupParagraph.temppay-popup .temppay-summary__hint {
   margin: 0 0 0.65rem;
   padding: 0.6rem 0.85rem;
   background: var(--keybg);
@@ -3238,66 +3238,66 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.other:active i {
   text-align: center;
   border-radius: 0.5rem;
 }
-#popupParagraph.temppay-cash-popup .temppay-summary__row {
+#popupParagraph.temppay-popup .temppay-summary__row {
   display: flex;
   flex-direction: row;
   align-items: baseline;
   justify-content: space-between;
   gap: 0.75rem;
 }
-#popupParagraph.temppay-cash-popup .temppay-summary__row--due .temppay-summary__label,
-#popupParagraph.temppay-cash-popup .temppay-summary__row--recv .temppay-summary__label {
+#popupParagraph.temppay-popup .temppay-summary__row--due .temppay-summary__label,
+#popupParagraph.temppay-popup .temppay-summary__row--recv .temppay-summary__label {
   font-size: 1.35rem;
   font-weight: 600;
 }
-#popupParagraph.temppay-cash-popup .temppay-summary__row--due .temppay-summary__label {
+#popupParagraph.temppay-popup .temppay-summary__row--due .temppay-summary__label {
   color: var(--main-p);
 }
-#popupParagraph.temppay-cash-popup .temppay-summary__row--recv .temppay-summary__label {
+#popupParagraph.temppay-popup .temppay-summary__row--recv .temppay-summary__label {
   color: var(--main-p);
 }
-#popupParagraph.temppay-cash-popup .temppay-summary__amt {
+#popupParagraph.temppay-popup .temppay-summary__amt {
   font-size: 1.1rem;
   font-weight: 600;
   font-variant-numeric: tabular-nums;
 }
-#popupParagraph.temppay-cash-popup .temppay-summary__amt strong {
+#popupParagraph.temppay-popup .temppay-summary__amt strong {
   font-size: clamp(1.85rem, 4.5vw, 2.35rem);
   font-weight: 800;
   line-height: 1.1;
 }
-#popupParagraph.temppay-cash-popup .temppay-summary__row--payable .temppay-summary__label {
+#popupParagraph.temppay-popup .temppay-summary__row--payable .temppay-summary__label {
   font-size: clamp(1.55rem, 3.2vw, 1.9rem);
   font-weight: 700;
 }
-#popupParagraph.temppay-cash-popup .temppay-summary__row--payable .temppay-summary__amt {
+#popupParagraph.temppay-popup .temppay-summary__row--payable .temppay-summary__amt {
   font-size: 1.3rem;
   font-weight: 600;
 }
-#popupParagraph.temppay-cash-popup .temppay-summary__row--payable .temppay-summary__amt strong {
+#popupParagraph.temppay-popup .temppay-summary__row--payable .temppay-summary__amt strong {
   font-size: clamp(2.2rem, 5.2vw, 3.1rem);
   font-weight: 800;
   line-height: 1.08;
 }
-#popupParagraph.temppay-cash-popup .temppay-summary__amt--pink {
+#popupParagraph.temppay-popup .temppay-summary__amt--pink {
   color: var(--font-red);
   text-shadow: 0 0 14px rgba(244, 143, 177, 0.2);
 }
-#popupParagraph.temppay-cash-popup .temppay-summary__amt--blue {
+#popupParagraph.temppay-popup .temppay-summary__amt--blue {
   color: var(--font-green);
   text-shadow: 0 0 14px var(--cyan-glow-25);
 }
-#popupParagraph.temppay-cash-popup .temppay-summary__amt--gray {
+#popupParagraph.temppay-popup .temppay-summary__amt--gray {
   color: var(--main-p);
   text-shadow: 0 0 14px var(--overlay-black-20);
 }
-#popupParagraph.temppay-cash-popup .temppay-summary__divider {
+#popupParagraph.temppay-popup .temppay-summary__divider {
   height: 1px;
   margin: 0.65rem 0;
   background: rgba(0, 0, 0, 0.45);
   box-shadow: 0 1px 0 var(--overlay-white-05);
 }
-#popupParagraph.temppay-cash-popup .temppay-summary__row--change {
+#popupParagraph.temppay-popup .temppay-summary__row--change {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
@@ -3305,22 +3305,22 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.other:active i {
   padding-top: 0.75rem;
   border-top: 1px solid var(--overlay-black-35);
 }
-#popupParagraph.temppay-cash-popup .temppay-summary__col {
+#popupParagraph.temppay-popup .temppay-summary__col {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   gap: 0.2rem;
 }
-#popupParagraph.temppay-cash-popup .temppay-summary__row--change .temppay-summary__label {
+#popupParagraph.temppay-popup .temppay-summary__row--change .temppay-summary__label {
   font-size: 1.2rem;
   font-weight: 600;
   color: var(--olive-soft);
 }
-#popupParagraph.temppay-cash-popup .temppay-summary__amt--gold {
+#popupParagraph.temppay-popup .temppay-summary__amt--gold {
   color: var(--olive-soft);
 }
-#popupParagraph.temppay-cash-popup .temppay-summary__row--change .temppay-summary__amt strong {
+#popupParagraph.temppay-popup .temppay-summary__row--change .temppay-summary__amt strong {
   font-size: clamp(1.5rem, 3.8vw, 1.95rem);
 }
 
