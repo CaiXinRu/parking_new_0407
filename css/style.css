@@ -517,7 +517,7 @@ main.nor h2.receipt-method-heading {
   font-size: 2.5rem;
   color: var(--black);
 }
-#popupParagraph.popup-h1-bar h1 {
+#popupParagraph:not(.single):has(> h1) > h1 {
   background: var(--main-p);
   color: var(--white);
   margin: -2rem -2rem 2rem;
@@ -3164,13 +3164,13 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.other:active i {
   filter: brightness(0.95) drop-shadow(0 0 14px var(--main-font-34)) drop-shadow(0 3px 8px var(--overlay-black-16));
 }
 
-#popupParagraph.temppay-popup {
+#popupParagraph.popup-card--temppay {
   padding-bottom: 11rem;
 }
-#popupParagraph.temppay-popup > h1 + p {
+#popupParagraph.popup-card--temppay > h1 + p {
   font-weight: 600;
 }
-#popupParagraph.temppay-popup .temppay-kiosk-wrap {
+#popupParagraph.popup-card--temppay .temppay-kiosk-wrap {
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -3185,7 +3185,7 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.other:active i {
   box-shadow: 0 6px 20px var(--overlay-black-35);
   border: 1px solid var(--overlay-black-06);
 }
-#popupParagraph.temppay-popup .temppay-kiosk-img {
+#popupParagraph.popup-card--temppay .temppay-kiosk-img {
   display: block;
   flex: 1 1 auto;
   min-height: 0;
@@ -3193,7 +3193,7 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.other:active i {
   height: 100%;
   object-fit: contain;
 }
-#popupParagraph.temppay-popup #popup-inner.temppay-cash-layout {
+#popupParagraph.popup-card--temppay #popup-inner.temppay-cash-layout {
   position: relative;
   flex-direction: column;
   width: 100%;
@@ -3202,7 +3202,7 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.other:active i {
   align-items: stretch;
   gap: 0.85rem;
 }
-#popupParagraph.temppay-popup .temppay-callout {
+#popupParagraph.popup-card--temppay .temppay-callout {
   position: absolute;
   top: 0;
   right: 0;
@@ -3220,14 +3220,14 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.other:active i {
   text-align: center;
   display: block;
 }
-#popupParagraph.temppay-popup .temppay-summary {
+#popupParagraph.popup-card--temppay .temppay-summary {
   border-radius: 1rem;
   padding: 1rem 1.15rem 1.15rem;
   background: var(--white);
   border: 1px solid rgba(255, 255, 255, 0.06);
   box-shadow: 0 6px 20px var(--overlay-black-35);
 }
-#popupParagraph.temppay-popup .temppay-summary__hint {
+#popupParagraph.popup-card--temppay .temppay-summary__hint {
   margin: 0 0 0.65rem;
   padding: 0.6rem 0.85rem;
   background: var(--keybg);
@@ -3238,66 +3238,66 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.other:active i {
   text-align: center;
   border-radius: 0.5rem;
 }
-#popupParagraph.temppay-popup .temppay-summary__row {
+#popupParagraph.popup-card--temppay .temppay-summary__row {
   display: flex;
   flex-direction: row;
   align-items: baseline;
   justify-content: space-between;
   gap: 0.75rem;
 }
-#popupParagraph.temppay-popup .temppay-summary__row--due .temppay-summary__label,
-#popupParagraph.temppay-popup .temppay-summary__row--recv .temppay-summary__label {
+#popupParagraph.popup-card--temppay .temppay-summary__row--due .temppay-summary__label,
+#popupParagraph.popup-card--temppay .temppay-summary__row--recv .temppay-summary__label {
   font-size: 1.35rem;
   font-weight: 600;
 }
-#popupParagraph.temppay-popup .temppay-summary__row--due .temppay-summary__label {
+#popupParagraph.popup-card--temppay .temppay-summary__row--due .temppay-summary__label {
   color: var(--main-p);
 }
-#popupParagraph.temppay-popup .temppay-summary__row--recv .temppay-summary__label {
+#popupParagraph.popup-card--temppay .temppay-summary__row--recv .temppay-summary__label {
   color: var(--main-p);
 }
-#popupParagraph.temppay-popup .temppay-summary__amt {
+#popupParagraph.popup-card--temppay .temppay-summary__amt {
   font-size: 1.1rem;
   font-weight: 600;
   font-variant-numeric: tabular-nums;
 }
-#popupParagraph.temppay-popup .temppay-summary__amt strong {
+#popupParagraph.popup-card--temppay .temppay-summary__amt strong {
   font-size: clamp(1.85rem, 4.5vw, 2.35rem);
   font-weight: 800;
   line-height: 1.1;
 }
-#popupParagraph.temppay-popup .temppay-summary__row--payable .temppay-summary__label {
+#popupParagraph.popup-card--temppay .temppay-summary__row--payable .temppay-summary__label {
   font-size: clamp(1.55rem, 3.2vw, 1.9rem);
   font-weight: 700;
 }
-#popupParagraph.temppay-popup .temppay-summary__row--payable .temppay-summary__amt {
+#popupParagraph.popup-card--temppay .temppay-summary__row--payable .temppay-summary__amt {
   font-size: 1.3rem;
   font-weight: 600;
 }
-#popupParagraph.temppay-popup .temppay-summary__row--payable .temppay-summary__amt strong {
+#popupParagraph.popup-card--temppay .temppay-summary__row--payable .temppay-summary__amt strong {
   font-size: clamp(2.2rem, 5.2vw, 3.1rem);
   font-weight: 800;
   line-height: 1.08;
 }
-#popupParagraph.temppay-popup .temppay-summary__amt--pink {
+#popupParagraph.popup-card--temppay .temppay-summary__amt--pink {
   color: var(--font-red);
   text-shadow: 0 0 14px rgba(244, 143, 177, 0.2);
 }
-#popupParagraph.temppay-popup .temppay-summary__amt--blue {
+#popupParagraph.popup-card--temppay .temppay-summary__amt--blue {
   color: var(--font-green);
   text-shadow: 0 0 14px var(--cyan-glow-25);
 }
-#popupParagraph.temppay-popup .temppay-summary__amt--gray {
+#popupParagraph.popup-card--temppay .temppay-summary__amt--gray {
   color: var(--main-p);
   text-shadow: 0 0 14px var(--overlay-black-20);
 }
-#popupParagraph.temppay-popup .temppay-summary__divider {
+#popupParagraph.popup-card--temppay .temppay-summary__divider {
   height: 1px;
   margin: 0.65rem 0;
   background: rgba(0, 0, 0, 0.45);
   box-shadow: 0 1px 0 var(--overlay-white-05);
 }
-#popupParagraph.temppay-popup .temppay-summary__row--change {
+#popupParagraph.popup-card--temppay .temppay-summary__row--change {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
@@ -3305,32 +3305,32 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.other:active i {
   padding-top: 0.75rem;
   border-top: 1px solid var(--overlay-black-35);
 }
-#popupParagraph.temppay-popup .temppay-summary__col {
+#popupParagraph.popup-card--temppay .temppay-summary__col {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   gap: 0.2rem;
 }
-#popupParagraph.temppay-popup .temppay-summary__row--change .temppay-summary__label {
+#popupParagraph.popup-card--temppay .temppay-summary__row--change .temppay-summary__label {
   font-size: 1.2rem;
   font-weight: 600;
   color: var(--olive-soft);
 }
-#popupParagraph.temppay-popup .temppay-summary__amt--gold {
+#popupParagraph.popup-card--temppay .temppay-summary__amt--gold {
   color: var(--olive-soft);
 }
-#popupParagraph.temppay-popup .temppay-summary__row--change .temppay-summary__amt strong {
+#popupParagraph.popup-card--temppay .temppay-summary__row--change .temppay-summary__amt strong {
   font-size: clamp(1.5rem, 3.8vw, 1.95rem);
 }
 
 /* 2.4.0 手機載具歸戶完成（成功圖示壓在卡片頂緣、附圖排版） */
-#popupParagraph.message-popup {
+#popupParagraph.popup-card--message {
   overflow: visible;
   padding: 4.25rem 2rem 9.5rem;
   box-shadow: 0 12px 40px var(--overlay-black-14);
 }
-.message-popup__icon {
+.popup-card__icon {
   position: absolute;
   left: 50%;
   top: 0;
@@ -3338,7 +3338,7 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.other:active i {
   z-index: 2;
   line-height: 0;
 }
-.message-popup__icon > img {
+.popup-card__icon > img {
   width: clamp(5.5rem, 18vw, 7.5rem);
   height: auto;
   display: block;
@@ -3350,7 +3350,7 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.other:active i {
     0 8px 24px var(--overlay-black-12);
 }
 /* 警示圖（icon_warning）等：PNG 置於 var(--main-p) 圓底，附白邊與陰影（同附圖壓在卡片頂緣） */
-.message-popup__icon-disc {
+.popup-card__icon-disc {
   width: clamp(5.5rem, 18vw, 7.5rem);
   height: clamp(5.5rem, 18vw, 7.5rem);
   background: var(--main-p);
@@ -3364,7 +3364,7 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.other:active i {
     0 0 0 4px var(--white),
     0 8px 24px var(--overlay-black-12);
 }
-.message-popup__icon-disc img {
+.popup-card__icon-disc img {
   width: 72%;
   height: auto;
   max-width: 100%;
@@ -3372,7 +3372,7 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.other:active i {
   border-radius: 0;
   box-shadow: none;
 }
-.message-popup__content {
+.popup-card__content {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -3380,7 +3380,7 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.other:active i {
   gap: 1rem;
   margin-top: 0.25rem;
 }
-#popupParagraph.message-popup .message-popup__content p {
+#popupParagraph.popup-card--message .popup-card__content p {
   display: block;
   width: 100%;
   text-align: center;
@@ -3388,51 +3388,51 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.other:active i {
   line-height: 1.5;
   justify-content: center;
 }
-#popupParagraph .message-popup__content p.popup-content-text-mt {
+#popupParagraph .popup-card__content p.popup-content-text-mt {
   margin-top: 20px;
 }
-#popupParagraph.message-popup .message-popup__content p.message-popup__title {
+#popupParagraph.popup-card--message .popup-card__content p.popup-card__title {
   font-size: 2.15rem;
   font-weight: 700;
   color: var(--black);
 }
-#popupParagraph.message-popup .message-popup__content p.message-popup__title--xl {
+#popupParagraph.popup-card--message .popup-card__content p.popup-card__title--xl {
   font-size: 3.15rem;
   margin-top: 20px;
 }
-#popupParagraph.message-popup .message-popup__content p.message-popup__title--spaced {
+#popupParagraph.popup-card--message .popup-card__content p.popup-card__title--spaced {
   margin-top: 20px;
 }
-.message-popup__line1,
-.message-popup__line2 {
+.popup-card__line1,
+.popup-card__line2 {
   font-size: 1.7rem;
   color: var(--black);
 }
-.message-popup__num {
+.popup-card__num {
   font-size: 2.15rem;
   font-weight: 700;
   color: #e53935;
   margin: 0 0.15em;
 }
 
-#popupParagraph.service-info-popup {
+#popupParagraph.popup-card--service {
   padding: 2.25rem 2rem 9.5rem;
   box-shadow: 0 12px 40px var(--overlay-black-14);
 }
-#popupParagraph.service-info-popup.popup-h1-bar {
+#popupParagraph.popup-card--service:not(.single):has(> h1) {
   padding: 2rem 2rem 9.5rem;
 }
-#popupParagraph.service-info-popup.popup-h1-bar .service-info-popup__content {
+#popupParagraph.popup-card--service:not(.single):has(> h1) .service-info-popup__content {
   margin-top: 0;
 }
 
-#popupParagraph.processing-popup.service-info-popup.popup-h1-bar {
+#popupParagraph.popup-card--processing.popup-card--service:not(.single):has(> h1) {
   padding: 2rem 2rem 3rem;
 }
-#popupParagraph.processing-popup .message-popup__content {
+#popupParagraph.popup-card--processing .popup-card__content {
   gap: 1.75rem;
 }
-#popupParagraph.processing-popup p.processing-popup__message {
+#popupParagraph.popup-card--processing p.processing-popup__message {
   margin: 0;
   line-height: 1.45;
   text-align: center;
@@ -3494,7 +3494,7 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.other:active i {
   min-width: 0;
   text-align: left;
 }
-#popupParagraph.service-info-popup .service-info-card__label {
+#popupParagraph.popup-card--service .service-info-card__label {
   display: block;
   width: 100%;
   margin: 0;
