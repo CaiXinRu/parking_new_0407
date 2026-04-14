@@ -1521,6 +1521,21 @@ footer #pat-list-inner p img {
 #lice-bt-container a.lice-card:active .lice-card__check svg path {
   stroke: var(--font-green);
 }
+#lice-bt-container a.lice-card.lice-card--hint {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 16px 20px;
+  background: var(--main-p);
+  color: var(--white);
+}
+#lice-bt-container .lice-card__hint {
+  margin: 0;
+  font-size: 1.7rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--white);
+}
 #checkout-pic-container .type:before {
   content: "";
   position: absolute;
