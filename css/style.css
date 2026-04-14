@@ -1308,10 +1308,10 @@ footer #pat-list-inner p img {
   filter: drop-shadow(0 10px 16px rgba(42, 36, 90, 0.2)) drop-shadow(0 10px 3px var(--overlay-black-10));
 }
 #b-bt-container a.car .pick-icon-ring i {
-  background-image: url("../images/0327/vehicle_car.png");
+  background-image: url("../images/popup/vehicle_car.png");
 }
 #b-bt-container a.sct .pick-icon-ring i {
-  background-image: url("../images/0327/vehicle_scooter.png");
+  background-image: url("../images/popup/vehicle_scooter.png");
 }
 #b-bt-container .pick-text {
   display: flex;
@@ -1372,10 +1372,10 @@ footer #pat-list-inner p img {
   background: var(--surface-soft);
 }
 #b-bt-container a.car:active .pick-icon-ring i {
-  background-image: url("../images/0327/vehicle_car.png");
+  background-image: url("../images/popup/vehicle_car.png");
 }
 #b-bt-container a.sct:active .pick-icon-ring i {
-  background-image: url("../images/0327/vehicle_scooter.png");
+  background-image: url("../images/popup/vehicle_scooter.png");
 }
 #lice-out {
   position: relative;
@@ -3121,8 +3121,6 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.checkout-pay-tile i {
   background-repeat: no-repeat;
   background-size: contain;
 }
-
-/* 1.1_temppay 支付方式圖示（0327 PNG）：--main-font (var(--main-font)) 淡光暈 + 輕陰影 */
 main.temppay-checkout-page #checkout-pay-inner ul li a.cash i,
 main.temppay-checkout-page #checkout-pay-inner ul li a.rebate i,
 main.temppay-checkout-page #checkout-pay-inner ul li a.other i {
@@ -3130,24 +3128,24 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.other i {
   filter: drop-shadow(0 0 6px var(--ink-34));
 }
 main.temppay-checkout-page #checkout-pay-inner ul li a.cash i {
-  background-image: url(../images/0327/main_cash.png);
+  background-image: url(../images/popup/main_cash.png);
 }
 main.temppay-checkout-page #checkout-pay-inner ul li a.cash:active i {
-  background-image: url(../images/0327/main_cash.png);
+  background-image: url(../images/popup/main_cash.png);
   filter: brightness(0.95) drop-shadow(0 0 6px var(--ink-34));
 }
 main.temppay-checkout-page #checkout-pay-inner ul li a.rebate i {
-  background-image: url(../images/0327/coupons_qrcode.png);
+  background-image: url(../images/popup/coupons_qrcode.png);
 }
 main.temppay-checkout-page #checkout-pay-inner ul li a.rebate:active i {
-  background-image: url(../images/0327/coupons_qrcode.png);
+  background-image: url(../images/popup/coupons_qrcode.png);
   filter: brightness(0.95) drop-shadow(0 0 14px var(--main-font-34)) drop-shadow(0 3px 8px var(--overlay-black-16));
 }
 main.temppay-checkout-page #checkout-pay-inner ul li a.other i {
-  background-image: url(../images/0327/main_otherpayments.png);
+  background-image: url(../images/popup/main_otherpayments.png);
 }
 main.temppay-checkout-page #checkout-pay-inner ul li a.other:active i {
-  background-image: url(../images/0327/main_otherpayments.png);
+  background-image: url(../images/popup/main_otherpayments.png);
   filter: brightness(0.95) drop-shadow(0 0 14px var(--main-font-34)) drop-shadow(0 3px 8px var(--overlay-black-16));
 }
 
@@ -3330,13 +3328,13 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.other:active i {
   height: auto;
   display: block;
   border-radius: 50%;
-  /* yes.png 圓形未貼滿裁切圓，透明帶需與圖內綠色一致，白 ring 才不會「隔空」 */
+  /* icon_yes.png 圓形未貼滿裁切圓，透明帶需與圖內綠色一致，白 ring 才不會「隔空」 */
   background-color: #5edd60;
   box-shadow:
     0 0 0 4px var(--white),
     0 8px 24px var(--overlay-black-12);
 }
-/* 警示圖（warning-sign）等：PNG 置於 var(--main-p) 圓底，附白邊與陰影（同附圖壓在卡片頂緣） */
+/* 警示圖（icon_warning）等：PNG 置於 var(--main-p) 圓底，附白邊與陰影（同附圖壓在卡片頂緣） */
 .message-popup__icon-disc {
   width: clamp(5.5rem, 18vw, 7.5rem);
   height: clamp(5.5rem, 18vw, 7.5rem);
