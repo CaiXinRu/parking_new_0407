@@ -3163,7 +3163,6 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.other:active i {
   background-image: url(../images/popup/main_otherpayments.png);
   filter: brightness(0.95) drop-shadow(0 0 14px var(--main-font-34)) drop-shadow(0 3px 8px var(--overlay-black-16));
 }
-
 #popupParagraph.popup-card--temppay {
   padding-bottom: 11rem;
 }
@@ -3329,6 +3328,9 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.other:active i {
   overflow: visible;
   padding: 4.25rem 2rem 9.5rem;
   box-shadow: 0 12px 40px var(--overlay-black-14);
+}
+#popupParagraph.popup-card--message.popup-card--message--init {
+  padding: 4.25rem 2rem 4.5rem;
 }
 .popup-card__icon {
   position: absolute;
