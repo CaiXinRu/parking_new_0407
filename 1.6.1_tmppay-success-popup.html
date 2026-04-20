@@ -10,6 +10,29 @@
   </head>
 
   <body>
+    <div id="popup_bg">
+      <div id="popupParagraph" class="popup-card popup-card--message">
+        <div class="popup-card__icon" aria-hidden="true">
+          <img src="images/reminder/icon_succeed.png" alt="" width="120" height="120" />
+        </div>
+        <div class="popup-card__content">
+          <p class="popup-card__title popup-card__title--xl">繳費完成</p>
+          <!-- <p class="popup-card__line1">請於<strong class="popup-card__num">15分鐘內</strong></p> -->
+          <p class="popup-card__line2">找零功能異常，請洽管理人員</p>
+        </div>
+        <div class="popup-buttom-bt">
+          <ul>
+            <li>
+              <div class="processing-popup__countdown">
+                <span class="processing-popup__countdown-prefix">⏱ 倒數</span>
+                <span class="processing-popup__countdown-num">08</span>
+                <span class="processing-popup__countdown-suffix">秒</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
     <div id="main-container">
       <header>
         <div id="header-inner">
@@ -32,7 +55,6 @@
             </ul>
           </div>
         </div>
-
         <div id="header-title">
           <div>永吉豐和苑三井花園飯店(台北忠孝)</div>
         </div>
@@ -54,27 +76,57 @@
         <div class="header-pic"><img class="header-mask" src="images/header-bg.png" alt="" /></div>
       </header>
       <main class="nor">
-        <div class="donate-qr">
-          <p>愛心碼<br />掃碼查詢</p>
-          <p class="code"><img src="images/love_qrcode.png" alt="" /></p>
-        </div>
-        <h2>請掃碼查詢或輸入愛心碼</h2>
+        <h2>請掃描或輸入手機載具</h2>
         <div id="nb-container" class="long">
-          <div><input type="text" value="" maxlength="7" /></div>
+          <div><input type="text" value="/" maxlength="1" /></div>
         </div>
-        <div id="keyboard-container">
-          <button>1</button>
-          <button>2</button>
-          <button>3</button>
-          <button>4</button>
-          <button>5</button>
-          <button>6</button>
-          <button>7</button>
-          <button>8</button>
-          <button>9</button>
-          <button class="tool">刪除</button>
-          <button>0</button>
-          <button class="tool">清除</button>
+        <div id="keyb-container">
+          <div class="receipt-keyboard">
+            <a href="">0</a>
+            <a href="">1</a>
+            <a href="">2</a>
+            <a href="">3</a>
+            <a href="">4</a>
+            <a href="">5</a>
+            <a href="">6</a>
+            <a href="">7</a>
+            <a href="">8</a>
+            <a href="">9</a>
+            <a href="">A</a>
+            <a href="">B</a>
+            <a href="">C</a>
+            <a href="">D</a>
+            <a href="">E</a>
+            <a href="">F</a>
+            <a href="">G</a>
+            <a href="">H</a>
+            <a href="">I</a>
+            <a href="">J</a>
+            <a href="">K</a>
+            <a href="">L</a>
+            <a href="">M</a>
+            <a href="">N</a>
+            <a href="">O</a>
+            <a href="">P</a>
+            <a href="">Q</a>
+            <a href="">R</a>
+            <a href="">S</a>
+            <a href="">T</a>
+            <a href="">U</a>
+            <a href="">V</a>
+            <a href="">W</a>
+            <a href="">X</a>
+            <a href="">Y</a>
+            <a href="">Z</a>
+            <a href="">/</a>
+            <a href="">.</a>
+            <a href="">-</a>
+            <a href="">+</a>
+          </div>
+          <div id="keyboard-del">
+            <a href="">刪除</a>
+            <a href="">清除</a>
+          </div>
         </div>
         <div id="main-bt-container">
           <a href="2.0_receiptcheck.html" class="left">
@@ -82,7 +134,7 @@
               <rect rx="38" ry="38" class="line" height="100%" width="100%" stroke-linejoin="round" /></svg
             ><i></i><span>返回</span>
           </a>
-          <a href="2.4.1-receiptphone-popup.html" class="right">
+          <a href="2.4.0-receiptphone-popup.html" class="right">
             <svg xmlns="http://www.w3.org/2000/svg">
               <rect rx="38" ry="38" class="line" height="100%" width="100%" stroke-linejoin="round" /></svg
             ><i></i><span>確認</span>

@@ -11,18 +11,68 @@
 
   <body>
     <div id="popup_bg">
-      <div id="popupParagraph" class="popup-card popup-card--message">
+      <div id="popupParagraph" class="popup-card popup-card--message popup-card--temppay">
         <div class="popup-card__icon" aria-hidden="true">
-          <img src="images/reminder/icon_fail.png" alt="" width="120" height="120" />
+          <img src="images/reminder/icon_succeed.png" alt="" width="120" height="120" />
         </div>
         <div class="popup-card__content">
-          <p class="popup-card__title popup-card__title--spaced">發票開立失敗<br />請拿證明聯，聯絡客服或管理室</p>
-          <p class="popup-card__line1">請於<strong class="popup-card__num">15分鐘內</strong></p>
-          <p class="popup-card__line2">取車出場，歡迎再度光臨</p>
+          <p class="popup-card__title popup-card__title--xl">繳費完成</p>
+          <!-- <div id="popup-inner" class="temppay-cash-layout">
+            <div class="temppay-summary">
+              <div class="temppay-summary__row temppay-summary__row--due">
+                <span class="temppay-summary__label">應繳金額</span>
+                <span class="temppay-summary__amt temppay-summary__amt--pink">NT$ <strong>300</strong></span>
+              </div>
+              <div class="temppay-summary__divider"></div>
+              <div class="temppay-summary__row temppay-summary__row--recv">
+                <span class="temppay-summary__label">已付金額</span>
+                <span class="temppay-summary__amt temppay-summary__amt--gray">NT$ <strong>0</strong></span>
+              </div>
+              <div class="temppay-summary__divider"></div>
+              <div class="temppay-summary__row temppay-summary__row--recv">
+                <span class="temppay-summary__label">未繳金額</span>
+                <span class="temppay-summary__amt temppay-summary__amt--gray">NT$ <strong>0</strong></span>
+              </div>
+              <div class="temppay-summary__divider-thick"></div>
+              <div class="temppay-summary__row temppay-summary__row--recv">
+                <span class="temppay-summary__label">需要找零</span>
+                <span class="temppay-summary__amt temppay-summary__amt--gray">NT$ <strong>0</strong></span>
+              </div>
+              <div class="temppay-summary__divider"></div>
+              <div class="temppay-summary__row temppay-summary__row--recv">
+                <span class="temppay-summary__label">實際找零</span>
+                <span class="temppay-summary__amt temppay-summary__amt--gray">NT$ <strong>0</strong></span>
+              </div>
+            </div>
+          </div> -->
+          <div id="popup-inner" class="temppay-cash-layout">
+            <div class="temppay-summary">
+              <div class="temppay-summary__row temppay-summary__row--recv">
+                <span class="temppay-summary__label">停車費用</span>
+                <span class="temppay-summary__amt temppay-summary__amt--gray">NT$ <strong>300</strong></span>
+              </div>
+              <div class="temppay-summary__divider"></div>
+              <div class="temppay-summary__row temppay-summary__row--recv">
+                <span class="temppay-summary__label">優惠折扣</span>
+                <span class="temppay-summary__amt temppay-summary__amt--blue">NT$ <strong>-25</strong></span>
+              </div>
+              <div class="temppay-summary__divider"></div>
+              <div class="temppay-summary__row temppay-summary__row--due temppay-summary__row--payable">
+                <span class="temppay-summary__label">應繳金額</span>
+                <span class="temppay-summary__amt temppay-summary__amt--pink">NT$ <strong>275</strong></span>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="popup-buttom-bt">
           <ul>
-            <li><a href="2.3-receiptdonate.html">確定 (5s)</a></li>
+            <li>
+              <div class="processing-popup__countdown">
+                <span class="processing-popup__countdown-prefix">⏱ 倒數</span>
+                <span class="processing-popup__countdown-num">08</span>
+                <span class="processing-popup__countdown-suffix">秒</span>
+              </div>
+            </li>
           </ul>
         </div>
       </div>
