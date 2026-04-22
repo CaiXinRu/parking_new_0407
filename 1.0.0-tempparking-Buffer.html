@@ -11,43 +11,42 @@
 
   <body>
     <div id="popup_bg">
-      <div id="popupParagraph" class="popup-card single">
-        <div class="CUT">
-          <div class="orb_graphic">
-            <svg>
-              <defs>
-                <linearGradient id="myGradient" x1="0%" y1="0%" x2="0%" y2="100%" spreadMethod="pad">
-                  <stop offset="0%" stop-color="#412187" stop-opacity="1" />
-                  <stop offset="90%" stop-color="#412187" stop-opacity="1" />
-                </linearGradient>
-              </defs>
-              <circle class="fill"></circle>
-              <circle class="progress"></circle>
-            </svg>
-            <div class="orb_value count">60</div>
-          </div>
-        </div>
+      <div id="popupParagraph" class="popup-card popup-card--temppay">
         <h1>系統訊息</h1>
         <p>您目前於緩衝時間內，無需繳費</p>
+        <br />
         <p class="note">入場時間 2024-05-16 10:44:01</p>
         <p>請問是否進行計次預繳?</p>
-        <div id="popup-inner">
-          <div class="popup-type tip">
-            <ul>
-              <li>
-                <p>
-                  <span><a href="">是</a></span>
-                </p>
-                <p>繳費後於<br />2024/05/16 22:57:57前出場</p>
-              </li>
-              <li>
-                <p>
-                  <span><a href="">否</a></span>
-                </p>
-                <p>若需出場請於緩衝時間內出場</p>
-              </li>
-            </ul>
+        <div id="popup-inner" class="two-buttons-stack-container">
+          <div class="two-buttons-stack">
+            <a href="" class="two-buttons-card two-buttons-card--success">
+              <span class="two-buttons-card__icon">
+                <img src="images/reminder/icon_succeed.png" alt="" />
+              </span>
+              <span class="two-buttons-card__title">是</span>
+              <span class="two-buttons-card__desc">
+                繳費後於 <time class="two-buttons-card__time">2024/05/16 22:57:57</time> 前出場
+              </span>
+            </a>
+            <a href="" class="two-buttons-card two-buttons-card--failure">
+              <span class="two-buttons-card__icon">
+                <img src="images/reminder/icon_fail.png" alt="" />
+              </span>
+              <span class="two-buttons-card__title">否</span>
+              <span class="two-buttons-card__desc">若需出場請於緩衝時間內出場</span>
+            </a>
           </div>
+        </div>
+        <div class="popup-buttom-bt">
+          <ul>
+            <li>
+              <div class="processing-popup__countdown">
+                <span class="processing-popup__countdown-prefix">⏱ 倒數</span>
+                <span class="processing-popup__countdown-num">08</span>
+                <span class="processing-popup__countdown-suffix">秒</span>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
     </div>

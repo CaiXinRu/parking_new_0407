@@ -525,16 +525,6 @@ main.nor h2.receipt-method-heading {
   font-size: 2.5rem;
   color: var(--black);
 }
-#popupParagraph:not(.single) > h1:not(.f2e-popupParagraph-single-h1),
-#popupParagraph:not(.single) .base-message__html > h1:not(.f2e-popupParagraph-single-h1) {
-  background: var(--main-p);
-  color: var(--white);
-  margin: -2rem -2rem 2rem;
-  padding: 1.25rem 2rem;
-  width: calc(100% + 4rem);
-  box-sizing: border-box;
-  border-radius: 2rem 2rem 0 0;
-}
 #popupParagraph p {
   font-size: 1.7rem;
   line-height: 3rem;
@@ -593,29 +583,13 @@ main.nor h2.receipt-method-heading {
   color: var(--white);
   font-size: 2.2rem;
 }
-#popup-inner .popup-type.tip ul li a {
-  position: relative;
-  display: flex;
-  width: 100px;
-  height: 80px;
-  justify-content: center;
-  align-items: center;
-  background: var(--main-p) url("../images/popup-bt-bg.png") no-repeat center center;
-  background-size: cover;
-  border-radius: 1.7rem;
-  color: var(--white);
-  font-size: 2.2rem;
-}
-.popup-buttom-bt ul li a:active,
-#popup-inner .popup-type.tip ul li a:active {
+.popup-buttom-bt ul li a:active {
   background: #493a5d;
 }
-.popup-buttom-bt ul li a:active::before,
-#popup-inner .popup-type.tip ul li a:active::before {
+.popup-buttom-bt ul li a:active::before {
   background-image: linear-gradient(325deg, #4d415d 30%, #6a5587 80%);
 }
-.popup-buttom-bt ul li a::before,
-#popup-inner .popup-type.tip ul li a::before {
+.popup-buttom-bt ul li a::before {
   content: "";
   z-index: 0;
   position: absolute;
@@ -638,82 +612,7 @@ main.nor h2.receipt-method-heading {
   font-size: 1.7rem;
   justify-content: space-evenly;
 }
-#popup-inner .popup-type.tip {
-  width: 90%;
-  padding: 0;
-}
-#popup-inner .popup-type.tip ul:before {
-  z-index: 0;
-}
-#popup-inner .popup-type.tip ul li {
-  align-items: stretch;
-  padding: 1rem 0;
-}
-#popup-inner .popup-type.tip ul li p:first-child {
-  width: 20%;
-}
-#popup-inner .popup-type.tip ul li p:last-child {
-  width: 68%;
-  font-size: 1.4rem;
-  line-height: 1.8rem;
-  margin: 0 0 0 4%;
-}
-#popup-inner .popup-type.tip ul li p:nth-child(2):before {
-  background: #e7e7e7;
-}
-#popup-inner .popup-type {
-  position: relative;
-  width: 60%;
-  padding: 0 0 0 1rem;
-}
-#popup-inner .popup-type ul {
-  position: relative;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
-#popup-inner .popup-type ul::before {
-  content: "";
-  z-index: 2;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border: solid 1px #dad1e2;
-  border-radius: 2.5rem;
-}
-#popup-inner .popup-type ul li {
-  position: relative;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#popup-inner .popup-type ul li p {
-  position: relative;
-  width: 48%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-#popup-inner .popup-type ul li p:nth-child(2):before {
-  content: "";
-  display: flex;
-  width: 1px;
-  height: 80%;
-  background: var(--white);
-  position: absolute;
-  left: 0;
-  top: 10%;
-}
-#popup-inner .popup-type ul li p span:first-child {
-  font-size: 1.3rem;
-}
-#popup-inner .popup-type ul li p span:nth-child(2) {
-  font-size: 2.4rem;
-  font-weight: 600;
-  line-height: 2.8rem;
-}
+
 #nb-container {
   display: flex;
   justify-content: space-evenly;
@@ -755,6 +654,7 @@ main.nor h2.receipt-method-heading {
   transition: transform 0.3s ease-in-out;
   z-index: 1;
 }
+#nb-container div input[type="password"],
 #nb-container div input[type="text"] {
   display: flex;
   position: relative;
@@ -1091,8 +991,9 @@ body.page-home #main-bt-container {
 #main-control-container a.prev {
   background: url("../images/prev_bt.png") no-repeat center center;
   background-size: 100%;
-  position: relative;
   padding: 0 5px 0 25px;
+  position: absolute;
+  left: 0;
 }
 #main-control-container a.prev:active {
   background: url("../images/prev_bt_over.png") no-repeat center center;
@@ -1107,9 +1008,10 @@ body.page-home #main-bt-container {
 #main-control-container a.next {
   background: url("../images/next_bt.png") no-repeat center center;
   background-size: 100%;
-  position: relative;
   flex-direction: row-reverse;
   padding: 0 25px 0 5px;
+  position: absolute;
+  right: 0;
 }
 #main-control-container a.next:active {
   background: url("../images/next_bt_over.png") no-repeat center center;
@@ -3358,6 +3260,72 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.other:active i {
 
 #popupParagraph.popup-card--processing {
   padding: 2rem 2rem 8rem;
+}
+
+#popupParagraph.popup-card--processing #popup-inner {
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 0;
+}
+#popup-inner.two-buttons-stack-container {
+  width: 88%;
+}
+.two-buttons-stack {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+}
+.two-buttons-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0.75rem;
+  padding: 1.45rem 1.15rem 1.35rem;
+  background: var(--white);
+  border-radius: 1.65rem;
+  border: 2px solid transparent;
+  text-decoration: none;
+  color: inherit;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+.two-buttons-card--success {
+  border-color: var(--font-green);
+}
+.two-buttons-card--failure {
+  border-color: var(--font-red);
+}
+.two-buttons-card:active {
+  opacity: 0.9;
+}
+.two-buttons-card__icon {
+  line-height: 0;
+}
+.two-buttons-card__icon img {
+  width: clamp(3.6rem, 11vw, 5rem);
+  height: auto;
+  display: block;
+  border-radius: 50%;
+}
+.two-buttons-card__title {
+  font-size: clamp(1.9rem, 5vw, 2.45rem);
+  font-weight: 700;
+  color: var(--black);
+  line-height: 1.25;
+}
+.two-buttons-card__desc {
+  font-size: 1.35rem;
+  line-height: 1.55;
+  color: var(--font-grey-d);
+  max-width: 26rem;
+}
+.two-buttons-card--success .two-buttons-card__time {
+  color: var(--font-green);
+  font-weight: 600;
 }
 
 #popupParagraph.popup-card--message {
