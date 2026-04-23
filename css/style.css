@@ -130,14 +130,15 @@
   stroke: url(#myGradient);
   stroke-linecap: round;
   transition: stroke-dashoffset 0.35s;
-  stroke-dashoffset: 214.16;
-  -webkit-animation: count 132s forwards;
+  stroke-dasharray: 233;
+  stroke-dashoffset: 233;
+  -webkit-animation: count 10s forwards;
   -webkit-animation-timing-function: linear;
   filter: drop-shadow(1px 1px 4px rgba(255, 255, 255, 1));
 }
 @-webkit-keyframes count {
   0% {
-    stroke-dashoffset: 314.16;
+    stroke-dashoffset: 233;
   }
   100% {
     stroke-dashoffset: 0;
@@ -672,9 +673,9 @@ main.nor h2.receipt-method-heading {
   caret-color: transparent;
   z-index: 2;
 }
-#nb-container div:focus-within::after {
-  transform: scale(1.2);
-  border: 0.2rem solid #a76ed7;
+#nb-container div.nb-slot--active::after {
+  transform: scale(1.15);
+  border: 0.8rem solid #a76ed7;
 }
 #keyboard-container {
   display: grid;
