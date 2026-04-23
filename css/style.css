@@ -132,11 +132,19 @@
   transition: stroke-dashoffset 0.35s;
   stroke-dasharray: 233;
   stroke-dashoffset: 233;
-  -webkit-animation: count 10s forwards;
-  -webkit-animation-timing-function: linear;
+  -webkit-animation: count var(--countdown-seconds, 10s) linear forwards;
+  animation: count var(--countdown-seconds, 10s) linear forwards;
   filter: drop-shadow(1px 1px 4px rgba(255, 255, 255, 1));
 }
 @-webkit-keyframes count {
+  0% {
+    stroke-dashoffset: 233;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes count {
   0% {
     stroke-dashoffset: 233;
   }
@@ -377,18 +385,42 @@ header .header-pic {
   position: absolute;
   z-index: 9;
   overflow: hidden;
-  top: 70px;
+  top: 60px;
   left: 0;
-  padding: 15px 20px 15px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 9px 15px 8px 5px;
   color: var(--white);
   text-align: center;
   line-height: 1.4rem;
   font-size: 1.2rem;
 }
-.donate-qr > p {
+.donate-qr-label {
   position: relative;
   z-index: 1;
-  top: -1px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  margin: 0 0 0.5rem;
+  padding: 0.35rem 0.5rem;
+  border: 1px solid currentColor;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  background-color: var(--main-font);
+}
+.donate-qr-icon {
+  display: block;
+  width: 1.8rem;
+  height: 1.8rem;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+.donate-qr-caption {
+  position: relative;
+  z-index: 1;
+  margin: 0.5rem 0 0;
 }
 .donate-qr:after {
   content: "";
@@ -416,7 +448,7 @@ header .header-pic {
   border-radius: 0.5rem;
   justify-content: center;
   align-items: center;
-  margin: 10px 0 0;
+  margin: 0.25rem 0;
 }
 .donate-qr .code img {
   max-width: 97%;
@@ -2613,15 +2645,9 @@ main.temppay-checkout-page .plate-badge .plate-value {
   font-variant-numeric: tabular-nums;
   line-height: 1.05;
 }
-main.temppay-checkout-page .checkout-top-card__headrow .checkout-orb-wrap.CUT {
-  position: relative;
-  right: auto;
-  bottom: auto;
-  top: auto;
-  left: auto;
-  flex-shrink: 0;
-  z-index: 2;
-  color: var(--black);
+.CUT.CUT--car-header {
+  right: 10px;
+  bottom: -40px;
 }
 main.temppay-checkout-page .checkout-top-card__headrow .orb_graphic svg {
   width: 104px;
@@ -2722,6 +2748,7 @@ main.temppay-checkout-page #checkout-list-container .checkout-inner {
   flex: 1 1 auto;
   min-height: 0;
   overflow: hidden;
+  justify-content: flex-start;
 }
 main.temppay-checkout-page .bill-list-title {
   margin: 0;
@@ -2879,13 +2906,13 @@ main.temppay-checkout-page #checkout-list-container .checkout-inner ul.bill-line
 }
 main.temppay-checkout-page .bill-total-bar {
   display: flex;
+  flex: 5;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
   flex-shrink: 0;
   margin: 0;
-  margin-top: auto;
   padding: 1rem clamp(1rem, 3vw, 1.45rem) 1.1rem;
   background: var(--font-red);
   color: var(--white);
