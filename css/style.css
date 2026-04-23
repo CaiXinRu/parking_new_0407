@@ -526,6 +526,16 @@ main.nor h2.receipt-method-heading {
   font-size: 2.5rem;
   color: var(--black);
 }
+#popupParagraph > h1,
+#popupParagraph .base-message__html > h1 {
+  background: var(--main-p);
+  color: var(--white);
+  margin: -2rem -2rem 2rem;
+  padding: 1.25rem 2rem;
+  width: calc(100% + 4rem);
+  box-sizing: border-box;
+  border-radius: 2rem 2rem 0 0;
+}
 #popupParagraph p {
   font-size: 1.7rem;
   line-height: 3rem;
