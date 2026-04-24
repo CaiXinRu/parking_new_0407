@@ -3108,6 +3108,9 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.other:active i {
 #popupParagraph.popup-card--temppay {
   padding-bottom: 9rem;
 }
+#popupParagraph.popup-card--temppay.popup-card--temppay--creditcard {
+  padding-bottom: 4rem;
+}
 #popupParagraph.popup-card--temppay > h1 + p,
 #popupParagraph.popup-card--temppay .base-message__html > h1 + p {
   font-weight: 600;
