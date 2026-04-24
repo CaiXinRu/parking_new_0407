@@ -3450,6 +3450,11 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.other:active i {
 #popupParagraph.popup-card--message .popup-card__content p.popup-card__title--spaced {
   margin-top: 20px;
 }
+#popupParagraph.popup-card--message .popup-card__content p.popup-card__line--red {
+  color: var(--font-red);
+  font-size: 2rem;
+  font-weight: 700;
+}
 .popup-card__line1,
 .popup-card__line2 {
   font-size: 1.7rem;
