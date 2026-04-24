@@ -536,14 +536,13 @@ main.nor h2.receipt-method-heading {
   flex-direction: column;
   align-items: center;
 }
-/* v-html 外層需撐滿寬度，否則在 align-items:center 下標題橫幅無法滿版 */
 #popupParagraph .base-message__html {
   align-self: stretch;
   width: 100%;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  align-items: stretch;
+  align-items: center;
 }
 #popupParagraph h1 {
   text-align: center;
