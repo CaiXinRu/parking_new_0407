@@ -343,6 +343,9 @@ header .header-pic {
   max-width: 100%;
   max-height: 100%;
 }
+#header-inner .top-tool ul li.top-tool__lang a.top-tool__lang-trigger--zh i.top-tool__lang-flag img {
+  object-fit: contain;
+}
 #header-inner .top-tool .lang-dropdown {
   position: absolute;
   top: calc(100% + 10px);
@@ -846,7 +849,7 @@ main.nor h2.receipt-method-heading {
   cursor: pointer;
   z-index: 2;
 }
-#keyboard-container button:focus {
+#keyboard-container button:active {
   background: var(--main-font);
   border: none;
   color: var(--white);
@@ -1447,7 +1450,8 @@ footer #pat-list-inner p img {
     0 8px 20px rgba(65, 33, 135, 0.12),
     0 14px 36px rgba(41, 33, 80, 0.1);
 }
-#lice-bt-container a.lice-card:active::before {
+#lice-bt-container a.lice-card:active::before,
+#lice-bt-container a.lice-card:focus::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -1548,11 +1552,14 @@ footer #pat-list-inner p img {
   color: #9ca3af;
   white-space: nowrap;
 }
-#lice-bt-container a.lice-card:active .lice-card__select-label {
+#lice-bt-container a.lice-card:active .lice-card__select-label,
+#lice-bt-container a.lice-card:focus .lice-card__select-label {
   color: var(--font-green);
 }
 #lice-bt-container a.lice-card:active .lice-card__check svg circle,
-#lice-bt-container a.lice-card:active .lice-card__check svg path {
+#lice-bt-container a.lice-card:focus .lice-card__check svg circle,
+#lice-bt-container a.lice-card:active .lice-card__check svg path,
+#lice-bt-container a.lice-card:focus .lice-card__check svg path {
   stroke: var(--font-green);
 }
 #lice-bt-container a.lice-card.lice-card--hint {
