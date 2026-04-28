@@ -304,12 +304,13 @@ header .header-pic {
   color: var(--black);
   border: 1px solid var(--white);
 }
-#header-inner .top-tool ul li a:active {
+#header-inner .top-tool ul li a:active,
+#header-inner .top-tool ul li a:focus {
   background: #fdcd69;
-  border: none;
   filter: none;
 }
-#header-inner .top-tool ul li a:active:after {
+#header-inner .top-tool ul li a:active:after,
+#header-inner .top-tool ul li a:focus:after {
   background: radial-gradient(ellipse at center, #ffc857 39%, #d7a63e 100%);
 }
 #header-inner .top-tool ul li a:after {
@@ -326,6 +327,83 @@ header .header-pic {
   left: 4px;
   opacity: 0.8;
   transform: rotate(14deg);
+}
+#header-inner .top-tool ul li.top-tool__lang {
+  overflow: visible;
+  z-index: 20;
+}
+#header-inner .top-tool ul li.top-tool__lang a.top-tool__lang-trigger i.top-tool__lang-flag {
+  width: 28px;
+  height: 28px;
+  border-radius: 7px;
+  overflow: hidden;
+}
+#header-inner .top-tool ul li.top-tool__lang a.top-tool__lang-trigger i.top-tool__lang-flag img {
+  object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
+}
+#header-inner .top-tool .lang-dropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  min-width: 155px;
+  z-index: 50;
+  padding: 0.4rem 0 0.35rem;
+  border-radius: 12px;
+  background: rgba(232, 232, 234, 0.94);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  filter: none;
+  font-size: 0.9rem;
+  text-align: left;
+}
+#header-inner .top-tool .lang-dropdown::before {
+  content: "";
+  position: absolute;
+  top: -7px;
+  right: 20px;
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid rgba(232, 232, 234, 0.94);
+  filter: drop-shadow(0 -0.5px 0 rgba(0, 0, 0, 0.06));
+}
+#header-inner .top-tool .lang-dropdown__item {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.4rem 0.75rem;
+  margin: 0;
+  border: 0;
+  background: transparent;
+  font: inherit;
+  color: var(--black);
+  cursor: pointer;
+  text-align: left;
+  line-height: 1.2;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 0;
+  box-shadow: none;
+  filter: none;
+  appearance: none;
+}
+#header-inner .top-tool .lang-dropdown__item:last-of-type {
+  border-bottom: none;
+}
+#header-inner .top-tool .lang-dropdown__item:active,
+#header-inner .top-tool .lang-dropdown__item:hover {
+  background: rgba(255, 255, 255, 0.5);
+  filter: none;
+}
+#header-inner .top-tool .lang-dropdown__flag {
+  width: 26px;
+  height: 26px;
+  object-fit: cover;
+  border-radius: 6px;
+  flex-shrink: 0;
 }
 #header-title {
   position: absolute;
@@ -710,7 +788,7 @@ main.nor h2.receipt-method-heading {
   line-height: 86px;
   text-align: center;
   font-weight: 800;
-  font-family: "LINE Seed TW", "Arial Black", sans-serif;
+  font-family: var(--font-app), "Arial Black", sans-serif;
   color: var(--main-font);
   padding: 0;
   background: var(--white);
