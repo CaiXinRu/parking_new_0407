@@ -20,7 +20,17 @@ html:lang(zh-Hant) {
 
 body,select,input,button,textarea{font-family:var(--font-app);outline: none}
 html, body{display: flex; align-items: center;justify-content: center; background: linear-gradient(to bottom,  #1a114d 0%,#4b158e 100%)}
-input,textarea{-webkit-user-select: text}
+html {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+input,
+textarea,
+[contenteditable="true"] {
+  -webkit-user-select: text;
+  user-select: text;
+}
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {
 	margin:0;
 	padding:0;

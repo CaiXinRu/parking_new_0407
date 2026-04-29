@@ -17,6 +17,11 @@
 .syt-long main.nor {
   padding: 10rem 0 0;
 }
+#main-control-container.system-page {
+  position: absolute;
+  width: 89%;
+  bottom: 335px;
+}
 select {
   background: transparent;
   border: none;
@@ -109,7 +114,7 @@ select {
   margin: 0;
 }
 #list-bt-inner button:not(:first-child) {
-  margin: 2rem 0 0;
+  margin: 1.3rem 0 0;
 }
 #list-bt-inner button:active {
   background: var(--main-font);
