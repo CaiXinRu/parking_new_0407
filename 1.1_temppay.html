@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -90,14 +90,14 @@
                   <div class="checkout-meta__times" aria-label="進出場時間">
                     <div class="time-item time-item--in">
                       <div class="time-item__left">
-                        <span class="time-pill">進　場</span>
+                        <span class="time-pill">Entry time</span>
                         <span class="time-date">2025-03-31</span>
                       </div>
                       <span class="time-time">10:30:45</span>
                     </div>
                     <div class="time-item time-item--out">
                       <div class="time-item__left">
-                        <span class="time-pill">出　場</span>
+                        <span class="time-pill">Exit time</span>
                         <span class="time-date">2025-03-31</span>
                       </div>
                       <span class="time-time">18:55:28</span>
@@ -148,7 +148,7 @@
                         <path d="M8 18v2M16 18v2M8 10h8" />
                       </svg>
                     </span>
-                    <span class="bill-desc">停車費用</span>
+                    <span class="bill-desc">Parking fee:</span>
                     <span class="bill-amt bill-amt--body">NT$ <strong>100</strong></span>
                   </li>
                   <!-- <li>
@@ -208,7 +208,7 @@
                         <path d="M7 7h.01" />
                       </svg>
                     </span>
-                    <span class="bill-desc">優惠折扣</span>
+                    <span class="bill-desc">Discount:</span>
                     <span class="bill-amt bill-amt--discount">- NT$ <strong>100</strong></span>
                   </li>
                 </ul>
@@ -219,7 +219,7 @@
               </div>
             </div>
           </div>
-          <h2>請選擇支付方式</h2>
+          <h2>Select payment</h2>
           <div id="checkout-paysel">
             <div id="checkout-pay-inner">
               <ul class="scroll checkout-pay-grid">
@@ -230,14 +230,27 @@
                   </a>
                 </li>
                 <li>
-                  <a href="1.1.1-rebate.html" class="rebate checkout-pay-tile" aria-label="停車折抵">
-                    <div class="checkout-pay-tile__head">停車折抵</div>
-                    <div class="checkout-pay-tile__body"><i aria-hidden="true"></i></div>
+                  <a href="1.1.0-otherpay.html" class="other checkout-pay-tile" aria-label="其他支付方式">
+                    <div class="checkout-pay-tile__head">其他支付方式</div>
+                    <div class="checkout-pay-tile__body checkout-pay-tile__body--other">
+                      <div class="checkout-pay-tile__opt">
+                        <img src="images/reminder/main_otherpayments_storedcard.png" alt="" width="88" height="88" />
+                        <span>IC</span>
+                      </div>
+                      <div class="checkout-pay-tile__opt">
+                        <img src="images/reminder/main_otherpayments_mobile.png" alt="" width="88" height="88" />
+                        <span>QR PAY</span>
+                      </div>
+                      <div class="checkout-pay-tile__opt">
+                        <img src="images/reminder/main_otherpayments_creditcard.png" alt="" width="88" height="88" />
+                        <span>Card</span>
+                      </div>
+                    </div>
                   </a>
                 </li>
                 <li>
-                  <a href="1.1.0-otherpay.html" class="other checkout-pay-tile" aria-label="其他支付方式">
-                    <div class="checkout-pay-tile__head">其他支付方式</div>
+                  <a href="1.1.1-rebate.html" class="rebate checkout-pay-tile" aria-label="停車折抵">
+                    <div class="checkout-pay-tile__head">停車折抵</div>
                     <div class="checkout-pay-tile__body"><i aria-hidden="true"></i></div>
                   </a>
                 </li>

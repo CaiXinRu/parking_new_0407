@@ -2555,8 +2555,6 @@ main.nor.parking-loc-page #checkout-container.parking.parking-loc {
   background-size: 100%;
 }
 #checkout-pay-inner ul li a span {
-  position: absolute;
-  z-index: -1;
   width: 100%;
   height: 100%;
   background: var(--white);
@@ -2564,12 +2562,6 @@ main.nor.parking-loc-page #checkout-container.parking.parking-loc {
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow:
-    1px 0 2px var(--chrome-border),
-    -1px 0 2px var(--chrome-border),
-    0 1px 2px var(--chrome-border),
-    0 -1px 2px var(--chrome-border),
-    inset 0 -1px 30px var(--chrome-border);
   bottom: 0;
 }
 #checkout-pay-inner ul li a span svg {
@@ -2710,6 +2702,7 @@ main.temppay-checkout-page .checkout-top-card__headrow {
   justify-content: space-between;
   gap: 0.5rem;
   width: 100%;
+  margin-bottom: 1rem;
 }
 main.temppay-checkout-page .plate-badge {
   position: relative;
@@ -2752,7 +2745,7 @@ main.temppay-checkout-page .checkout-top-card__headrow .orb_value:before {
 main.temppay-checkout-page .checkout-meta__times {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1rem;
   min-width: 0;
   width: 100%;
 }
@@ -2788,6 +2781,7 @@ main.temppay-checkout-page .time-pill {
   border-radius: 0.35rem;
   line-height: 1.35;
   box-shadow: 0 1px 4px rgba(224, 102, 102, 0.45);
+  width: 131px;
 }
 main.temppay-checkout-page .time-date {
   font-size: clamp(1.1rem, 2.4vw, 1.3rem);
@@ -3154,6 +3148,43 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.checkout-pay-tile .checko
   justify-content: center;
   background: var(--white);
 }
+main.temppay-checkout-page #checkout-pay-inner ul li a.checkout-pay-tile.other {
+  min-height: 178px;
+}
+main.temppay-checkout-page #checkout-pay-inner ul li a.checkout-pay-tile .checkout-pay-tile__body--other {
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 0rem;
+  padding: 1rem 0.4rem 0.65rem;
+}
+main.temppay-checkout-page #checkout-pay-inner ul li a.checkout-pay-tile .checkout-pay-tile__opt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  flex: 1 1 0;
+  min-width: 0;
+  gap: 0rem;
+}
+main.temppay-checkout-page #checkout-pay-inner ul li a.checkout-pay-tile .checkout-pay-tile__opt img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 4.1rem;
+  object-fit: contain;
+  filter: drop-shadow(0 0 4px var(--ink-34));
+}
+main.temppay-checkout-page #checkout-pay-inner ul li a.checkout-pay-tile.other:active .checkout-pay-tile__opt img {
+  filter: brightness(0.96) drop-shadow(0 0 4px var(--ink-34));
+}
+main.temppay-checkout-page #checkout-pay-inner ul li a.checkout-pay-tile .checkout-pay-tile__opt span {
+  font-weight: 700;
+  color: var(--black);
+  letter-spacing: 0.06em;
+  text-align: center;
+  line-height: 1.2;
+  font-size: 1rem;
+}
 main.temppay-checkout-page #checkout-pay-inner ul li a.checkout-pay-tile i {
   width: min(90%, 240px);
   height: auto;
@@ -3164,8 +3195,7 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.checkout-pay-tile i {
   background-size: contain;
 }
 main.temppay-checkout-page #checkout-pay-inner ul li a.cash i,
-main.temppay-checkout-page #checkout-pay-inner ul li a.rebate i,
-main.temppay-checkout-page #checkout-pay-inner ul li a.other i {
+main.temppay-checkout-page #checkout-pay-inner ul li a.rebate i {
   background-size: contain;
   filter: drop-shadow(0 0 6px var(--ink-34));
 }
@@ -3181,13 +3211,6 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.rebate i {
 }
 main.temppay-checkout-page #checkout-pay-inner ul li a.rebate:active i {
   background-image: url(../images/reminder/coupons_qrcode.png);
-  filter: brightness(0.95) drop-shadow(0 0 14px var(--main-font-34)) drop-shadow(0 3px 8px var(--overlay-black-16));
-}
-main.temppay-checkout-page #checkout-pay-inner ul li a.other i {
-  background-image: url(../images/reminder/main_otherpayments.png);
-}
-main.temppay-checkout-page #checkout-pay-inner ul li a.other:active i {
-  background-image: url(../images/reminder/main_otherpayments.png);
   filter: brightness(0.95) drop-shadow(0 0 14px var(--main-font-34)) drop-shadow(0 3px 8px var(--overlay-black-16));
 }
 #popupParagraph.popup-card--temppay {
