@@ -2933,7 +2933,6 @@ main.temppay-checkout-page #checkout-list-container .checkout-inner ul.bill-line
   line-height: 1.35;
   color: var(--main-p);
   font-variant-numeric: tabular-nums;
-  text-shadow: 0 0 14px var(--overlay-black-20);
 }
 main.temppay-checkout-page
   #checkout-list-container
@@ -2966,7 +2965,6 @@ main.temppay-checkout-page
   li.bill-line-items__discount
   .bill-desc {
   color: var(--font-green);
-  text-shadow: 0 0 14px var(--cyan-glow-25);
 }
 main.temppay-checkout-page #checkout-list-container .checkout-inner ul.bill-line-items li .bill-amt--discount {
   justify-self: end;
@@ -3358,15 +3356,12 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.rebate:active i {
 }
 #popupParagraph.popup-card--temppay .temppay-summary__amt--pink {
   color: var(--font-red);
-  text-shadow: 0 0 14px rgba(244, 143, 177, 0.2);
 }
-#popupParagraph.popup-card--temppay .temppay-summary__amt--blue {
+#popupParagraph.popup-card--temppay .temppay-summary__amt--green {
   color: var(--font-green);
-  text-shadow: 0 0 14px var(--cyan-glow-25);
 }
 #popupParagraph.popup-card--temppay .temppay-summary__amt--gray {
   color: var(--main-p);
-  text-shadow: 0 0 14px var(--overlay-black-20);
 }
 #popupParagraph.popup-card--temppay .temppay-summary__divider {
   height: 1px;
