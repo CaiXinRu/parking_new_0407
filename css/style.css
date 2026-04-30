@@ -546,18 +546,6 @@ main {
   color: var(--main-font);
   overflow: hidden;
 }
-main::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  background: white;
-  /* background: url("/images/0407/wallpaper_tcmf.png") center center no-repeat; */
-  /* background: url("/images/0407/wallpaper_asus.png") center center no-repeat; */
-  background-size: cover;
-  opacity: 0.7;
-  pointer-events: none;
-}
 main > * {
   position: relative;
   z-index: 1;
@@ -954,6 +942,20 @@ main.nor h2.receipt-method-heading {
 }
 body.page-home #main-bt-container {
   bottom: 180px;
+}
+body.page-home main.has-wallpaper-img::before {
+  display: none;
+}
+body.page-home main.has-wallpaper-img > .main-wallpaper {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  opacity: 0.7;
+  pointer-events: none;
 }
 #main-bt-container a {
   position: relative;
@@ -2513,10 +2515,6 @@ main.nor.parking-loc-page #checkout-container.parking.parking-loc {
 #checkout-pay-inner ul li a:active {
   color: var(--white);
 }
-#checkout-pay-inner ul li a:active span {
-  background: var(--main-font);
-  box-shadow: none;
-}
 #checkout-pay-inner ul li a:active {
   color: var(--white);
 }
@@ -2561,7 +2559,7 @@ main.nor.parking-loc-page #checkout-container.parking.parking-loc {
   border-radius: 1.5rem;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   bottom: 0;
 }
 #checkout-pay-inner ul li a span svg {
@@ -3146,14 +3144,11 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.checkout-pay-tile .checko
   justify-content: center;
   background: var(--white);
 }
-main.temppay-checkout-page #checkout-pay-inner ul li a.checkout-pay-tile.other {
-  min-height: 178px;
-}
 main.temppay-checkout-page #checkout-pay-inner ul li a.checkout-pay-tile .checkout-pay-tile__body--other {
   align-items: stretch;
   justify-content: space-between;
   gap: 0rem;
-  padding: 1rem 0.4rem 0.65rem;
+  padding: 0.7rem 0.4rem 0.65rem;
 }
 main.temppay-checkout-page #checkout-pay-inner ul li a.checkout-pay-tile .checkout-pay-tile__opt {
   display: flex;
@@ -3166,9 +3161,9 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.checkout-pay-tile .checko
 }
 main.temppay-checkout-page #checkout-pay-inner ul li a.checkout-pay-tile .checkout-pay-tile__opt img {
   width: auto;
-  max-width: 100%;
+  max-width: 95%;
   height: auto;
-  max-height: 4.1rem;
+  max-height: 3.8rem;
   object-fit: contain;
   filter: drop-shadow(0 0 4px var(--ink-34));
 }
@@ -3180,7 +3175,7 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.checkout-pay-tile .checko
   color: var(--black);
   letter-spacing: 0.06em;
   text-align: center;
-  line-height: 1.2;
+  line-height: 0.8;
   font-size: 1rem;
 }
 main.temppay-checkout-page #checkout-pay-inner ul li a.checkout-pay-tile i {
