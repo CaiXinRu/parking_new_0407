@@ -6,7 +6,7 @@
   --footer-h: 246px;
   --white: #ffffff;
   --black: #000000;
-  --keybg: #dbdbdb;
+  --keybg: #eaeaea;
   --main-p: #4e566e;
   --font-grey-d: #534f4f;
   --font-green: #08bf5b;
@@ -20,7 +20,7 @@
   --surface-tint: #f0f2fa;
   --gold-accent: #e8b845;
   --pink-accent: #dc5ca7;
-  --gray-radial: #d3d2db;
+  --gray-radial: #e7e7e7;
   --purple-mid: #7d4c9c;
   --text-slate: #4b5563;
   --text-slate-d: #475569;
@@ -1243,9 +1243,8 @@ footer #pay-list-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 75%;
-  min-height: 80px;
-  max-height: 120px;
+  width: 71%;
+  height: 100px;
   border-radius: 5rem;
   background: var(--white-dim);
   backdrop-filter: blur(5px);
@@ -1259,7 +1258,8 @@ footer #pat-list-inner {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 0 1rem;
+  align-items: center;
+  padding: 0 2rem;
 }
 footer #pat-list-inner p {
   display: flex;
@@ -1303,12 +1303,7 @@ footer #pat-list-inner p img {
   border-radius: 24px;
   border: 10px solid var(--surface-tint);
   background: var(--white);
-  box-shadow:
-    0 0 0 1px rgba(255, 255, 255, 0.45),
-    0 0 24px rgba(255, 255, 255, 0.28),
-    0 14px 40px rgba(42, 36, 82, 0.22),
-    0 6px 16px rgba(0, 0, 0, 0.65),
-    0 2px 4px var(--overlay-black-08);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.65);
   text-decoration: none;
   color: inherit;
   -webkit-tap-highlight-color: transparent;
@@ -1447,10 +1442,7 @@ footer #pat-list-inner p img {
   background: var(--white);
   text-decoration: none;
   color: #3d4d66;
-  box-shadow:
-    0 2px 20px rgba(0, 0, 0, 0.7),
-    0 8px 20px rgba(65, 33, 135, 0.12),
-    0 14px 36px rgba(41, 33, 80, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
 }
 #lice-bt-container a.lice-card:active::before,
 #lice-bt-container a.lice-card:focus::before {
@@ -1694,9 +1686,7 @@ footer #pat-list-inner p img {
   color: inherit;
   border-radius: 1.15rem;
   overflow: hidden;
-  box-shadow:
-    0 8px 24px var(--overlay-black-30),
-    0 2px 8px var(--overlay-black-30);
+  box-shadow: 0 6px 8px var(--overlay-black-30);
   background: var(--surface-cream);
   -webkit-tap-highlight-color: transparent;
 }
@@ -1852,6 +1842,8 @@ footer #pat-list-inner p img {
   align-content: flex-start;
   gap: 0.4rem 0.55rem;
   flex: 0 0 auto;
+  width: -moz-fit-content; /* 針對舊版 Firefox */
+  width: -webkit-fit-content; /* 針對舊版 Safari/Chrome */
   width: fit-content;
   padding: 0.32rem 0.6rem;
   background: var(--white);
@@ -1860,8 +1852,6 @@ footer #pat-list-inner p img {
 }
 #payment-out #payment-bt-container.payment-method-grid .pay-tile__logos img {
   height: 44px;
-  width: auto;
-  max-width: 42%;
   object-fit: contain;
   flex: 0 1 auto;
 }
@@ -1916,37 +1906,6 @@ footer #pat-list-inner p img {
   flex-direction: column;
   align-items: center;
   z-index: 0;
-}
-#payment-out #payment-bt-container ul li a {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  width: 95%;
-  height: 265px;
-  font-size: 2.2rem;
-  font-weight: 500;
-  padding: 0 0 4rem;
-  color: var(--main-font);
-  margin: 0 1rem 0 0;
-}
-#payment-out #payment-bt-container ul li a:active {
-  color: var(--white);
-}
-#payment-out #payment-bt-container ul li a:active svg {
-  display: none;
-}
-#payment-out #payment-bt-container ul li a:active span {
-  background: var(--main-font);
-  box-shadow: none;
-}
-#payment-out #payment-bt-container ul li a i {
-  display: flex;
-  width: 175px;
-  height: 135px;
-  filter: drop-shadow(2px 2px 1px var(--overlay-black-15));
-  margin: -43px 0 0;
 }
 #payment-out #payment-bt-container.rebate ul li a.recard i {
   background: url("../images/pay-card.svg") no-repeat center center;
@@ -2245,7 +2204,7 @@ main.nor.parking-loc-page #checkout-container.parking.parking-loc {
   background: var(--white);
   border-radius: 1rem;
   padding: 1.25rem 1.25rem 1.5rem;
-  box-shadow: 0 0 15px var(--overlay-black-60);
+  box-shadow: 0 0 8px var(--overlay-black-60);
 }
 .parking-loc-photo {
   border-radius: 0.65rem;
@@ -2293,7 +2252,7 @@ main.nor.parking-loc-page #checkout-container.parking.parking-loc {
   padding: 0.85rem 1rem 0.85rem 0;
   background: var(--white);
   border-radius: 1rem;
-  box-shadow: 0 0 14px var(--overlay-black-60);
+  box-shadow: 0 0 6px var(--overlay-black-60);
   overflow: hidden;
 }
 .parking-loc-strip-accent {
@@ -2625,7 +2584,7 @@ main.temppay-checkout-page .checkout-top-card__row {
   min-height: clamp(210px, 34vw, 300px);
   background: var(--white);
   border-radius: 1.25rem;
-  box-shadow: 0 0 15px var(--overlay-black-60);
+  box-shadow: 0 0 8px var(--overlay-black-60);
   overflow: hidden;
   border: 1px solid rgba(65, 33, 135, 0.08);
 }
@@ -2812,7 +2771,7 @@ main.temppay-checkout-page #checkout-list-container.checkout-bill-card {
   padding: 0;
   overflow: hidden;
   border-radius: 1.25rem;
-  box-shadow: 0 0 15px var(--overlay-black-60);
+  box-shadow: 0 0 8px var(--overlay-black-60);
   border: 1px solid rgba(65, 33, 135, 0.1);
   background: var(--white);
   color: var(--navy-dark);
@@ -3105,7 +3064,7 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.checkout-pay-tile {
   min-height: 155px;
   border-radius: 1.25rem;
   overflow: hidden;
-  box-shadow: 0 0 15px var(--overlay-black-60);
+  box-shadow: 0 0 10px var(--overlay-black-60);
   color: inherit;
 }
 main.temppay-checkout-page #checkout-pay-inner ul li a.checkout-pay-tile:active {
@@ -3228,7 +3187,7 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.rebate:active i {
   overflow: hidden;
   background: var(--white);
   border-radius: 10px;
-  box-shadow: 0 6px 20px var(--overlay-black-35);
+  box-shadow: 0 6px 8px var(--overlay-black-35);
   border: 1px solid var(--overlay-black-06);
 }
 #popupParagraph.popup-card--temppay .temppay-kiosk-img {
@@ -3295,7 +3254,7 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.rebate:active i {
   padding: 1rem 1.15rem 1.15rem;
   background: var(--white);
   border: 1px solid rgba(255, 255, 255, 0.06);
-  box-shadow: 0 6px 20px var(--overlay-black-35);
+  box-shadow: 0 6px 12px var(--overlay-black-35);
 }
 #popupParagraph.popup-card--temppay .temppay-summary__hint {
   margin: 0 0 0.65rem;
