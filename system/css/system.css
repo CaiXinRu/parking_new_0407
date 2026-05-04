@@ -146,6 +146,11 @@ select {
   max-width: 580px;
   padding: 2rem 2rem 6rem;
 }
+#popupParagraph .system-popup p {
+  text-align: left;
+  align-self: stretch;
+  justify-content: flex-start;
+}
 #popupParagraph .type.center {
   text-align: center;
 }

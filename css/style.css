@@ -466,42 +466,18 @@ header .header-pic {
   position: absolute;
   z-index: 9;
   overflow: hidden;
-  top: 60px;
+  top: 70px;
   left: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 9px 15px 8px 5px;
+  padding: 15px 20px 15px 15px;
   color: var(--white);
   text-align: center;
   line-height: 1.4rem;
   font-size: 1.2rem;
 }
-.donate-qr-label {
+.donate-qr > p {
   position: relative;
   z-index: 1;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.4rem;
-  margin: 0 0 0.5rem;
-  padding: 0.35rem 0.5rem;
-  border: 1px solid currentColor;
-  border-radius: 0.5rem;
-  box-sizing: border-box;
-  background-color: var(--main-font);
-}
-.donate-qr-icon {
-  display: block;
-  width: 1.8rem;
-  height: 1.8rem;
-  object-fit: contain;
-  flex-shrink: 0;
-}
-.donate-qr-caption {
-  position: relative;
-  z-index: 1;
-  margin: 0.5rem 0 0;
+  top: -1px;
 }
 .donate-qr:after {
   content: "";
@@ -930,7 +906,8 @@ main.nor h2.receipt-method-heading {
   align-items: center;
   font-family: inherit;
 }
-#main-bt-container {
+#main-bt-container,
+#main-bt-recommend {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -939,6 +916,11 @@ main.nor h2.receipt-method-heading {
   width: 75%;
   position: absolute;
   bottom: 115px;
+}
+#main-bt-recommend {
+  justify-content: center;
+  bottom: 270px;
+  width: min(75%, calc(3 * 135px + 2 * 1.3rem + 2 * 3rem));
 }
 body.page-home #main-bt-container {
   bottom: 180px;
@@ -957,7 +939,8 @@ body.page-home main.has-wallpaper-img > .main-wallpaper {
   opacity: 0.7;
   pointer-events: none;
 }
-#main-bt-container a {
+#main-bt-container a,
+#main-bt-recommend a {
   position: relative;
   display: flex;
   justify-content: center;
@@ -972,7 +955,8 @@ body.page-home main.has-wallpaper-img > .main-wallpaper {
   height: 80px;
   margin: -1rem 0.4rem 0;
 }
-#main-bt-container a:after {
+#main-bt-container a:after,
+#main-bt-recommend a:after {
   content: "";
   display: flex;
   width: 80%;
@@ -985,7 +969,8 @@ body.page-home main.has-wallpaper-img > .main-wallpaper {
   bottom: 0;
   opacity: 0.2;
 }
-#main-bt-container a:before {
+#main-bt-container a:before,
+#main-bt-recommend a:before {
   content: "";
   display: flex;
   width: 90%;
@@ -1003,24 +988,30 @@ body.page-home main.has-wallpaper-img > .main-wallpaper {
   bottom: -16px;
 }
 #main-bt-container a.left:active,
-#main-bt-container a.right:active {
+#main-bt-container a.right:active,
+#main-bt-recommend a:active {
   background: var(--main-font);
 }
-#main-bt-container a:active:before {
+#main-bt-container a:active:before,
+#main-bt-recommend a:active:before {
   bottom: -8px;
 }
 #main-bt-container a:active svg,
-#main-bt-container a:active:after {
+#main-bt-container a:active:after,
+#main-bt-recommend a:active svg,
+#main-bt-recommend a:active:after {
   display: none;
 }
-#main-bt-container a svg {
+#main-bt-container a svg,
+#main-bt-recommend a svg {
   position: absolute;
   width: 100%;
   height: 100%;
   overflow: visible;
   z-index: 1;
 }
-#main-bt-container a .line {
+#main-bt-container a .line,
+#main-bt-recommend a .line {
   stroke-dasharray: 260;
   stroke-width: 1px;
   fill: transparent;
@@ -1060,13 +1051,15 @@ body.page-home main.has-wallpaper-img > .main-wallpaper {
     stroke-dashoffset: 1000;
   }
 }
-#main-bt-container a i {
+#main-bt-container a i,
+#main-bt-recommend a i {
   display: flex;
   width: 55px;
   height: 55px;
   position: relative;
 }
-#main-bt-container a span {
+#main-bt-container a span,
+#main-bt-recommend a span {
   display: flex;
   position: relative;
 }
@@ -1086,6 +1079,14 @@ body.page-home main.has-wallpaper-img > .main-wallpaper {
   background: url("../images/mb-right-icon.png") no-repeat center center;
   background-size: 100%;
   margin: 0 0 0 0.5rem;
+}
+#main-bt-recommend a {
+  width: 100%;
+  margin: -1rem 0 0;
+  padding: 0;
+  font-size: 2.5rem;
+  border-radius: 999px;
+  background: linear-gradient(to right, var(--purple-deep) 0%, var(--indigo-deep) 100%);
 }
 #main-control-container {
   position: relative;
