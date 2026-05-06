@@ -1241,7 +1241,7 @@ footer #pay-list-container {
   justify-content: center;
   align-items: center;
   width: 71%;
-  height: 100px;
+  height: 115px;
   border-radius: 5rem;
   background: var(--white-dim);
   backdrop-filter: blur(5px);
@@ -1249,7 +1249,7 @@ footer #pay-list-container {
   box-shadow:
     0 0 7px #5d5d5dad,
     inset 2px 1px 5px var(--white-dim-inner);
-  margin: 0 0 2rem;
+  margin: 0 0 1.35rem;
 }
 footer #pat-list-inner {
   display: flex;
@@ -1262,8 +1262,9 @@ footer #pat-list-inner p {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
+  margin: 0.4rem 0.4rem;
 }
 footer #pat-list-inner p img {
   width: 100%;
