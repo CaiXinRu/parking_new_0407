@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://googleapis.com" rel="stylesheet" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>微程式資訊 Microprogram｜停車場繳費機</title>
+  </head>
+
+  <body class="page-home">
+    <div id="popup_bg">
+      <div id="popupParagraph" class="popup-card popup-card--message popup-card--twobuttons">
+        <div class="popup-card__icon" aria-hidden="true">
+          <img src="images/reminder/icon_succeed.png" alt="" width="120" height="120" />
+        </div>
+        <div class="popup-card__content">
+          <p class="popup-card__title popup-card__title--lg">繳費完成</p>
+          <div class="twobuttons-popup__divider" aria-hidden="true"></div>
+          <div class="twobuttons-popup__question">
+            <p class="twobuttons-popup__question-title">是否將發票存入手機條碼？</p>
+            <div class="twobuttons-popup__info-card" aria-label="手機條碼">
+              <p class="twobuttons-popup__info-label">手機條碼</p>
+              <div class="twobuttons-popup__info-row">
+                <p class="twobuttons-popup__info-time">➨ /81234567</p>
+              </div>
+            </div>
+          </div>
+          <div class="twobuttons-popup__divider" aria-hidden="true"></div>
+        </div>
+        <div id="popup-inner" class="twobuttons-popup__actions">
+          <button type="button" class="twobuttons-popup__btn twobuttons-popup__btn--primary">使用此載具</button>
+          <button type="button" class="twobuttons-popup__btn twobuttons-popup__btn--primary">不使用載具</button>
+        </div>
+        <div class="twobuttons-popup__divider" aria-hidden="true"></div>
+        <div class="popup-buttom-bt">
+          <ul>
+            <li>
+              <div class="processing-popup__countdown">
+                <span class="processing-popup__countdown-prefix">⏱ 倒數</span>
+                <span class="processing-popup__countdown-num">08</span>
+                <span class="processing-popup__countdown-suffix">秒</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="main-container">
+      <header>
+        <div id="header-inner">
+          <div class="time"><span>2025-09-15</span><span>17:20</span></div>
+          <div class="name">
+            <span><img src="images/0407/mp_logo.png" alt="" /></span>
+          </div>
+          <div class="top-tool">
+            <ul>
+              <li>
+                <a href="0.3-service-popup.html"
+                  ><i><img src="images/contact-icon.svg" alt="" /></i>客服</a
+                >
+              </li>
+              <li>
+                <a href=""
+                  ><i><img src="images/language-icon.svg" alt="" /></i>語系</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div id="header-title">
+          <div>永吉豐和苑三井花園飯店(台北忠孝)</div>
+        </div>
+        <div class="CUT">
+          <div class="orb_graphic">
+            <svg>
+              <defs>
+                <linearGradient id="myGradient" x1="0%" y1="0%" x2="0%" y2="100%" spreadMethod="pad">
+                  <stop offset="0%" stop-color="#412187" stop-opacity="1" />
+                  <stop offset="90%" stop-color="#412187" stop-opacity="1" />
+                </linearGradient>
+              </defs>
+              <circle class="fill"></circle>
+              <circle class="progress"></circle>
+            </svg>
+            <div class="orb_value count">60</div>
+          </div>
+        </div>
+        <div class="header-pic"><img class="header-mask" src="images/header-bg.png" alt="" /></div>
+      </header>
+      <main class="nor">
+        <h2>輸入車牌數字</h2>
+        <div id="nb-container" class="four">
+          <div><input type="text" value="8" maxlength="1" /></div>
+          <div><input type="text" value="" maxlength="1" /></div>
+          <div><input type="text" value="" maxlength="1" /></div>
+          <div><input type="text" value="" maxlength="1" /></div>
+        </div>
+        <div id="keyboard-container">
+          <button>1</button>
+          <button>2</button>
+          <button>3</button>
+          <button>4</button>
+          <button>5</button>
+          <button>6</button>
+          <button>7</button>
+          <button>8</button>
+          <button>9</button>
+          <button class="tool">刪除</button>
+          <button>0</button>
+          <button class="tool">清除</button>
+        </div>
+        <div id="main-bt-container">
+          <a href="0.-1-initial-popup.html" class="right">
+            <svg xmlns="http://www.w3.org/2000/svg">
+              <rect rx="38" ry="38" class="line" height="100%" width="100%" stroke-linejoin="round" /></svg
+            ><i></i><span>確認</span>
+          </a>
+        </div>
+      </main>
+      <footer>
+        <div id="pay-list-container">
+          <div id="pat-list-inner">
+            <p><img src="images/pay_easycard.png" alt="" /></p>
+            <p><img src="images/pay_easypay.png" alt="" /></p>
+            <p><img src="images/pay_ipass.png" alt="" /></p>
+            <p><img src="images/pay_icash2.0.png" alt="" /></p>
+            <p><img src="images/pay_linepay.png" alt="" /></p>
+            <p><img src="images/pay_street.png" alt="" /></p>
+            <p><img src="images/pay_twpay.png" alt="" /></p>
+            <p><img src="images/pay_applepay.png" alt="" /></p>
+            <p><img src="images/pay_googlepay.png" alt="" /></p>
+            <p><img src="images/pay_samsungpay.png" alt="" /></p>
+            <p><img src="images/pay_cash.png" alt="" /></p>
+            <p><img src="images/pay_creditcard.png" alt="" /></p>
+          </div>
+        </div>
+        <div class="footer-pic"><img class="footer-mask" src="images/footer-bg.png" alt="" /></div>
+      </footer>
+    </div>
+  </body>
+</html>

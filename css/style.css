@@ -598,10 +598,6 @@ main.nor h2.receipt-method-heading {
   right: 20px;
   bottom: unset;
 }
-#popupParagraph.single h1 {
-  font-size: 2.5rem;
-  color: var(--black);
-}
 #popupParagraph > h1,
 #popupParagraph .base-message__html > h1 {
   background: var(--main-p);
@@ -3367,65 +3363,6 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.rebate:active i {
   justify-content: flex-start;
   gap: 0;
 }
-#popup-inner.two-buttons-stack-container {
-  width: 88%;
-}
-.two-buttons-stack {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 1.15rem;
-}
-.two-buttons-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  gap: 0.75rem;
-  padding: 1.45rem 1.15rem 1.35rem;
-  background: var(--white);
-  border-radius: 1.65rem;
-  border: 2px solid transparent;
-  text-decoration: none;
-  color: inherit;
-  box-sizing: border-box;
-  -webkit-tap-highlight-color: transparent;
-}
-.two-buttons-card--success {
-  border-color: var(--font-green);
-}
-.two-buttons-card--failure {
-  border-color: var(--font-red);
-}
-.two-buttons-card:active {
-  opacity: 0.9;
-}
-.two-buttons-card__icon {
-  line-height: 0;
-}
-.two-buttons-card__icon img {
-  width: clamp(3.6rem, 11vw, 5rem);
-  height: auto;
-  display: block;
-  border-radius: 50%;
-}
-.two-buttons-card__title {
-  font-size: clamp(1.9rem, 5vw, 2.45rem);
-  font-weight: 700;
-  color: var(--black);
-  line-height: 1.25;
-}
-.two-buttons-card__desc {
-  font-size: 1.35rem;
-  line-height: 1.55;
-  color: var(--font-grey-d);
-  max-width: 26rem;
-}
-.two-buttons-card--success .two-buttons-card__time {
-  color: var(--font-green);
-  font-weight: 600;
-}
 
 #popupParagraph.popup-card--message {
   overflow: visible;
@@ -3434,6 +3371,9 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.rebate:active i {
 }
 #popupParagraph.popup-card--message.popup-card--message--init {
   padding: 4.25rem 2rem 4.5rem;
+}
+#popupParagraph.popup-card--message.popup-card--twobuttons {
+  padding: 4.25rem 2rem 7.5rem;
 }
 .popup-card__icon {
   position: absolute;
@@ -3485,7 +3425,7 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.rebate:active i {
   gap: 1rem;
   margin-top: 0.25rem;
 }
-#popupParagraph.popup-card--message .popup-card__content p {
+#popupParagraph .popup-card__content p {
   display: block;
   width: 100%;
   text-align: center;
@@ -3496,19 +3436,23 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.rebate:active i {
 #popupParagraph .popup-card__content p.popup-content-text-mt {
   margin-top: 20px;
 }
-#popupParagraph.popup-card--message .popup-card__content p.popup-card__title {
+#popupParagraph .popup-card__content p.popup-card__title {
   font-size: 2.15rem;
   font-weight: 700;
   color: var(--black);
 }
-#popupParagraph.popup-card--message .popup-card__content p.popup-card__title--xl {
+#popupParagraph .popup-card__content p.popup-card__title--xl {
   font-size: 3.15rem;
   margin-top: 20px;
 }
-#popupParagraph.popup-card--message .popup-card__content p.popup-card__title--spaced {
+#popupParagraph .popup-card__content p.popup-card__title--lg {
+  font-size: 2.8rem;
   margin-top: 20px;
 }
-#popupParagraph.popup-card--message .popup-card__content p.popup-card__line--red {
+#popupParagraph .popup-card__content p.popup-card__title--spaced {
+  margin-top: 20px;
+}
+#popupParagraph .popup-card__content p.popup-card__line--red {
   color: var(--font-red);
   font-size: 2rem;
   font-weight: 700;
@@ -3526,11 +3470,8 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.rebate:active i {
 }
 
 #popupParagraph.popup-card--service {
-  padding: 2.25rem 2rem 9.5rem;
-  box-shadow: 0 12px 40px var(--overlay-black-14);
-}
-#popupParagraph.popup-card--service:not(.single) {
   padding: 2rem 2rem 9.5rem;
+  box-shadow: 0 12px 40px var(--overlay-black-14);
 }
 #popupParagraph.popup-card--service .service-info-popup__content {
   margin-top: 0;
@@ -3643,4 +3584,167 @@ main.temppay-checkout-page #checkout-pay-inner ul li a.rebate:active i {
   width: 2.5rem;
   height: 2.5rem;
   display: block;
+}
+
+/* —— Prepayment popup (0.7.1): 版面與主題色 (--font-green / --keybg)；保留頂部 icon —— */
+#popupParagraph.popup-card--twobuttons .popup-card__content {
+  gap: 1.35rem;
+  align-self: stretch;
+  width: 100%;
+}
+#popupParagraph.popup-card--twobuttons .twobuttons-popup__info-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.85rem;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0;
+  background: transparent;
+  color: var(--main-p);
+}
+#popupParagraph.popup-card--twobuttons .popup-card__content .twobuttons-popup__info-label,
+#popupParagraph.popup-card--twobuttons .popup-card__content .twobuttons-popup__info-time {
+  text-align: center;
+  width: 100%;
+  display: block;
+  margin: 0;
+  line-height: 1.4;
+}
+#popupParagraph.popup-card--twobuttons .twobuttons-popup__info-label {
+  font-size: 1.7rem;
+  font-weight: 500;
+  color: var(--text-slate);
+}
+#popupParagraph.popup-card--twobuttons .twobuttons-popup__info-row {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  gap: 0.95rem;
+  background: var(--keybg);
+  border-radius: 1rem;
+  padding: 0.9rem 1.1rem;
+  box-sizing: border-box;
+}
+#popupParagraph.popup-card--twobuttons .twobuttons-popup__info-icon {
+  width: 3rem;
+  height: 3rem;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--main-p);
+}
+#popupParagraph.popup-card--twobuttons .twobuttons-popup__info-icon svg {
+  width: 2.6rem;
+  height: 2.6rem;
+  display: block;
+}
+#popupParagraph.popup-card--twobuttons .twobuttons-popup__info-time {
+  flex: 1;
+  text-align: left;
+  font-size: 1.7rem;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.01em;
+  line-height: 1.2;
+  color: var(--text-slate);
+}
+#popupParagraph.popup-card--twobuttons .twobuttons-popup__question {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.45rem;
+  width: 100%;
+}
+#popupParagraph.popup-card--twobuttons .twobuttons-popup__divider {
+  width: 100%;
+  height: 1px;
+  margin: 1.1rem 0 1.1rem;
+  background: var(--gray-radial);
+}
+#popupParagraph.popup-card--twobuttons .twobuttons-popup__question-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--main-p);
+  margin-bottom: 0.55rem;
+}
+#popupParagraph.popup-card--twobuttons .popup-card__content .twobuttons-popup__stay-label {
+  width: fit-content;
+  margin-top: 12px;
+}
+#popupParagraph.popup-card--twobuttons .twobuttons-popup__stay-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0.35rem 1.05rem 0.3rem;
+  border-radius: 0.8rem;
+  font-size: 1.7rem;
+  font-weight: 500;
+  line-height: 1.15;
+  color: var(--text-slate);
+  background: var(--keybg);
+}
+
+#popupParagraph.popup-card--twobuttons .twobuttons-popup__stay-time {
+  margin: 0;
+  font-size: 4.5rem;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  line-height: 1.06;
+  color: var(--font-green);
+}
+#popupParagraph.popup-card--twobuttons .twobuttons-popup__stay-note {
+  margin: 0.25rem 0 0;
+  font-size: 1.7rem;
+  font-weight: 500;
+  line-height: 1.35;
+  color: var(--text-slate);
+}
+#popupParagraph.popup-card--twobuttons #popup-inner.twobuttons-popup__actions {
+  width: 88%;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 0.85rem;
+  box-sizing: border-box;
+}
+#popupParagraph.popup-card--twobuttons .twobuttons-popup__btn {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1.35rem 1.25rem;
+  border-radius: 1.25rem;
+  font-size: clamp(1.75rem, 4.5vw, 2.2rem);
+  font-weight: 700;
+  line-height: 1.2;
+  border: none;
+  cursor: pointer;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+#popupParagraph.popup-card--twobuttons .twobuttons-popup__btn--primary {
+  background: var(--font-green);
+  color: var(--white);
+}
+#popupParagraph.popup-card--twobuttons .twobuttons-popup__btn--primary:active {
+  opacity: 0.92;
+}
+#popupParagraph.popup-card--twobuttons .twobuttons-popup__btn-dollar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.85rem;
+  height: 2.85rem;
+  flex-shrink: 0;
+  border-radius: 50%;
+  font-size: 1.65rem;
+  font-weight: 700;
+  line-height: 1;
+  background: rgba(255, 255, 255, 0.22);
+  color: var(--white);
 }
