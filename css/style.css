@@ -508,7 +508,7 @@ header .header-pic {
   margin: 0.25rem 0;
 }
 .donate-qr .code img {
-  max-width: 97%;
+  max-width: 94%;
   max-height: 97%;
 }
 main {
@@ -921,10 +921,10 @@ main.nor h2.receipt-method-heading {
 body.page-home #main-bt-container {
   bottom: 180px;
 }
-body.page-home main.has-wallpaper-img::before {
+main.has-wallpaper-img::before {
   display: none;
 }
-body.page-home main.has-wallpaper-img > .main-wallpaper {
+main.has-wallpaper-img > .main-wallpaper {
   position: absolute;
   inset: 0;
   z-index: 0;
@@ -2700,7 +2700,7 @@ main.temppay-checkout-page .checkout-top-card__headrow .orb_value:before {
 main.temppay-checkout-page .checkout-meta__times {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.6rem;
   min-width: 0;
   width: 100%;
 }
