@@ -55,35 +55,74 @@
       </header>
       <main class="nor">
         <h2>投幣器補幣-步驟1：補幣</h2>
-        <div class="system-type">使用投幣器，按結帳現金存量進行補幣。<br />全部完成後按「下一步」，進行現金結帳。</div>
-        <div class="system-container">
-          <div id="system-tb-inner">
-            <table class="norule">
-              <tr>
-                <td>幣別</td>
-                <td>目前數量</td>
-                <td>應備數量</td>
-                <td>本次補幣數量</td>
-              </tr>
-              <tr>
-                <td>50元</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-              </tr>
-              <tr>
-                <td>10元</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-              </tr>
-              <tr>
-                <td>5元</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-              </tr>
-            </table>
+        <div class="cash-badge-wrap">
+          <span class="cash-badge">即時更新</span>
+        </div>
+        <div class="system-type">使用投幣器，按結帳現金存量進行補幣。全部完成後按「下一步」，進行現金結帳。</div>
+        <div class="system-container cash-refill cash-acceptor">
+          <div id="system-tb-inner" class="settle-grid">
+            <article class="settle-card settle-card--blue">
+              <header class="settle-card__head">
+                <span class="settle-card__coin">50</span>
+                <span class="settle-card__unit">幣別 (TWD)</span>
+              </header>
+              <div class="settle-card__stats">
+                <div class="settle-stat">
+                  <span class="settle-stat__label">目前數量</span>
+                  <span class="settle-stat__value">0</span>
+                </div>
+                <div class="settle-stat">
+                  <span class="settle-stat__label">應備數量</span>
+                  <span class="settle-stat__value">0</span>
+                </div>
+              </div>
+              <div class="settle-card__total">
+                <span class="settle-card__total-label">本次補幣數量</span>
+                <span class="settle-card__total-value">0</span>
+              </div>
+            </article>
+
+            <article class="settle-card settle-card--green">
+              <header class="settle-card__head">
+                <span class="settle-card__coin">10</span>
+                <span class="settle-card__unit">幣別 (TWD)</span>
+              </header>
+              <div class="settle-card__stats">
+                <div class="settle-stat">
+                  <span class="settle-stat__label">目前數量</span>
+                  <span class="settle-stat__value">165</span>
+                </div>
+                <div class="settle-stat">
+                  <span class="settle-stat__label">應備數量</span>
+                  <span class="settle-stat__value">150</span>
+                </div>
+              </div>
+              <div class="settle-card__total">
+                <span class="settle-card__total-label">本次補幣數量</span>
+                <span class="settle-card__total-value">65</span>
+              </div>
+            </article>
+
+            <article class="settle-card settle-card--purple">
+              <header class="settle-card__head">
+                <span class="settle-card__coin">5</span>
+                <span class="settle-card__unit">幣別 (TWD)</span>
+              </header>
+              <div class="settle-card__stats">
+                <div class="settle-stat">
+                  <span class="settle-stat__label">目前數量</span>
+                  <span class="settle-stat__value">130</span>
+                </div>
+                <div class="settle-stat">
+                  <span class="settle-stat__label">應備數量</span>
+                  <span class="settle-stat__value">100</span>
+                </div>
+              </div>
+              <div class="settle-card__total">
+                <span class="settle-card__total-label">本次補幣數量</span>
+                <span class="settle-card__total-value">30</span>
+              </div>
+            </article>
           </div>
         </div>
         <div id="main-bt-container">

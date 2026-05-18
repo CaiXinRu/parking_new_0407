@@ -1,120 +1,188 @@
 <!doctype html>
 <html>
-<head>
-<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="https://googleapis.com" rel="stylesheet">
-	<link rel="stylesheet" href="../css/reset.css">
-	<link rel="stylesheet" href="../css/style.css">
-	<link href="css/system.css" rel="stylesheet" type="text/css">
-	<title>微程式資訊 Microprogram｜停車場繳費機</title>
-</head>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://googleapis.com" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link href="css/system.css" rel="stylesheet" type="text/css" />
+    <title>微程式資訊 Microprogram｜停車場繳費機</title>
+  </head>
 
-<body>
-	<div id="main-container">
-		<header>
-			<div id="header-inner">
-				<div class="time"><span>2025-09-15</span><span>17:20</span></div>
-				<div class="name"><span><img src="../images/c-logo.png" alt=""/></span></div>
-				<div class="top-tool">
-					<ul>
-						<li><a href=""><i><img src="../images/contact-icon.svg" alt=""/></i>客服</a></li>
-						<li><a href=""><i><img src="../images/language-icon.svg" alt=""/></i>語系</a></li>
-					</ul>
-				</div>
-			</div>			
-			<div id="header-title">
-				<div>南山新市園區C棟停車場</div>
-			</div>
-			<div class="CUT">
-				<div class="orb_graphic">
-					<svg>
-						<defs>
-							<linearGradient id="myGradient" x1="0%" y1="0%"	x2="0%" y2="100%" spreadMethod="pad">
-								<stop offset="0%" stop-color="#412187" stop-opacity="1"/>
-								<stop offset="90%" stop-color="#412187" stop-opacity="1"/>
-							</linearGradient>
-						</defs>
-						<circle class="fill"></circle>
-						<circle class="progress"></circle>
-					</svg>
-					<div class="orb_value count">60</div>
-				</div>
-			</div>			
-			<div class="header-pic"><img class="header-mask" src="../images/header-bg.png" alt=""/></div>	
-		</header>
-		<main class="nor">			
-			<h2>現金結帳作業</h2>
-			<div class="system-container">			
-				<div id="system-tb-inner" class="type inner">
-					<p class="title">目前現金存量</p>
-					<ol class="type-list">
-						<li><span>100元紙鈔:</span><span>0(張)</span></li>
-						<li><span>50元硬幣:</span><span>0(枚)</span></li>
-						<li><span>10元硬幣:</span><span>11(枚)</span></li>
-						<li><span>5元硬幣:</span><span>8(枚)</span></li>
-					</ol>
-				</div>
-			</div>
-			<div class="system-container">		
-				<div id="system-tb-inner" class="type">
-					<p class="title">設定結帳後現金存量</p>
-					<ol class="type-list">
-						<li><span>100元紙鈔:</span><span>0(張)</span></li>
-						<li><span>50元硬幣:</span><span>0(枚)</span></li>
-						<li><span>10元硬幣:</span><span>11(枚)</span></li>
-						<li><span>5元硬幣:</span><span>8(枚)</span></li>
-					</ol>
-				</div>
-			</div>
-			<div class="select-contanier">
-				<span>請選擇結帳人員</span>
-				<div>
-				  <select name="select">
-					  <option>Attendant</option>
-			      </select>
-				</div>
-			</div>
-			<div class="select-contanier">
-				<span>請選擇結帳方式</span>
-				<div>
-				  <select name="select">
-					  <option>一般結帳</option>
-			      </select>
-				</div>
-			</div>
-			<div id="main-bt-container">
-				<a href="" class="left">
-					<svg xmlns="http://www.w3.org/2000/svg">
-						<rect rx="38" ry="38" class="line" height="100%" width="100%" stroke-linejoin="round"/>
-					</svg><i></i>回上頁
-				</a>
-				<a href="" class="right">
-					<svg xmlns="http://www.w3.org/2000/svg">
-						<rect rx="38" ry="38" class="line" height="100%" width="100%" stroke-linejoin="round"/>
-					</svg><i></i>開始結帳
-				</a>
-			</div>
-		</main>
-		<footer class="inner">		  
-			<div id="pay-list-container">				
-				<div id="pat-list-inner">
-					<p><img src="images/pay_easycard.png" alt=""/></p>
-					<p><img src="images/pay_easypay.png" alt=""/></p>
-					<p><img src="images/pay_ipass.png" alt=""/></p>
-					<p><img src="images/pay_icash2.0.png" alt=""/></p>
-					<p><img src="images/pay_linepay.png" alt=""/></p>
-					<p><img src="images/pay_street.png" alt=""/></p>
-					<p><img src="images/pay_twpay.png" alt=""/></p>
-					<p><img src="images/pay_applepay.png" alt=""/></p>
-					<p><img src="images/pay_googlepay.png" alt=""/></p>
-					<p><img src="images/pay_samsungpay.png" alt=""/></p>
-					<p><img src="images/pay_cash.png" alt=""/></p>
-					<p><img src="images/pay_creditcard.png" alt=""/></p>
-				</div>
-			</div>
-			<div class="footer-pic"><img class="footer-mask" src="../images/footer-bg.png" alt=""/></div>		  
-		</footer>
-	</div>
-</body>
+  <body>
+    <div id="main-container">
+      <header>
+        <div id="header-inner">
+          <div class="time"><span>2025-09-15</span><span>17:20</span></div>
+          <div class="name">
+            <span><img src="../images/c-logo.png" alt="" /></span>
+          </div>
+          <div class="top-tool">
+            <ul>
+              <li>
+                <a href=""
+                  ><i><img src="../images/contact-icon.svg" alt="" /></i>客服</a
+                >
+              </li>
+              <li>
+                <a href=""
+                  ><i><img src="../images/language-icon.svg" alt="" /></i>語系</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div id="header-title">
+          <div>南山新市園區C棟停車場</div>
+        </div>
+        <div class="CUT">
+          <div class="orb_graphic">
+            <svg>
+              <defs>
+                <linearGradient id="myGradient" x1="0%" y1="0%" x2="0%" y2="100%" spreadMethod="pad">
+                  <stop offset="0%" stop-color="#412187" stop-opacity="1" />
+                  <stop offset="90%" stop-color="#412187" stop-opacity="1" />
+                </linearGradient>
+              </defs>
+              <circle class="fill"></circle>
+              <circle class="progress"></circle>
+            </svg>
+            <div class="orb_value count">60</div>
+          </div>
+        </div>
+        <div class="header-pic"><img class="header-mask" src="../images/header-bg.png" alt="" /></div>
+      </header>
+      <main class="nor">
+        <h2>現金結帳作業</h2>
+        <section class="cash-card">
+          <header class="cash-card__head">
+            <h3 class="cash-card__title">
+              <i class="cash-card__icon" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="2.5" y="5" width="19" height="14" rx="2.5" />
+                  <path d="M2.5 10h19" />
+                  <path d="M6 15h4" />
+                </svg>
+              </i>
+              目前現金存量
+            </h3>
+            <span class="cash-badge">即時更新</span>
+          </header>
+          <ul class="denom-grid">
+            <li class="denom-item">
+              <span class="denom-item__label">100元紙鈔</span>
+              <span class="denom-item__value"><b>0</b><em>張</em></span>
+            </li>
+            <li class="denom-item">
+              <span class="denom-item__label">50元硬幣</span>
+              <span class="denom-item__value"><b>0</b><em>枚</em></span>
+            </li>
+            <li class="denom-item">
+              <span class="denom-item__label">10元硬幣</span>
+              <span class="denom-item__value"><b>11</b><em>枚</em></span>
+            </li>
+            <li class="denom-item">
+              <span class="denom-item__label">5元硬幣</span>
+              <span class="denom-item__value"><b>8</b><em>枚</em></span>
+            </li>
+          </ul>
+        </section>
+
+        <section class="cash-card">
+          <header class="cash-card__head">
+            <h3 class="cash-card__title cash-card__title--blue">
+              <i class="cash-card__icon cash-card__icon--blue" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <line x1="4" y1="7" x2="20" y2="7" />
+                  <line x1="4" y1="17" x2="20" y2="17" />
+                  <circle cx="9" cy="7" r="2.5" fill="#fff" />
+                  <circle cx="15" cy="17" r="2.5" fill="#fff" />
+                </svg>
+              </i>
+              結帳設定
+            </h3>
+          </header>
+          <div class="settle-form">
+            <div class="reserve-row">
+              <div class="reserve-detail">
+                <p class="reserve-detail__title">結帳後預計保留的金額明細</p>
+                <ul class="reserve-detail__list">
+                  <li>100元 x 0</li>
+                  <li>|</li>
+                  <li>50元 x 0</li>
+                  <li>|</li>
+                  <li class="is-pink">10元 x 1500</li>
+                  <li>|</li>
+                  <li class="is-pink">5元 x 1000</li>
+                </ul>
+              </div>
+            </div>
+            <label class="settle-field">
+              <span class="settle-field__label">結帳人員</span>
+              <div class="settle-field__select">
+                <select name="select">
+                  <option>管理員 - Nomi (ID: 8802)</option>
+                </select>
+              </div>
+            </label>
+            <label class="settle-field">
+              <span class="settle-field__label">結帳方式</span>
+              <div class="settle-field__select">
+                <select name="select">
+                  <option>一般結帳</option>
+                </select>
+              </div>
+            </label>
+          </div>
+        </section>
+
+        <div id="main-bt-container">
+          <a href="" class="left">
+            <svg xmlns="http://www.w3.org/2000/svg">
+              <rect rx="38" ry="38" class="line" height="100%" width="100%" stroke-linejoin="round" /></svg
+            ><i></i>回上頁
+          </a>
+          <a href="" class="right">
+            <svg xmlns="http://www.w3.org/2000/svg">
+              <rect rx="38" ry="38" class="line" height="100%" width="100%" stroke-linejoin="round" /></svg
+            ><i></i>開始結帳
+          </a>
+        </div>
+      </main>
+      <footer class="inner">
+        <div id="pay-list-container">
+          <div id="pat-list-inner">
+            <p><img src="images/pay_easycard.png" alt="" /></p>
+            <p><img src="images/pay_easypay.png" alt="" /></p>
+            <p><img src="images/pay_ipass.png" alt="" /></p>
+            <p><img src="images/pay_icash2.0.png" alt="" /></p>
+            <p><img src="images/pay_linepay.png" alt="" /></p>
+            <p><img src="images/pay_street.png" alt="" /></p>
+            <p><img src="images/pay_twpay.png" alt="" /></p>
+            <p><img src="images/pay_applepay.png" alt="" /></p>
+            <p><img src="images/pay_googlepay.png" alt="" /></p>
+            <p><img src="images/pay_samsungpay.png" alt="" /></p>
+            <p><img src="images/pay_cash.png" alt="" /></p>
+            <p><img src="images/pay_creditcard.png" alt="" /></p>
+          </div>
+        </div>
+        <div class="footer-pic"><img class="footer-mask" src="../images/footer-bg.png" alt="" /></div>
+      </footer>
+    </div>
+  </body>
 </html>

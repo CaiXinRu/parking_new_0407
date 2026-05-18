@@ -10,7 +10,7 @@
     <title>微程式資訊 Microprogram｜停車場繳費機</title>
   </head>
 
-  <body class="syt-long">
+  <body>
     <div id="main-container">
       <header>
         <div id="header-inner">
@@ -56,49 +56,64 @@
       <main class="nor">
         <h2>周邊設備</h2>
         <div class="system-container">
-          <div id="system-tb-inner">
-            <table>
-              <tr>
-                <td>設備 IP1 (內網)</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>設備 IP2 (外網)</td>
-                <td>172.16.65.111</td>
-              </tr>
-              <tr>
-                <td>設備 IP3</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>設備 gateway</td>
-                <td>172.16.65.254</td>
-              </tr>
-              <tr>
-                <td>設備 DNS 使用中</td>
-                <td>168.95.1.1</td>
-              </tr>
-              <tr>
-                <td>設備 DNS 1</td>
-                <td>168.95.1.1</td>
-              </tr>
-              <tr>
-                <td>設備 DNS 2</td>
-                <td>8.8.8.8</td>
-              </tr>
-              <tr>
-                <td>IPTables狀態</td>
-                <td><button>狀態</button></td>
-              </tr>
-              <tr>
-                <td>XPS 是否啟用</td>
-                <td>啟用</td>
-              </tr>
-              <tr>
-                <td>XPS IP</td>
-                <td>172.16.65.111</td>
-              </tr>
-              <!-- <tr>
+          <div id="system-tb-inner" class="peripheral-card-stack">
+            <section class="system-info-card" aria-label="設備 IP">
+              <table>
+                <tr>
+                  <td>設備 IP1 (內網)</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>設備 IP2 (外網)</td>
+                  <td>172.16.65.111</td>
+                </tr>
+                <tr>
+                  <td>設備 IP3</td>
+                  <td></td>
+                </tr>
+              </table>
+            </section>
+            <section class="system-info-card" aria-label="設備 DNS">
+              <table>
+                <tr>
+                  <td>設備 DNS 使用中</td>
+                  <td>168.95.1.1</td>
+                </tr>
+                <tr>
+                  <td>設備 DNS 1</td>
+                  <td>168.95.1.1</td>
+                </tr>
+                <tr>
+                  <td>設備 DNS 2</td>
+                  <td>8.8.8.8</td>
+                </tr>
+              </table>
+            </section>
+            <section class="system-info-card" aria-label="閘道與防火牆">
+              <table>
+                <tr>
+                  <td>設備 gateway</td>
+                  <td>172.16.65.254</td>
+                </tr>
+                <tr>
+                  <td>IPTables狀態</td>
+                  <td><button>查看</button></td>
+                </tr>
+              </table>
+            </section>
+            <section class="system-info-card" aria-label="XPS">
+              <table>
+                <tr>
+                  <td>XPS 啟用狀態</td>
+                  <td>啟用</td>
+                </tr>
+                <tr>
+                  <td>XPS IP</td>
+                  <td>172.16.65.111</td>
+                </tr>
+              </table>
+            </section>
+            <!-- <tr>
                 <td>設備 MAC</td>
                 <td>C400ADC8EB36</td>
               </tr>
@@ -131,10 +146,9 @@
                 <td>正常(0)</td>
               </tr>
               <tr>
-                <td>watchdog 是否啟用</td>
+                <td>watchdog 啟用狀態</td>
                 <td class="red">停用(0)</td>
               </tr> -->
-            </table>
           </div>
         </div>
         <div id="main-control-container" class="system-page">

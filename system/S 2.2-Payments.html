@@ -56,93 +56,107 @@
       <main class="nor">
         <h2>金流狀態</h2>
         <div class="system-container">
-          <div id="system-tb-inner">
-            <table>
-              <tr>
-                <td>悠遊卡是否啟用</td>
-                <td>啟用</td>
-              </tr>
-              <tr>
-                <td>悠遊卡狀態</td>
-                <td>正常(0)</td>
-              </tr>
-              <tr>
-                <td>一卡通是否啟用</td>
-                <td>啟用</td>
-              </tr>
-              <tr>
-                <td>一卡通狀態</td>
-                <td>正常(0)</td>
-              </tr>
-              <tr>
-                <td>愛金卡是否啟用</td>
-                <td>啟用</td>
-              </tr>
-              <tr>
-                <td>愛金卡狀態</td>
-                <td>正常(0)</td>
-              </tr>
-              <tr>
-                <td>有錢卡是否啟用</td>
-                <td class="red">停用</td>
-              </tr>
-              <tr>
-                <td>有錢卡狀態</td>
-                <td>正常(0)</td>
-              </tr>
-              <tr>
-                <td>現金是否啟用</td>
-                <td>啟用</td>
-              </tr>
-              <tr>
-                <td>現金運行狀態</td>
-                <td>正常</td>
-              </tr>
-              <tr>
-                <td>紙鈔機狀態</td>
-                <td>成功(0)</td>
-              </tr>
-              <tr>
-                <td>投幣機狀態</td>
-                <td>成功(0)</td>
-              </tr>
-              <tr>
-                <td>50 元找零機狀態</td>
-                <td>成功(0)</td>
-              </tr>
-              <tr>
-                <td>10 元找零機狀態</td>
-                <td>成功(0)</td>
-              </tr>
-              <tr>
-                <td>5 元找零機狀態</td>
-                <td>成功(0)</td>
-              </tr>
-              <tr>
-                <td>LINE Pay 是否啟用</td>
-                <td>啟用</td>
-              </tr>
-              <tr>
-                <td>街口支付是否啟用</td>
-                <td>啟用</td>
-              </tr>
-              <tr>
-                <td>APPLE Pay 是否啟用</td>
-                <td class="red">停用(0)</td>
-              </tr>
-              <tr>
-                <td>Google Pay 是否啟用</td>
-                <td class="red">停用(0)</td>
-              </tr>
-              <tr>
-                <td>Happy Go Pay 是否啟用</td>
-                <td>正常(0)</td>
-              </tr>
-              <tr>
-                <td>信用卡支付是否啟用</td>
-                <td>正常(0)</td>
-              </tr>
-            </table>
+          <div id="system-tb-inner" class="peripheral-card-stack payments-card-stack">
+            <section class="system-info-card" aria-label="電子票證">
+              <table>
+                <tr>
+                  <td>悠遊卡啟用狀態</td>
+                  <td>啟用</td>
+                </tr>
+                <tr>
+                  <td>悠遊卡狀態</td>
+                  <td>正常(0)</td>
+                </tr>
+                <tr>
+                  <td>一卡通啟用狀態</td>
+                  <td>啟用</td>
+                </tr>
+                <tr>
+                  <td>一卡通狀態</td>
+                  <td>正常(0)</td>
+                </tr>
+                <tr>
+                  <td>愛金卡啟用狀態</td>
+                  <td>啟用</td>
+                </tr>
+                <tr>
+                  <td>愛金卡狀態</td>
+                  <td>正常(0)</td>
+                </tr>
+                <tr>
+                  <td>有錢卡啟用狀態</td>
+                  <td class="red">停用</td>
+                </tr>
+                <tr>
+                  <td>有錢卡狀態</td>
+                  <td>正常(0)</td>
+                </tr>
+              </table>
+            </section>
+            <section class="system-info-card" aria-label="現金">
+              <table>
+                <tr>
+                  <td>現金啟用狀態</td>
+                  <td>啟用</td>
+                </tr>
+                <tr>
+                  <td>現金運行狀態</td>
+                  <td>正常</td>
+                </tr>
+                <tr>
+                  <td>紙鈔機狀態</td>
+                  <td>成功(0)</td>
+                </tr>
+                <tr>
+                  <td>投幣機狀態</td>
+                  <td>成功(0)</td>
+                </tr>
+                <tr>
+                  <td>50 元找零機狀態</td>
+                  <td>成功(0)</td>
+                </tr>
+                <tr>
+                  <td>10 元找零機狀態</td>
+                  <td>成功(0)</td>
+                </tr>
+                <tr>
+                  <td>5 元找零機狀態</td>
+                  <td>成功(0)</td>
+                </tr>
+              </table>
+            </section>
+            <section class="system-info-card" aria-label="行動支付">
+              <table>
+                <tr>
+                  <td>LINE Pay 啟用狀態</td>
+                  <td>啟用</td>
+                </tr>
+                <tr>
+                  <td>街口支付啟用狀態</td>
+                  <td>啟用</td>
+                </tr>
+                <tr>
+                  <td>APPLE Pay 啟用狀態</td>
+                  <td class="red">停用(0)</td>
+                </tr>
+                <tr>
+                  <td>Google Pay 啟用狀態</td>
+                  <td class="red">停用(0)</td>
+                </tr>
+                <tr>
+                  <td>Happy Go Pay 啟用狀態</td>
+                  <td>正常(0)</td>
+                </tr>
+              </table>
+            </section>
+            <section class="system-info-card" aria-label="信用卡">
+              <table>
+                <tr>
+                  <td>信用卡支付啟用狀態</td>
+                  <td>正常(0)</td>
+                </tr>
+              </table>
+            </section>
           </div>
         </div>
         <div id="main-bt-container">

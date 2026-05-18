@@ -56,65 +56,83 @@
       <main class="nor">
         <h2>設備設定</h2>
         <div class="system-container">
-          <div id="system-tb-inner">
-            <table>
-              <tr>
-                <td>設備 IP1 (內網)</td>
-                <td></td>
-                <td><button>修改</button></td>
-              </tr>
-              <tr>
-                <td>設備 IP2 (外網)</td>
-                <td>172.16.65.111</td>
-                <td><button>修改</button></td>
-              </tr>
-              <tr>
-                <td>設備 IP3</td>
-                <td></td>
-                <td><button>修改</button></td>
-              </tr>
-              <tr>
-                <td>設備 gateway</td>
-                <td>172.16.65.254</td>
-                <td><button>修改</button></td>
-              </tr>
-              <tr>
-                <td>設備 DNS 使用中</td>
-                <td>168.95.1.1</td>
-                <td><button>修改</button></td>
-              </tr>
-              <tr>
-                <td>設備 DNS 1</td>
-                <td>168.95.1.1</td>
-                <td><button>修改</button></td>
-              </tr>
-              <tr>
-                <td>設備 DNS 2</td>
-                <td>8.8.8.8</td>
-                <td><button>修改</button></td>
-              </tr>
-              <tr>
-                <td>IPTables狀態</td>
-                <td><button>狀態</button></td>
-                <td><button>修改</button></td>
-              </tr>
-              <tr>
-                <td>XPS 是否啟用</td>
-                <td>啟用</td>
-                <td><button>修改</button></td>
-              </tr>
-              <tr>
-                <td>XPS IP</td>
-                <td><span>172.16.65.111</span></td>
-                <td><button class="bg-grey">修改</button></td>
-              </tr>
-              <tr>
-                <td>watchdog 是否啟用</td>
-                <td class="red">停用(0)</td>
-                <td><button>修改</button></td>
-              </tr>
-            </table>
+          <div id="system-tb-inner" class="peripheral-card-stack">
+            <section class="system-info-card" aria-label="設備 IP">
+              <table>
+                <tr>
+                  <td>設備 IP1 (內網)</td>
+                  <td></td>
+                  <td><button>修改</button></td>
+                </tr>
+                <tr>
+                  <td>設備 IP2 (外網)</td>
+                  <td>172.16.65.111</td>
+                  <td><button>修改</button></td>
+                </tr>
+                <tr>
+                  <td>設備 IP3</td>
+                  <td></td>
+                  <td><button>修改</button></td>
+                </tr>
+              </table>
+            </section>
+            <section class="system-info-card" aria-label="設備 DNS">
+              <table>
+                <tr>
+                  <td>設備 DNS 使用中</td>
+                  <td>168.95.1.1</td>
+                  <td><button>修改</button></td>
+                </tr>
+                <tr>
+                  <td>設備 DNS 1</td>
+                  <td>168.95.1.1</td>
+                  <td><button>修改</button></td>
+                </tr>
+                <tr>
+                  <td>設備 DNS 2</td>
+                  <td>8.8.8.8</td>
+                  <td><button>修改</button></td>
+                </tr>
+              </table>
+            </section>
+            <section class="system-info-card" aria-label="閘道與防火牆">
+              <table>
+                <tr>
+                  <td>設備 gateway</td>
+                  <td>172.16.65.254</td>
+                  <td><button>修改</button></td>
+                </tr>
+                <tr>
+                  <td>IPTables狀態</td>
+                  <td><button>查看</button></td>
+                  <td><button>修改</button></td>
+                </tr>
+                <tr>
+                  <td>watchdog 啟用狀態</td>
+                  <td class="red">停用(0)</td>
+                  <td><button>修改</button></td>
+                </tr>
+              </table>
+            </section>
+            <section class="system-info-card" aria-label="XPS">
+              <table>
+                <tr>
+                  <td>XPS 啟用狀態</td>
+                  <td>啟用</td>
+                  <td><button>修改</button></td>
+                </tr>
+                <tr>
+                  <td>XPS IP</td>
+                  <td><span>172.16.65.111</span></td>
+                  <td><button class="bg-grey">修改</button></td>
+                </tr>
+              </table>
+            </section>
           </div>
+        </div>
+        <div id="main-control-container" class="system-page">
+          <a href="" class="prev"><i></i>上一頁</a>
+          <a href="" class="next"><i></i>下一頁</a>
         </div>
         <div id="main-bt-container">
           <a href="" class="left">

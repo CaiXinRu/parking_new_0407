@@ -1,87 +1,360 @@
 <!doctype html>
 <html>
-<head>
-<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="https://googleapis.com" rel="stylesheet">
-	<link rel="stylesheet" href="../css/reset.css">
-	<link rel="stylesheet" href="../css/style.css">
-	<link href="css/system.css" rel="stylesheet" type="text/css">
-	<title>微程式資訊 Microprogram｜停車場繳費機</title>
-</head>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://googleapis.com" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link href="css/system.css" rel="stylesheet" type="text/css" />
+    <title>微程式資訊 Microprogram｜停車場繳費機</title>
+  </head>
 
-<body class="syt-long less">
-	<div id="main-container">
-		<header>
-			<div id="header-inner">
-				<div class="time"><span>2025-09-15</span><span>17:20</span></div>
-				<div class="name"><span><img src="../images/c-logo.png" alt=""/></span></div>
-				<div class="top-tool">
-					<ul>
-						<li><a href=""><i><img src="../images/contact-icon.svg" alt=""/></i>客服</a></li>
-						<li><a href=""><i><img src="../images/language-icon.svg" alt=""/></i>語系</a></li>
-					</ul>
-				</div>
-			</div>			
-			<div id="header-title">
-				<div>南山新市園區C棟停車場</div>
-			</div>
-			<div class="CUT">
-				<div class="orb_graphic">
-					<svg>
-						<defs>
-							<linearGradient id="myGradient" x1="0%" y1="0%"	x2="0%" y2="100%" spreadMethod="pad">
-								<stop offset="0%" stop-color="#412187" stop-opacity="1"/>
-								<stop offset="90%" stop-color="#412187" stop-opacity="1"/>
-							</linearGradient>
-						</defs>
-						<circle class="fill"></circle>
-						<circle class="progress"></circle>
-					</svg>
-					<div class="orb_value count">60</div>
-				</div>
-			</div>			
-			<div class="header-pic"><img class="header-mask" src="../images/header-bg.png" alt=""/></div>	
-		</header>
-		<main class="nor">			
-			<h2>設備檢測</h2>
-			<div id="list-bt-inner">
-				<button>網路測試</button>
-				<button>XPS連線狀態</button>
-				<button>票證讀卡測試</button>
-				<button>信用卡讀卡測試</button>
-				<button>LED燈測試</button>
-				<button>印表機測試</button>
-				<button>QR Code測試</button>
-				<button>現金測試</button>
-			</div>			
-			<div id="main-bt-container">
-				<a href="" class="left">
-					<svg xmlns="http://www.w3.org/2000/svg">
-						<rect rx="38" ry="38" class="line" height="100%" width="100%" stroke-linejoin="round"/>
-					</svg><i></i>返回
-				</a>
-			</div>
-		</main>
-		<footer class="inner">		  
-			<div id="pay-list-container">				
-				<div id="pat-list-inner">
-					<p><img src="images/pay_easycard.png" alt=""/></p>
-					<p><img src="images/pay_easypay.png" alt=""/></p>
-					<p><img src="images/pay_ipass.png" alt=""/></p>
-					<p><img src="images/pay_icash2.0.png" alt=""/></p>
-					<p><img src="images/pay_linepay.png" alt=""/></p>
-					<p><img src="images/pay_street.png" alt=""/></p>
-					<p><img src="images/pay_twpay.png" alt=""/></p>
-					<p><img src="images/pay_applepay.png" alt=""/></p>
-					<p><img src="images/pay_googlepay.png" alt=""/></p>
-					<p><img src="images/pay_samsungpay.png" alt=""/></p>
-					<p><img src="images/pay_cash.png" alt=""/></p>
-					<p><img src="images/pay_creditcard.png" alt=""/></p>
-				</div>
-			</div>
-			<div class="footer-pic"><img class="footer-mask" src="../images/footer-bg.png" alt=""/></div>		  
-		</footer>
-	</div>
-</body>
+  <body>
+    <div id="main-container">
+      <header>
+        <div id="header-inner">
+          <div class="time"><span>2025-09-15</span><span>17:20</span></div>
+          <div class="name">
+            <span><img src="../images/c-logo.png" alt="" /></span>
+          </div>
+          <div class="top-tool">
+            <ul>
+              <li>
+                <a href=""
+                  ><i><img src="../images/contact-icon.svg" alt="" /></i>客服</a
+                >
+              </li>
+              <li>
+                <a href=""
+                  ><i><img src="../images/language-icon.svg" alt="" /></i>語系</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div id="header-title">
+          <div>南山新市園區C棟停車場</div>
+        </div>
+        <div class="CUT">
+          <div class="orb_graphic">
+            <svg>
+              <defs>
+                <linearGradient id="myGradient" x1="0%" y1="0%" x2="0%" y2="100%" spreadMethod="pad">
+                  <stop offset="0%" stop-color="#412187" stop-opacity="1" />
+                  <stop offset="90%" stop-color="#412187" stop-opacity="1" />
+                </linearGradient>
+              </defs>
+              <circle class="fill"></circle>
+              <circle class="progress"></circle>
+            </svg>
+            <div class="orb_value count">60</div>
+          </div>
+        </div>
+        <div class="header-pic"><img class="header-mask" src="../images/header-bg.png" alt="" /></div>
+      </header>
+      <main class="nor">
+        <h2>設備檢測</h2>
+        <div id="list-bt-inner">
+          <button type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M5 9c4.4-4.4 11.6-4.4 16 0"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M8 12c2.2-2.2 5.8-2.2 8 0"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M10.5 14.5c.8-.8 2.2-.8 3 0"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <circle
+                cx="12"
+                cy="18"
+                r="1.5"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+            <span>網路測試</span>
+          </button>
+          <button type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+              <circle
+                cx="7"
+                cy="12"
+                r="3"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M10 12h4"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <circle
+                cx="17"
+                cy="12"
+                r="3"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <span>XPS連線狀態</span>
+          </button>
+          <button type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+              <rect
+                x="3"
+                y="7"
+                width="11"
+                height="10"
+                rx="1.5"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M16 8c.8 1.5.8 4.5 0 6M19 6c1.2 2.5 1.2 5.5 0 8"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <span>票證讀卡測試</span>
+          </button>
+          <button type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+              <rect
+                x="3"
+                y="6"
+                width="18"
+                height="12"
+                rx="2"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M3 10h18"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M7 14h6"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <span>信用卡讀卡測試</span>
+          </button>
+          <button type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+              <circle
+                cx="12"
+                cy="12"
+                r="3.5"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M12 4.5V6M12 18v1.5M4.5 12H6M18 12h1.5M7 7l1 1M16 16l1 1M7 17l1-1M16 8l1-1"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <span>LED燈測試</span>
+          </button>
+          <button type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+              <rect
+                x="6"
+                y="3"
+                width="12"
+                height="5"
+                rx="1"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <rect
+                x="5"
+                y="8"
+                width="14"
+                height="9"
+                rx="1.5"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M9 11h6M8 17h8"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <span>印表機測試</span>
+          </button>
+          <button type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+              <rect
+                x="2.5"
+                y="2.5"
+                width="8"
+                height="8"
+                rx="1.5"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <rect
+                x="13.5"
+                y="2.5"
+                width="8"
+                height="8"
+                rx="1.5"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <rect
+                x="2.5"
+                y="13.5"
+                width="8"
+                height="8"
+                rx="1.5"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M14 14h2v2h-2zM17 14h2v2h-2zM14 17h2v2h-2zM17 17h2v2h-2z"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <span>QR Code測試</span>
+          </button>
+          <button type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+              <rect
+                x="2.5"
+                y="5"
+                width="19"
+                height="14"
+                rx="2.5"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M2.5 10h19"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M6 15h4"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <span>現金測試</span>
+          </button>
+        </div>
+        <div id="main-bt-container">
+          <a href="" class="left">
+            <svg xmlns="http://www.w3.org/2000/svg">
+              <rect rx="38" ry="38" class="line" height="100%" width="100%" stroke-linejoin="round" /></svg
+            ><i></i>返回
+          </a>
+        </div>
+      </main>
+      <footer class="inner">
+        <div id="pay-list-container">
+          <div id="pat-list-inner">
+            <p><img src="images/pay_easycard.png" alt="" /></p>
+            <p><img src="images/pay_easypay.png" alt="" /></p>
+            <p><img src="images/pay_ipass.png" alt="" /></p>
+            <p><img src="images/pay_icash2.0.png" alt="" /></p>
+            <p><img src="images/pay_linepay.png" alt="" /></p>
+            <p><img src="images/pay_street.png" alt="" /></p>
+            <p><img src="images/pay_twpay.png" alt="" /></p>
+            <p><img src="images/pay_applepay.png" alt="" /></p>
+            <p><img src="images/pay_googlepay.png" alt="" /></p>
+            <p><img src="images/pay_samsungpay.png" alt="" /></p>
+            <p><img src="images/pay_cash.png" alt="" /></p>
+            <p><img src="images/pay_creditcard.png" alt="" /></p>
+          </div>
+        </div>
+        <div class="footer-pic"><img class="footer-mask" src="../images/footer-bg.png" alt="" /></div>
+      </footer>
+    </div>
+  </body>
 </html>

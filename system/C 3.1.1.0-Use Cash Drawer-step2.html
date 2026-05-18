@@ -54,64 +54,174 @@
         <div class="header-pic"><img class="header-mask" src="../images/header-bg.png" alt="" /></div>
       </header>
       <main class="nor">
-        <h2>錢箱補幣-步驟2：現金結帳</h2>
+        <h2>錢箱補幣-步驟2：結帳</h2>
         <div class="system-type">
-          紙鈔：打開機體內的現金箱直接收取，完成後按「結帳完成」。<br />硬幣：將現金箱及機體關上後，按「進行結帳」，機器會出幣至找零口。<br />所有幣別完成結帳收取後，按「完成」。
+          紙鈔：打開機體內的現金箱直接收取，完成後按「結帳完成」。<br />硬幣：將現金箱及機體關上後，按「進行結帳」，機器會出幣至找零口。
         </div>
-        <div class="system-container">
-          <div id="system-tb-inner">
-            <table class="norule">
-              <tr>
-                <td>幣別</td>
-                <td>目前數量</td>
-                <td>應備數量</td>
-                <td>本次補幣數量</td>
-                <td>操作</td>
-              </tr>
-              <tr>
-                <td>100元</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>不須結帳</td>
-              </tr>
-              <tr>
-                <td>50元</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>不須結帳</td>
-              </tr>
-              <tr>
-                <td>10元</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td><button>進行結帳</button></td>
-              </tr>
-              <tr>
-                <td>5元</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td><button>進行結帳</button></td>
-              </tr>
-            </table>
+        <div class="system-container settle-board">
+          <div id="system-tb-inner" class="settle-grid">
+            <article class="settle-card settle-card--blue">
+              <header class="settle-card__head">
+                <span class="settle-card__coin">100</span>
+                <span class="settle-card__unit">幣別 (TWD)</span>
+              </header>
+              <div class="settle-card__stats">
+                <div class="settle-stat">
+                  <span class="settle-stat__label">目前數量</span>
+                  <span class="settle-stat__value">205</span>
+                </div>
+                <div class="settle-stat">
+                  <span class="settle-stat__label">應備數量</span>
+                  <span class="settle-stat__value">200</span>
+                </div>
+              </div>
+              <div class="settle-card__total">
+                <span class="settle-card__total-label">結帳數量</span>
+                <span class="settle-card__total-value">5</span>
+              </div>
+              <button class="settle-card__action">
+                <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="m8 12 3 3 5-6" />
+                </svg>
+                結帳完成
+              </button>
+            </article>
+
+            <article class="settle-card settle-card--green">
+              <header class="settle-card__head">
+                <span class="settle-card__coin">50</span>
+                <span class="settle-card__unit">幣別 (TWD)</span>
+              </header>
+              <div class="settle-card__stats">
+                <div class="settle-stat">
+                  <span class="settle-stat__label">目前數量</span>
+                  <span class="settle-stat__value">0</span>
+                </div>
+                <div class="settle-stat">
+                  <span class="settle-stat__label">應備數量</span>
+                  <span class="settle-stat__value">0</span>
+                </div>
+              </div>
+              <div class="settle-card__total">
+                <span class="settle-card__total-label">結帳數量</span>
+                <span class="settle-card__total-value">0</span>
+              </div>
+              <button class="settle-card__action" disabled>
+                <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="m8 12 3 3 5-6" />
+                </svg>
+                不須結帳
+              </button>
+            </article>
+
+            <article class="settle-card settle-card--purple">
+              <header class="settle-card__head">
+                <span class="settle-card__coin">10</span>
+                <span class="settle-card__unit">幣別 (TWD)</span>
+              </header>
+              <div class="settle-card__stats">
+                <div class="settle-stat">
+                  <span class="settle-stat__label">目前數量</span>
+                  <span class="settle-stat__value">165</span>
+                </div>
+                <div class="settle-stat">
+                  <span class="settle-stat__label">應備數量</span>
+                  <span class="settle-stat__value">150</span>
+                </div>
+              </div>
+              <div class="settle-card__total">
+                <span class="settle-card__total-label">結帳數量</span>
+                <span class="settle-card__total-value">65</span>
+              </div>
+              <button class="settle-card__action">
+                <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="m8 12 3 3 5-6" />
+                </svg>
+                進行結帳
+              </button>
+            </article>
+
+            <article class="settle-card settle-card--gold">
+              <header class="settle-card__head">
+                <span class="settle-card__coin">5</span>
+                <span class="settle-card__unit">幣別 (TWD)</span>
+              </header>
+              <div class="settle-card__stats">
+                <div class="settle-stat">
+                  <span class="settle-stat__label">目前數量</span>
+                  <span class="settle-stat__value">130</span>
+                </div>
+                <div class="settle-stat">
+                  <span class="settle-stat__label">應備數量</span>
+                  <span class="settle-stat__value">100</span>
+                </div>
+              </div>
+              <div class="settle-card__total">
+                <span class="settle-card__total-label">結帳數量</span>
+                <span class="settle-card__total-value">30</span>
+              </div>
+              <button class="settle-card__action">
+                <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="m8 12 3 3 5-6" />
+                </svg>
+                進行結帳
+              </button>
+            </article>
           </div>
         </div>
-        <div id="main-bt-container">
-          <a href="" class="right">
+        <div id="main-bt-container" class="settle-bt-container">
+          <a href="" class="left">
             <svg xmlns="http://www.w3.org/2000/svg">
-              <rect rx="38" ry="38" class="line" height="100%" width="100%" stroke-linejoin="round" /></svg
-            >全部結帳
+              <rect rx="38" ry="38" class="line" height="100%" width="100%" stroke-linejoin="round" />
+            </svg>
+            <span class="settle-bt-container__row">
+              <svg
+                class="settle-bt-container__icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <ellipse cx="12" cy="7.5" rx="7.5" ry="2.3" />
+                <ellipse cx="12" cy="12" rx="7.5" ry="2.3" />
+                <ellipse cx="12" cy="16.5" rx="7.5" ry="2.3" />
+              </svg>
+              <span class="settle-bt-container__title">全部結帳</span>
+            </span>
+            <div class="settle-bt-container__note">將進行所有幣別的結帳</div>
           </a>
           <a href="" class="right">
             <svg xmlns="http://www.w3.org/2000/svg">
-              <rect rx="38" ry="38" class="line" height="100%" width="100%" stroke-linejoin="round" /></svg
-            >完成
+              <rect rx="38" ry="38" class="line" height="100%" width="100%" stroke-linejoin="round" />
+            </svg>
+            <span class="settle-bt-container__row">
+              <svg
+                class="settle-bt-container__icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <circle cx="12" cy="12" r="9" />
+                <path d="m8 12 3 3 5-6" />
+              </svg>
+              <span class="settle-bt-container__title">完成</span>
+            </span>
+            <div class="settle-bt-container__note">結帳完成後離開此頁</div>
           </a>
         </div>
-        <div class="system-type note">按「全部結帳」會進行所有幣別的結帳；硬幣會按幣別自動出幣。</div>
       </main>
       <footer class="inner">
         <div id="pay-list-container">
