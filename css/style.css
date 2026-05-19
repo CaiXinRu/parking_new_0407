@@ -85,6 +85,8 @@
   position: relative;
   width: var(--mainsize-w);
   height: var(--mainsize-h);
+  flex-shrink: 0;
+  overflow: hidden;
   background: var(--white);
   color: var(--white);
   font-size: 1.4rem;
@@ -547,8 +549,6 @@ main.nor h2.receipt-method-heading {
   position: fixed;
   inset: 0;
   width: 100%;
-  min-height: 100vh;
-  min-height: 100dvh;
   display: flex;
   justify-content: center;
   align-items: center;
